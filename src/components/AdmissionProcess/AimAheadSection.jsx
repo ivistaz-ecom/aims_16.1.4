@@ -6,7 +6,7 @@ const AimAheadSection = () => {
     <div className="relative w-full h-[90vh] md:h-[80vh] lg:h-[75vh] overflow-hidden">
       {/* Desktop Background Image */}
       <Image
-        src="/admission-process/student-new.webp"
+        src="/admission-process/student-new1.webp"
         alt="Aim Ahead with Confidence"
         fill
         className="hidden lg:block object-cover"
@@ -32,7 +32,7 @@ const AimAheadSection = () => {
       />
 
       {/* Content Container */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center mt-30 md:mt-70 lg:mt-0 ml-0 md:ml-0 lg:ml-20">
+      <div className="relative z-10 h-full flex flex-col items-center justify-center mt-30 md:mt-70 lg:mt-0">
         <div className="container mx-auto px-4 md:px-0 lg:px-0">
           <div className="flex lg:justify-start md:justify-center">
             <div className="w-full md:max-w-2xl">

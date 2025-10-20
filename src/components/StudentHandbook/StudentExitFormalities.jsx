@@ -12,7 +12,7 @@ const StudentExitFormalities = () => {
             {/* Image First for Mobile & Tablet */}
             <div className="flex flex-col gap-4 order-1 md:order-1 lg:order-2">
               <Image
-                src="/alumni-association/events-and-reunions.webp"
+                src="/student-handbook/student-exit-formalities.webp"
                 alt="Young men playing basketball outdoors"
                 width={500}
                 height={500}

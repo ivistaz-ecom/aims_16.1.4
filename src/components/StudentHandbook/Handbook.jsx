@@ -10,7 +10,7 @@ const Handbook = () => {
           {/* Left Column - Image */}
           <div className="flex flex-col gap-4 col-span-1">
             <Image
-              src="/alumni-association/alumni-netowrk.webp"
+              src="/student-handbook/student.webp"
               alt="Alumni Network"
               width={500}
               height={500}
