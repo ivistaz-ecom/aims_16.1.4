@@ -10,7 +10,7 @@ const HeroBanner = ({ announcements, pageType = "bba-aviation" }) => {
         <div className="hidden md:block w-full h-full bg-cover bg-top bg-no-repeat bg-[url('/admission-process/hero-banner.webp')]" />
 
         {/* Background Image - Mobile */}
-        <div className="md:hidden w-full h-full bg-cover bg-top bg-no-repeat bg-[url('/admission-process/mobile-banner-new.webp')]" />
+        <div className="md:hidden w-full h-full bg-cover bg-top bg-no-repeat bg-[url('/admission-process/mobile-banner-new1.webp')]" />
 
         {/* Gradient Overlay - Figma Design */}
         <div
@@ -22,7 +22,7 @@ const HeroBanner = ({ announcements, pageType = "bba-aviation" }) => {
         ></div>
 
         {/* Bottom Content Container */}
-        <div className="absolute left-0 right-0 px-4 lg:px-0 bottom-20 md:bottom-15 lg:mx-10 mx-0">
+        <div className="absolute left-0 right-0 px-4 lg:px-0 bottom-12 md:bottom-15 lg:mx-10 mx-0">
           <div className="container mx-auto">
             <div className="flex lg:flex-row flex-col items-center justify-between md:gap-4 gap-4">
               <div className="flex items-center">

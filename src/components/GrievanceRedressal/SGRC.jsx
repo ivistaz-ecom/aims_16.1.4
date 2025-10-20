@@ -10,7 +10,6 @@ const SGRC = () => {
     "All other grievances may be reported at the immediate levels and unresolved grievances shall be escalated as described. Students may report grievances at the immediate levels and unresolved grievances shall be escalated as shown in the escalation chart.",
     "Unresolved grievances will be forwarded to the Students Grievance Redressal Committee (SGRC), which functions under the ACSD, through the Registrar.",
     "Grievances shall also be submitted in one of the following ways:\na. via this institutional portal\nb. in writing or by email to the Registrar – registrar@theaims.ac.in\nc. by email to grievances@theaims.ac.in\n",
-    "(Chart: https://www.theaims.ac.in/grievance-redressal)",
   ]
 
   const renderParagraph = (paragraph, index) => {
@@ -91,7 +90,7 @@ const SGRC = () => {
       <div className="px-4 md:px-6 lg:px-8 py-6 md:py-10">
         <div className="container mx-auto">
           <Image
-            src="/grievance-redressal/chart.webp"
+            src="/grievance-redressal/chart-new.webp"
             alt="SGRC"
             width={1000}
             height={1000}
