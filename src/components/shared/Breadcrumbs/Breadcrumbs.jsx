@@ -201,6 +201,16 @@ const Breadcrumbs = () => {
         return
       }
 
+      // Special case for cells-committees-antiragging-sexual-harassment-grievances-equal-opportunity
+      if (segment === "cells-committees-antiragging-sexual-harassment-grievances-equal-opportunity") {
+        breadcrumbs.push({
+          label: "Committees",
+          href: currentPath,
+          isLast: index === pathSegments.length - 1,
+        })
+        return
+      }
+
       // Convert segment to readable label
       const label = segment
         .split("-")
