@@ -7,22 +7,22 @@ const OurAwardedScholars = () => {
             {
                 year: "2022",
                 entries: [
-                    "Ms. Navya Bhanu - Microfinance for Urban Poor - An Evaluation of Self Help Groups in Bangalore",
+                    "Ms Navya Bhanu - Microfinance for Urban Poor - An Evaluation of Self Help Groups in Bangalore",
                 ],
             },
             {
                 year: "2021",
                 entries: [
-                    "Ms. Harshitha S - Impact of Work-life Balance on Performance of Women Employees in Service Industry",
+                    "Ms Harshitha S - Impact of Work-life Balance on Performance of Women Employees in Service Industry",
                 ],
             },
             {
                 year: "2020",
                 entries: [
-                    "Mr. Arijit Roy - Effectiveness of Advertising in Creating Brand Equity of Product Based E-Tailers",
-                    "Ms. Maria Pramila Dsouza - Impact of Accountability of Non-Governmental Organizations (NGOs) on Social Development: A Study of Select NGO's in Karnataka",
-                    "Ms. Bhavya Bhanu - Impact of Recruitment Process Outsourcing on Employee Performance in Select Information Technology Organizations",
-                    "Mr. Somayeh Azoor - Marketing of Renewable Energy - A Study of Solar Energy Users in Mysore",
+                    "Mr Arijit Roy - Effectiveness of Advertising in Creating Brand Equity of Product Based E-Tailers",
+                    "Ms Maria Pramila Dsouza - Impact of Accountability of Non-Governmental Organizations (NGOs) on Social Development: A Study of Select NGO's in Karnataka",
+                    "Ms Bhavya Bhanu - Impact of Recruitment Process Outsourcing on Employee Performance in Select Information Technology Organizations",
+                    "Mr Somayeh Azoor - Marketing of Renewable Energy - A Study of Solar Energy Users in Mysore",
                 ],
             },
             {
@@ -33,24 +33,24 @@ const OurAwardedScholars = () => {
         "Dr Kavitha Desai": [
             {
                 year: "2020",
-                entries: ["Mr. Mehrdad Nazari - Strategic Planning and Performance: A Study of Select Companies in Indian Automobile Industry.",
-                    "Mr. Abdolhamid Bidokht - An Evaluation of Financial Performance of Select Private Sector Banks in India.",
-                    "Ms. Jyothi M.N - Human Resource Management in Banking Industry in India - A Comparative Study of Private and Foreign Banks."
+                entries: ["Mr Mehrdad Nazari - Strategic Planning and Performance: A Study of Select Companies in Indian Automobile Industry.",
+                    "Mr Abdolhamid Bidokht - An Evaluation of Financial Performance of Select Private Sector Banks in India.",
+                    "Ms Jyothi M.N - Human Resource Management in Banking Industry in India - A Comparative Study of Private and Foreign Banks."
                 ]
             },
             {
                 year: "2019",
-                entries: ["Ms. Mahalakshmi S - Internet of Things in Management of Electronic Power Distribution at BESCOM.",
-                    "Mr. Debopam Chakrabarti - Supply Chain Efficiency of Different Distribution Channels for Vegetables - A Study of Select Regions in Telangana.",
+                entries: ["Ms Mahalakshmi S - Internet of Things in Management of Electronic Power Distribution at BESCOM.",
+                    "Mr Debopam Chakrabarti - Supply Chain Efficiency of Different Distribution Channels for Vegetables - A Study of Select Regions in Telangana.",
                 ]
             },
         ],
         "Dr Somanath V.S": [
             {
                 year: "2020",
-                entries: ["Mr. Pramu Kumar Raje Urs M N - A Comparative Study of Green Human Resources Management Practices in Manufacturing and Information Technology Firms in Bangalore.",
-                    "Ms. Satarupa Misra - Pension Plans as an Income Security - An Assessment of Employees Perception in Select Private Sector Firms.",
-                    "Mr. Nagakrishna Raje Urs - Fringe Benefits and Employees Performance - A Comparative Study of Public and Private Sector Companies."
+                entries: ["Mr Pramu Kumar Raje Urs M N - A Comparative Study of Green Human Resources Management Practices in Manufacturing and Information Technology Firms in Bangalore.",
+                    "Ms Satarupa Misra - Pension Plans as an Income Security - An Assessment of Employees Perception in Select Private Sector Firms",
+                    "Mr Nagakrishna Raje Urs - Fringe Benefits and Employees Performance - A Comparative Study of Public and Private Sector Companies."
 
                 ]
             },
@@ -58,31 +58,31 @@ const OurAwardedScholars = () => {
         "Dr Renati Jayaprakash Reddy": [
             {
                 year: "2022",
-                entries: ["Ms. Hridhya.P.K - Financial Literacy and Personal Investment Decisions by Individual Investors of Kerala.",
-                    "Ms. Anas Mohammad A'bad Alkasasbeh - Time Driven Activity Based Costing (TDABC) and Profit Maximization in Jordanian Cement Factories."
+                entries: ["Ms Hridhya.P.K - Financial Literacy and Personal Investment Decisions by Individual Investors of Kerala.",
+                    "Ms Anas Mohammad A'bad Alkasasbeh - Time Driven Activity Based Costing (TDABC) and Profit Maximization in Jordanian Cement Factories."
                 ]
             },
             {
                 year: "2021",
-                entries: ["Ms. Geethanjali. G - Startups in India - A Study on Challenges and Prospects of Selected Units in Bengaluru.",
+                entries: ["Ms Geethanjali. G - Startups in India - A Study on Challenges and Prospects of Selected Units in Bengaluru.",
                 ]
             },
             {
                 year: "2019",
-                entries: ["Mr. Davood Rismani - Role of Intellectual Capital in Value Creation through Organizational Performance - A Comparative Study of Selected Industries in India.",
-                    "Mr. Papaiah - Challenges of MSMEs in Karnataka: A Study with Reference to Peenya Industrial Area, Bengaluru."
+                entries: ["Mr Davood Rismani - Role of Intellectual Capital in Value Creation through Organizational Performance - A Comparative Study of Selected Industries in India.",
+                    "Mr Papaiah - Challenges of MSMEs in Karnataka: A Study with Reference to Peenya Industrial Area, Bengaluru."
                 ]
             },
         ],
         "Dr B.A.Karunakara Reddy": [
             {
                 year: "2021",
-                entries: ["Mr. Hariharan.R - A Study of price fixation Mechanism in Indian Commodity Market - A Special Reference to Selected Agricultural Commodities."]
+                entries: ["Mr Hariharan.R - A Study of price fixation Mechanism in Indian Commodity Market - A Special Reference to Selected Agricultural Commodities."]
             },
             {
                 year: "2020",
-                entries: ["Mr. Bardees Taher Ahmed Al Okab - Sustainable Development and Eco-Tourism in Yemen - A Study on IBB Province.",
-                    "Mr. Mahmoud Fawzi Z. Ismail - A Study on the Modern Management Accounting Techniques for Competitive Advantage in the Jordanian Telecommunications.",
+                entries: ["Mr Bardees Taher Ahmed Al Okab - Sustainable Development and Eco-Tourism in Yemen - A Study on IBB Province.",
+                    "Mr Mahmoud Fawzi Z. Ismail - A Study on the Modern Management Accounting Techniques for Competitive Advantage in the Jordanian Telecommunications.",
                 ]
             },
         ],
