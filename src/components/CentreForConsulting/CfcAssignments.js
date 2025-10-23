@@ -164,7 +164,7 @@ const CfcAssignments = () => {
                         <span className="text-gray-500">N.A.</span>
                       )}
                     </td>
-                    <td className="px-4 py-3 text-sm lg:text-base monser-400 text-gray-700 align-top bg-[#E1F9F4]">
+                    <td className="px-4 py-3 text-sm lg:text-base monser-400 align-top bg-[#E1F9F4]">
                       {assignment.assignments}
                     </td>
                   </tr>

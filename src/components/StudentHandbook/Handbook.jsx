@@ -29,7 +29,7 @@ const Handbook = () => {
                 Please download the student handbook to understand various
                 resources and facilities available to you as a student of this
                 institution including mentoring, focus centres, grievances,
-                feedback process, and many
+                feedback process, and many more.
               </p>
             </div>
 

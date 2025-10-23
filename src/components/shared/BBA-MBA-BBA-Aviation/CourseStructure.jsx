@@ -199,7 +199,7 @@ const CourseStructure = ({ programKey = "mba" }) => {
               "Language 1 - Kannada/Additional English/Hindi/Urdu/Sanskrit/Tamil/<br/>Malayalam/Marathi/Telugu",
               "Language 2 - English",
               "Elements of Cost Accounting",
-              "organizational Behavior",
+              "Organizational Behavior",
               "Artificial Intelligence",
               "Sports",
               "NCC/NSS/others (if any)",

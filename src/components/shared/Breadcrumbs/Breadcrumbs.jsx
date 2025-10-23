@@ -7,37 +7,37 @@ import { usePathname } from "next/navigation"
 
 const Breadcrumbs = () => {
   const pathname = usePathname()
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false)
 
   // Show breadcrumbs after scrolling 100px (but not on home page)
   useEffect(() => {
     const handleScroll = () => {
-      const threshold = 100; // 100px scroll threshold
-      const shouldShow = window.scrollY > threshold && pathname !== '/';
-      setIsVisible(shouldShow);
-    };
+      const threshold = 100 // 100px scroll threshold
+      const shouldShow = window.scrollY > threshold && pathname !== "/"
+      setIsVisible(shouldShow)
+    }
 
     // Check initial state
-    handleScroll();
+    handleScroll()
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [pathname]);
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [pathname])
 
   // Function to handle home link click and ensure scroll to top
   const handleHomeClick = () => {
     // Force scroll to top after a short delay to ensure navigation completes
     setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'instant' });
-    }, 15);
-  };
+      window.scrollTo({ top: 0, behavior: "instant" })
+    }, 15)
+  }
 
   // Generate breadcrumbs from pathname
   const generateBreadcrumbs = () => {
     const pathSegments = pathname.split("/").filter((segment) => segment !== "")
 
     // Don't show breadcrumbs on home page
-    if (pathSegments.length === 0 || pathname === '/') return []
+    if (pathSegments.length === 0 || pathname === "/") return []
 
     // Special case for Eresources page
     if (pathname.includes("eresources")) {
@@ -131,6 +131,46 @@ const Breadcrumbs = () => {
         return
       }
 
+      // Special case for bachelor-computer-applications
+      if (segment === "bachelor-computer-applications") {
+        breadcrumbs.push({
+          label: "Bachelor of Computer Applications",
+          href: currentPath,
+          isLast: index === pathSegments.length - 1,
+        })
+        return
+      }
+
+      // Special case for master-computer-applications
+      if (segment === "master-computer-applications") {
+        breadcrumbs.push({
+          label: "Master of Computer Applications",
+          href: currentPath,
+          isLast: index === pathSegments.length - 1,
+        })
+        return
+      }
+
+      // Special case for bachelor-hotel-management
+      if (segment === "bachelor-hotel-management") {
+        breadcrumbs.push({
+          label: "Bachelor of Hotel Management",
+          href: currentPath,
+          isLast: index === pathSegments.length - 1,
+        })
+        return
+      }
+
+      // Special case for bachelor-business-administration-aviation-management
+      if (segment === "bachelor-business-administration-aviation-management") {
+        breadcrumbs.push({
+          label: "Bachelor of Business Administration Aviation Management",
+          href: currentPath,
+          isLast: index === pathSegments.length - 1,
+        })
+        return
+      }
+
       // Special case for pgdm (under placements-mba)
       if (segment === "pgdm") {
         breadcrumbs.push({
@@ -202,7 +242,10 @@ const Breadcrumbs = () => {
       }
 
       // Special case for cells-committees-antiragging-sexual-harassment-grievances-equal-opportunity
-      if (segment === "cells-committees-antiragging-sexual-harassment-grievances-equal-opportunity") {
+      if (
+        segment ===
+        "cells-committees-antiragging-sexual-harassment-grievances-equal-opportunity"
+      ) {
         breadcrumbs.push({
           label: "Committees",
           href: currentPath,
@@ -238,10 +281,20 @@ const Breadcrumbs = () => {
   return (
     <>
       {/* Spacer div that only appears when breadcrumbs are visible */}
-      <div className={`w-full transition-all duration-300 z-40 bg-white ${isVisible ? 'h-12' : 'h-0'}`} />
+      <div
+        className={`w-full transition-all duration-300 z-40 bg-white ${
+          isVisible ? "h-12" : "h-0"
+        }`}
+      />
 
       <div className="z-40">
-        <nav className={`bg-white shadow-sm border-b border-gray-100 px-4 lg:px-8 fixed top-[10vh] lg:top-[17vh] left-0 right-0 z-40 transition-all duration-300 ${isVisible ? 'opacity-100 h-auto' : 'opacity-0 h-0 pointer-events-none overflow-hidden border-0'}`}>
+        <nav
+          className={`bg-white shadow-sm border-b border-gray-100 px-4 lg:px-8 fixed top-[10vh] lg:top-[17vh] left-0 right-0 z-40 transition-all duration-300 ${
+            isVisible
+              ? "opacity-100 h-auto"
+              : "opacity-0 h-0 pointer-events-none overflow-hidden border-0"
+          }`}
+        >
           <div className="container mx-auto">
             <div className="flex items-center space-x-2 py-3 overflow-x-auto scrollbar-hide">
               {/* Mobile scroll indicator */}
@@ -284,21 +337,21 @@ const Breadcrumbs = () => {
 
           {/* Custom scrollbar styles */}
           <style jsx>{`
-        .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-        /* Smooth scrolling for mobile */
-        @media (max-width: 1024px) {
-          .scrollbar-hide {
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-          }
-        }
-      `}</style>
+            .scrollbar-hide {
+              -ms-overflow-style: none;
+              scrollbar-width: none;
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+              display: none;
+            }
+            /* Smooth scrolling for mobile */
+            @media (max-width: 1024px) {
+              .scrollbar-hide {
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
+              }
+            }
+          `}</style>
         </nav>
       </div>
     </>

@@ -27,18 +27,20 @@ const HeroBannerSoB = ({ announcements, pageType = "engineering" }) => {
             <div className="container mx-auto">
               <div className="flex lg:flex-row flex-col items-center justify-between md:gap-4 gap-4">
                 <div className="flex items-center">
-                  <h1 className="text-white text-2xl lg:text-[60px] playfair-300 lg:leading-16">
+                  <h5 className="text-white text-4xl lg:text-[60px] playfair-300 lg:leading-16">
                     AIMS School of <br className="hidden lg:block" />{" "}
-                    <span className="italic playfair-400 text-[#D2EEE8]">Business</span>
-                  </h1>
+                    <span className="italic playfair-400 text-[#D2EEE8]">
+                      Business
+                    </span>
+                  </h5>
                 </div>
                 <div className="flex items-center">
                   <Image
-                    src="/school-of-business/iacbe.webp"
+                    src="/school-of-business/iacbe.svg"
                     alt="IACBE"
                     width={400}
                     height={100}
-                    className="object-contain"
+                    className="md:object-contain object-cover"
                   />
                 </div>
               </div>

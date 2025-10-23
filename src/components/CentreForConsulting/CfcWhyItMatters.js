@@ -41,7 +41,7 @@ const CfcWhyItMatters = () => {
                 Through structured business consulting services in academic
                 institutions in Bangalore, the centre:
               </p>
-              <ul className="list-disc list-inside monser-400 flex flex-col gap-4 text-white">
+              <ul className="list-disc monser-400 flex flex-col gap-4 text-white md:pl-6 pl-4 ">
                 <li>
                   Helps students develop practical skills through corporate
                   projects

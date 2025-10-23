@@ -279,7 +279,11 @@ const AdmissionTabs = ({ tabsData }) => {
                                 <span>
                                   {point.split("Apply Now")[0]}
                                   <a
-                                    href="https://apply.theaims.ac.in/login"
+                                    href={
+                                      tabsData[activeTab].title === "PUC"
+                                        ? "https://www.iesonline.co.in/aims-pu-application/"
+                                        : "https://apply.theaims.ac.in/login"
+                                    }
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-[#A22877] hover:text-[#8B1F5F] underline font-semibold"

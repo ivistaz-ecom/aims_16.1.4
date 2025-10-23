@@ -51,16 +51,16 @@ const HowToApply = () => {
                   Before you begin, we recommend reviewing:
                 </h5>
 
-                <ul className="space-y-2 sm:space-y-3 list-disc list-inside ml-4 md:ml-0">
-                  <li className="text-base md:text-lg monser-400 leading-relaxed ">
+                <ul className="space-y-2 sm:space-y-3 list-disc ml-4 md:ml-0">
+                  <li className="text-base md:text-lg monser-400 leading-relaxed pl-2">
                     The <span className="monser-600">eligibility criteria</span>{" "}
                     on your chosen program page
                   </li>
-                  <li className="text-base md:text-lg monser-400 leading-relaxed">
+                  <li className="text-base md:text-lg monser-400 leading-relaxed pl-2">
                     The <span className="monser-600">documents required</span>{" "}
                     for applying to UG or PG courses
                   </li>
-                  <li className="text-base md:text-lg monser-400 leading-relaxed">
+                  <li className="text-base md:text-lg monser-400 leading-relaxed pl-2">
                     The{" "}
                     <span className="monser-600">
                       important deadlines for college admissions 2025

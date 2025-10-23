@@ -36,7 +36,7 @@ const ReadyToDraw = ({
                 {primaryButtonText && (
                   <Button
                     variant="secondary"
-                    className="whitespace-nowrap text-xs sm:text-sm md:text-base"
+                    className="whitespace-nowrap "
                     href="https://apply.theaims.ac.in/login"
                     target="_blank"
                   >

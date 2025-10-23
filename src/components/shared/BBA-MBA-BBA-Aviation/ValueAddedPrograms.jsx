@@ -17,7 +17,7 @@ const ValueAddedPrograms = ({ programKey = "mba" }) => {
           id: "certifications-2026-2027",
           title: "2026-2027",
           content: [
-            "Advance excel",
+            "Advance Excel",
             "Industry Readiness Training – GD & Aptitude",
           ],
         },
@@ -78,7 +78,7 @@ const ValueAddedPrograms = ({ programKey = "mba" }) => {
             {
               title: "Psychometric Assessment & Career Mapping",
               subItems: [
-                "Career Mapping Discover your strengths, interests, and career pathways through structured psychometric assessments and personalized guidance. Implemented through standardized tests and counselling sessions by experts. This program helps students make informed academic and career decisions.",
+                "Discover your strengths, interests, and career pathways through structured psychometric assessments and personalized guidance. Implemented through standardised tests and counselling sessions by experts. This program helps students make informed academic and career decisions.",
               ],
             },
             {
@@ -108,7 +108,7 @@ const ValueAddedPrograms = ({ programKey = "mba" }) => {
             {
               title: "Advanced Readiness & Industry Integration",
               subItems: [
-                "This program prepares students for professional life by familiarizing them with workplace practices, professional etiquette, and industry expectations. Discussions with experts and real-world case studies give students a practical perspective on how to succeed after graduation.",
+                "This program prepares students for professional life by familiarising them with workplace practices, professional etiquette, and industry expectations. Discussions with experts and real-world case studies give students a practical perspective on how to succeed after graduation.",
               ],
             },
             {
@@ -132,7 +132,7 @@ const ValueAddedPrograms = ({ programKey = "mba" }) => {
             {
               title: "Psychometric Assessment & Career Mapping",
               subItems: [
-                "Career Mapping Discover your strengths, interests, and career pathways through structured psychometric assessments and personalized guidance. Implemented through standardized tests and counselling sessions by experts. This program helps students make informed academic and career decisions.",
+                "Discover your strengths, interests, and career pathways through structured psychometric assessments and personalized guidance. Implemented through standardised tests and counselling sessions by experts. This program helps students make informed academic and career decisions.",
               ],
             },
             {

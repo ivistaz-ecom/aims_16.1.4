@@ -1,48 +1,52 @@
-'use client'
-import React from 'react'
+"use client"
+import React from "react"
 
 const CfcCurrentAssignments = () => {
   const currentAssignmentsData = [
     {
       company: "CRISIL",
       website: "www.crisil.com",
-      assignments: "Due diligence for a power plant in Nigeria"
+      assignments: "Due diligence for a power plant in Nigeria",
     },
     {
       company: "Viddyarth Academic Services Pvt Ltd",
       website: "www.viddyarth.com",
-      assignments: "Work has been done for them on pro-bono basis in field of Linked In technical inputs and social media marketing"
+      assignments:
+        "Work has been done for them on pro-bono basis in field of Linked In technical inputs and social media marketing",
     },
     {
       company: "Gururaj Associates",
       website: "www.gururajassociates.com",
-      assignments: "We are assisting them in Marketing, Governance and Financial strategic advice"
+      assignments:
+        "We are assisting them in Marketing, Governance and Financial strategic advice",
     },
     {
       company: "Superseva Pvt Ltd",
       website: "www.superseva.com",
-      assignments: "Consulting in Marketing Strategy and Financial Areas"
+      assignments: "Consulting in Marketing Strategy and Financial Areas",
     },
     {
       company: "Green Essence",
       website: "www.greenessencestore.com",
-      assignments: "Governance, Systems Definition, Strategic Marketing and Top Consulting work"
+      assignments:
+        "Governance, Systems Definition, Strategic Marketing and Top Consulting work",
     },
     {
       company: "Metamorph Learning",
       website: "www.metamorphskills.com",
-      assignments: "Development of eLearning material, Strategic Marketing and Top Consulting work"
+      assignments:
+        "Development of eLearning material, Strategic Marketing and Top Consulting work",
     },
     {
       company: "Bangalore Whiteboard",
       website: "www.whiteboardindia.org",
-      assignments: "Helping in Whiteboard Theory of Change working with NGO's"
+      assignments: "Helping in Whiteboard Theory of Change working with NGO's",
     },
     {
       company: "Town Essentials Pvt Ltd",
       website: "www.towness.co.in",
-      assignments: "-"
-    }
+      assignments: "-",
+    },
   ]
 
   return (
@@ -59,13 +63,13 @@ const CfcCurrentAssignments = () => {
               {/* Table Head */}
               <thead className="bg-[#531675] text-white">
                 <tr>
-                  <th className="px-4 py-3 text-center text-sm lg:text-base monser-600 border-r border-gray-300 w-1/3">
+                  <th className="px-4 py-3 text-center text-sm lg:text-base monser-600 border-r border-gray-300">
                     Company
                   </th>
-                  <th className="px-4 py-3 text-center text-sm lg:text-base monser-600 border-r border-gray-300 w-1/3">
+                  <th className="px-4 py-3 text-center text-sm lg:text-base monser-600 border-r border-gray-300">
                     Website
                   </th>
-                  <th className="px-4 py-3 text-center text-sm lg:text-base monser-600 w-1/3">
+                  <th className="px-4 py-3 text-center text-sm lg:text-base monser-600">
                     Completed Assignments
                   </th>
                 </tr>
@@ -77,7 +81,9 @@ const CfcCurrentAssignments = () => {
                   <tr
                     key={index}
                     className={`border-b border-gray-200 transition-colors duration-200 
-                    ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-gray-100`}
+                    ${
+                      index % 2 === 0 ? "bg-white" : "bg-gray-50"
+                    } hover:bg-gray-100`}
                   >
                     {/* Company */}
                     <td className="px-4 py-3 text-sm lg:text-base monser-500 text-[#0C2165] border-r border-gray-200 align-top bg-[#E1F9F4]">
@@ -97,7 +103,7 @@ const CfcCurrentAssignments = () => {
                     </td>
 
                     {/* Assignments */}
-                    <td className="px-4 py-3 text-sm lg:text-base monser-400 text-gray-700 align-top bg-[#E1F9F4]">
+                    <td className="px-4 py-3 text-sm lg:text-base monser-400  align-top bg-[#E1F9F4]">
                       {assignment.assignments}
                     </td>
                   </tr>
