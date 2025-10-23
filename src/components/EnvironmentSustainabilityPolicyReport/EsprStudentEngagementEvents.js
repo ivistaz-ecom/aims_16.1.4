@@ -88,10 +88,11 @@ const EsprStudentEngagementEvents = () => {
                             onClick={() =>
                               setSelectedParticipant(participant.id)
                             }
-                            className={`text-left px-4 py-[0.5] rounded-lg transition-all block duration-300 mb-3 lg:border-[1px]  ${selectedParticipant === participant.id
-                              ? "bg-[#A22877] text-white border-[#A22877]"
-                              : "bg-white text-gray-700 border-gray-300 hover:border-[#A22877]"
-                              }`}
+                            className={`text-left px-4 py-[0.5] rounded-lg transition-all block duration-300 mb-3 lg:border-[1px]  ${
+                              selectedParticipant === participant.id
+                                ? "bg-[#A22877] text-white border-[#A22877]"
+                                : "bg-white text-gray-700 border-gray-300 hover:border-[#A22877]"
+                            }`}
                           >
                             <span className="font-semibold text-lg">
                               {participant.name}
@@ -109,10 +110,11 @@ const EsprStudentEngagementEvents = () => {
                         <button
                           key={participant.id}
                           onClick={() => setSelectedParticipant(participant.id)}
-                          className={`text-left px-4 py-[0.5] rounded-2xl transition-all block duration-300 mb-3 border-[1px] ${selectedParticipant === participant.id
-                            ? "bg-[#A22877] text-white border-[#A22877]"
-                            : "bg-white text-gray-700 border-black hover:border-[#A22877]"
-                            }`}
+                          className={`text-left px-4 py-[0.5] rounded-2xl transition-all block duration-300 mb-3 border-[1px] ${
+                            selectedParticipant === participant.id
+                              ? "bg-[#A22877] text-white border-[#A22877]"
+                              : "bg-white text-gray-700 border-black hover:border-[#A22877]"
+                          }`}
                         >
                           <span className="font-semibold text-lg">
                             {participant.name}
@@ -150,6 +152,7 @@ const EsprStudentEngagementEvents = () => {
             <h3 className="text-4xl lg:text-6xl playfair-300 leading-tight">
               AIMS Environmental and
               <br className="hidden md:block" />
+              <span className="md:hidden"> </span>
               Sustainability Audit Report
             </h3>
             <div className="flex justify-start">

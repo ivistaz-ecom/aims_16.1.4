@@ -81,10 +81,7 @@ const SofPrograms = () => {
                   {doctoralProgram.description}
                 </p>
                 <Link href={doctoralProgram.link}>
-                  <Button
-                    variant="placement"
-                    className="text-[12px] lg:text-[16px] text-white"
-                  >
+                  <Button variant="placement" className=" text-white">
                     Explore Now
                   </Button>
                 </Link>

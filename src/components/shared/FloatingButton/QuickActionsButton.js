@@ -69,7 +69,7 @@ const QuickActionsButton = () => {
       window.removeEventListener("resize", checkMobile)
       clearTimeout(scrollTimeout)
     }
-  }, [])
+  }, [isInitialized])
 
   // Handle click/touch for mobile
   const handleMainButtonClick = () => {

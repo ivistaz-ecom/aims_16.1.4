@@ -262,6 +262,10 @@ const Breadcrumbs = () => {
           if (word.toLowerCase() === "aims") {
             return "AIMS"
           }
+          // Special case: convert "cat" to "CAT" in all caps
+          if (word.toLowerCase() === "cat") {
+            return "CAT"
+          }
           return word.charAt(0).toUpperCase() + word.slice(1)
         })
         .join(" ")
