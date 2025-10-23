@@ -3,7 +3,7 @@ import Image from "next/image"
 
 const WhyItMatters = () => {
   return (
-    <div className="relative w-full h-[90vh] md:h-[80vh] lg:h-[75vh] overflow-hidden  ">
+    <div className="relative w-full h-[90vh] md:h-[80vh] lg:h-[75vh] overflow-hidden mb-6 md:mb-0 ">
       {/* Desktop Background Image */}
       <Image
         src="/student-development/why-it-matters-new.webp"
@@ -32,7 +32,7 @@ const WhyItMatters = () => {
       />
 
       {/* Content Container */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center mt-30 md:mt-60 lg:mt-0 ml-0 md:ml-0 lg:ml-20 mb-10 md:mb-0 lg:mb-0">
+      <div className="relative z-10 h-full flex flex-col items-center justify-center mt-25 md:mt-60 lg:mt-0 ml-0 md:ml-0 lg:ml-20 mb-10 md:mb-0 lg:mb-0">
         <div className="container mx-auto px-4 md:px-0 lg:px-0">
           <div className="flex lg:justify-end md:justify-center mt-38 md:mt-0 lg:mt-0">
             <div className="w-full md:max-w-xl">

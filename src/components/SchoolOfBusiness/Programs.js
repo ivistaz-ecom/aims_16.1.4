@@ -88,10 +88,7 @@ const Programs = () => {
                   {doctoralProgram.description}
                 </p>
                 <Link href={doctoralProgram.link}>
-                  <Button
-                    variant="placement"
-                    className="text-[12px] lg:text-[16px] text-white"
-                  >
+                  <Button variant="placement" className="text-white">
                     Explore Now
                   </Button>
                 </Link>
@@ -166,10 +163,7 @@ const Programs = () => {
                       {program.description}
                     </p>
                     <Link href={program.link}>
-                      <Button
-                        variant="placement"
-                        className="text-[12px] lg:text-[16px]"
-                      >
+                      <Button variant="placement" className="text-white">
                         Explore Now
                       </Button>
                     </Link>
