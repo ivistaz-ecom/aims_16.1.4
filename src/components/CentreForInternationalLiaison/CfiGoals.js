@@ -19,7 +19,7 @@ const CfiGoals = () => {
                   <ul className="list-disc text-start monser-400 flex flex-col gap-4 md:pl-6 pl-4">
                     <li className="text-lg lg:text-[18px] monser-400">
                       Represent AIMS Institutes on global platforms that would
-                      help us achieve AIMS Institute's vision of moulding
+                      help us achieve AIMS Institute&apos;s vision of moulding
                       professionals of global excellence
                     </li>
                     <li className="text-lg lg:text-[18px] monser-400">
