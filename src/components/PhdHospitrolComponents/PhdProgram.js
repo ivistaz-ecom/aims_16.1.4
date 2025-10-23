@@ -3,6 +3,14 @@ import Image from "next/image";
 import Button from '@/shared/Button';
 
 const PhdProgram = () => {
+    const courseItems = [
+        'Research Methodology',
+        'Review of Literature and Seminars',
+        'Submission of Annual progress reports',
+        'Two research paper publications',
+        'Thesis submission - After 30 months (minimum)',
+    ];
+
     return (
         <>
             {/* Top Banner Section */}
@@ -11,26 +19,27 @@ const PhdProgram = () => {
                     <div className="flex flex-col lg:flex-row items-start md:gap-6 gap-0 container mx-auto md:py-10 py-6">
 
                         {/* Left Side - Title */}
-
-                        {/* <div className="lg:w-1/2 items-center text-center lg:text-left">
-                            <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#A22877] italic">
-                                PhD Program
-                            </h3>
-                            <h3 className="text-3xl md:text-4xl lg:text-5xl text-[#0c2165] -mt-6 md:-mt-8">
+                        <div className="lg:w-1/2">
+                            <h3 className="text-3xl md:text-4xl font-semibold text-left text-[#0c2165] pb-0 mb-0">
+                                <span
+                                    style={{
+                                        fontWeight: '500',
+                                        color: '#a22978',
+                                        fontFamily: 'Playfair Display',
+                                    }}
+                                    className="italic -mt-10 md:-mt-10"
+                                >
+                                    PhD Program
+                                </span>
+                                <br />
                                 Course Structure
                             </h3>
-                        </div> */}
-                        <div className="lg:w-1/2">
-                        <h3 className="text-3xl md:text-4xl font-semibold text-left text-[#0c2165]  pb-0 mb-0">
-                            <span style={{ fontWeight: '500', color: '#a22978', fontFamily: 'Playfair Display' }} className="italic -mt-10 md:-mt-10"> PhD Program</span> <br />
-                            Course Structure
-                        </h3>
-                    </div>
+                        </div>
 
                         {/* Right Side - Paragraph */}
                         <div className="lg:w-1/2 flex items-start">
                             <p className="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed text-center lg:text-left">
-                            All provisionally registered candidates shall undergo coursework of one semester over a duration of 20 weeks, inclusive of the course-end assessment. The University shall notify the timetable and details of the coursework, including the schedule.
+                                All provisionally registered candidates shall undergo coursework of one semester over a duration of 20 weeks, inclusive of the course-end assessment. The University shall notify the timetable and details of the coursework, including the schedule.
                             </p>
                         </div>
                     </div>
@@ -45,12 +54,15 @@ const PhdProgram = () => {
                         <h2 className="text-lg md:text-xl font-semibold mb-4">
                             The suggested course structure for PhD Programs in Management, Commerce and English of UoM generally consists of:
                         </h2>
-                        <ul className="list-disc list-inside space-y-2 mb-6 pl-1">
-                            <li className='text-lg'>Research Methodology</li>
-                            <li className='text-lg'>Review of Literature and Seminars</li>
-                            <li className='text-lg'>Submission of Annual progress reports</li>
-                            <li className='text-lg'>Two research paper publications</li>
-                            <li className='text-lg'>Thesis submission - After 30 months (minimum)</li>
+
+                        {/* Updated bullet points with separated dots and content */}
+                        <ul className="space-y-3 mb-6 pl-1">
+                            {courseItems.map((item, index) => (
+                                <li key={index} className="flex items-start gap-3">
+                                    <span className="mt-3 w-2 h-2 bg-[#0c2165] rounded-full shrink-0"></span>
+                                    <span className="text-lg text-gray-800">{item}</span>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
@@ -73,7 +85,7 @@ const PhdProgram = () => {
                 <div className='container mx-auto flex flex-col md:flex-row'>
 
                     {/* Left Side (70%) */}
-                    <div className="md:w-[70%] w-full flex flex-col justify-center items-start py-10 px-4 md:px-0 ">
+                    <div className="md:w-[70%] w-full flex flex-col justify-center items-start py-10 px-4 md:px-0">
                         <p className="mb-4 text-sm md:text-base">
                             The syllabus for research methodology for each course is separate.
                             <br />
@@ -105,7 +117,7 @@ const PhdProgram = () => {
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
 
-export default PhdProgram
+export default PhdProgram;
