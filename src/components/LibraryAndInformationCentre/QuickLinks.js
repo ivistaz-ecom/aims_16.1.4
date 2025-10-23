@@ -311,7 +311,7 @@ const QuickLinks = () => {
             <Subscribe />
           </div>
 
-          <p className="mt-3 text-gray-800 text-sm text-center">
+          <p className="pt-8 text-gray-800 text-sm text-center">
             Sign up with your email to receive login credentials for our digital platforms.
           </p>
         </div>
