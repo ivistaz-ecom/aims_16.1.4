@@ -353,7 +353,7 @@ export default function ExactSwapCarousel() {
                             <li key={i} className="text-lg leading-snug">
                               <Link
                                 href={p.link}
-                                className="transition-colors duration-200 hover:underline"
+                                className="transition-colors duration-200 underline md:no-underline hover:underline"
                               >
                                 {p.name}
                               </Link>
@@ -373,7 +373,7 @@ export default function ExactSwapCarousel() {
                             <li key={i} className="text-lg leading-snug">
                               <Link
                                 href={p.link}
-                                className=" transition-colors duration-200 hover:underline"
+                                className=" transition-colors duration-200 underline md:no-underline hover:underline"
                               >
                                 {p.name}
                               </Link>
@@ -393,7 +393,7 @@ export default function ExactSwapCarousel() {
                             <li key={i} className="text-lg leading-snug">
                               <Link
                                 href={p.link}
-                                className=" transition-colors duration-200 hover:underline"
+                                className=" transition-colors duration-200 underline md:no-underline hover:underline"
                               >
                                 {p.name}
                               </Link>
