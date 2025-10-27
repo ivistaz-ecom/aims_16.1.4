@@ -9,7 +9,7 @@ export async function generateMetadata() {
     title: "Best Business School in India | AIMS Bangalore",
     description: "Discover AIMS, the Best business school in Bangalore and among the top business schools in India for postgraduate studies. Shape your career with us.",
     path: "/about-aims",
-    metaImage: "/images/aims-logo.png",
+    metaImage: "/about-aims/About-banner.webp",
     pageType: "EducationalOrganization",
   });
 }
