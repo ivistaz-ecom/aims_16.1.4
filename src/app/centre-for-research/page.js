@@ -11,9 +11,7 @@ const CentreForResearch = () => (
       metaImage="/images/aims-logo.png"
       schemaType="EducationalOrganization"
     />
-    <div>
-      <CentreForResearchComponents />
-    </div>
+    <CentreForResearchComponents />
   </>
 )
 

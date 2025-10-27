@@ -11,6 +11,7 @@ const page = () => (
             metaImage="/images/aims-logo.png"
             schemaType="EducationalOrganization"
         />
+
         <SchoolOfInformationTechnology />
     </>
 )

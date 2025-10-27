@@ -11,9 +11,7 @@ const page = () => (
       metaImage="/images/aims-logo.png"
       schemaType="WebSite"
     />
-    <div>
-      <Scholarship />
-    </div>
+    <Scholarship />
   </>
 )
 

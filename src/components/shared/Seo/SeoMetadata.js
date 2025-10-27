@@ -9,15 +9,14 @@ const SeoMetadata = ({
     schemaType = "EducationalOrganization",
     additionalSchema = {},
 }) => {
-    const domainName = process.env.NEXT_PUBLIC_SITE_URL || "https://theaims.ac.in"
-
     useEffect(() => {
-        // Update title
-        if (title) {
-            document.title = title
-        }
+        // ✅ Get current domain directly from browser
+        const domainName = typeof window !== 'undefined' ? window.location.origin : ''
 
-        // Update or create meta description
+        // Update title
+        if (title) document.title = title
+
+        // Meta description
         let metaDescription = document.querySelector('meta[name="description"]')
         if (!metaDescription) {
             metaDescription = document.createElement('meta')
@@ -95,10 +94,9 @@ const SeoMetadata = ({
             document.head.appendChild(script)
         }
         script.textContent = JSON.stringify(schema)
-    }, [title, description, path, metaImage, schemaType, additionalSchema, domainName])
+    }, [title, description, path, metaImage, schemaType, additionalSchema])
 
     return null
 }
 
 export default SeoMetadata
-
