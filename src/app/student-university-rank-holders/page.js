@@ -8,8 +8,7 @@ const page = () => {
     description:
       "Among leading management colleges in India for career growth, AIMS shines as the Best business school in Bangalore with strong campus placements for MBA achievers.",
     path: "/student-university-rank-holders",
-    metaImage: "/images/aims-logo.png",
-    pageType: "EducationalOrganization",
+    metaImage: "/university-rank-holders/banner-01.webp",
   };
 
   return (

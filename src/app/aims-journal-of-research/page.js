@@ -7,8 +7,7 @@ const page = () => {
     title: "Top B School in India | AIMS Journal of Research",
     description: "Explore AIMS Journal of Research from a Top B school in India. A leading business school with research center, driving innovation and academic excellence.",
     path: "/aims-journal-of-research",
-    metaImage: "/images/aims-logo.png",
-    pageType: "EducationalOrganization",
+    metaImage: "/aims-journal-of-research/banner-02.webp",
   }
 
   return (

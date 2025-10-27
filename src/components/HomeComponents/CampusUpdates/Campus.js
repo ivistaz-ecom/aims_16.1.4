@@ -25,7 +25,7 @@ const slides = [
   },
   {
     id: "s4",
-    src: "/home/campus/slide02.webp",
+    src: "/home/campus/slide-02.webp",
     description: "AIMS School of Business Shines Again",
     date: "Jun 6, 2025",
     alt: "card 4",
@@ -42,7 +42,7 @@ const slides = [
   
   {
     id: "s3",
-    src: "/home/campus/slide01.webp",
+    src: "/home/campus/slide-01.webp",
     description:
       "A Milestone Achievement for BBA Aviation at AIMS Institutes!",
     date: "Jun 6, 2025",

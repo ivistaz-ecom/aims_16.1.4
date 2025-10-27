@@ -7,8 +7,7 @@ const page = () => {
     title: "Top Recruiters at AIMS Institutes Placements",
     description: "AIMS Institutes connects students with 200+ recruiters. Explore top hiring partners and placement opportunities across industries in Bengaluru.",
     path: "/recruiters",
-    metaImage: "/images/aims-logo.png",
-    pageType: "EducationalOrganization",
+    metaImage: "/recruiters/banner02.webp",
   }
 
   return (
