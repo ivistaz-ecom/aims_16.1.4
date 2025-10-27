@@ -7,8 +7,7 @@ const page = () => {
     title: "MBA & PGDM Placements at AIMS Institutes",
     description: "Discover AIMS Institutes MBA and PGDM placement highlights. Top recruiters, ₹27 LPA highest CTC, and career opportunities with global exposure.",
     path: "/placements-mba/pgdm",
-    metaImage: "/images/aims-logo.png",
-    pageType: "EducationalOrganization",
+    metaImage: "/placements-mba/pgdm/banner.webp",
   }
 
   return (

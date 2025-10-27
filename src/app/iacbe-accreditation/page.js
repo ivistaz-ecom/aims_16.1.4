@@ -8,8 +8,7 @@ const page = () => {
     description:
       "Explore accredited MBA programs with global exposure in India at AIMS, among the best business schools in Bangalore with IACBE & ACBSP equivalent accreditations.",
     path: "/iacbe-accreditation",
-    metaImage: "/images/aims-logo.png",
-    pageType: "EducationalOrganization",
+    metaImage: "/iacbe/banner-03.webp",
   };
 
   return (

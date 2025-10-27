@@ -17,8 +17,8 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata = {
-  title: "AIMS - Comprehensive Platform",
-  description: "Our comprehensive platform designed to deliver exceptional user experiences",
+  // title: "AIMS - Comprehensive Platform",
+  // description: "Our comprehensive platform designed to deliver exceptional user experiences",
   robots: {
     index: false,
     follow: false,
