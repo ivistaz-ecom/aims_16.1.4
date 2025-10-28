@@ -1,6 +1,7 @@
 import React from "react"
-import FacultyMemberDetails from "@/components/FacultyMemberDetails"
+// import FacultyMemberDetails from "@/components/FacultyMemberDetails"
 import SeoMetadata from "@/components/shared/Seo/SeoMetadata"
+import FacutlMembers2025 from "@/components/FacutlMembers2025"
 
 const FacultyMemberDetailsPage = () => (
   <>
@@ -11,7 +12,8 @@ const FacultyMemberDetailsPage = () => (
       metaImage="/images/aims-logo.png"
       // schemaType="EducationalOrganization"
     />
-    <FacultyMemberDetails />
+    {/* <FacultyMemberDetails /> */}
+    <FacutlMembers2025 />
   </>
 )
 
