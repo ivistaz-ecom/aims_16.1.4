@@ -9,7 +9,7 @@ const page = () => (
       description="Step-by-step guide to AIMS Institutes admission process. Find eligibility, documents required for UG & PG programs, and how to apply in Bengaluru."
       path="/admission-process"
       metaImage="/images/aims-logo.png"
-      schemaType="WebSite"
+      // schemaType="WebSite"
     />
     <AdmissionProcess />
   </>

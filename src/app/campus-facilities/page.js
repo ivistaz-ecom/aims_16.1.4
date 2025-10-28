@@ -1,6 +1,6 @@
-import React from 'react'
-import CampusFacilities from '@/components/CampusFacilities'
-import SeoMetadata from '@/components/shared/Seo/SeoMetadata'
+import React from "react"
+import CampusFacilities from "@/components/CampusFacilities"
+import SeoMetadata from "@/components/shared/Seo/SeoMetadata"
 
 const page = () => (
   <>
@@ -9,7 +9,7 @@ const page = () => (
       description="Explore campus facilities at one of the leading institutes with entrepreneurship development centres in Karnataka and discover the benefits of studying from a private college with good infrastructure."
       path="/campus-facilities"
       metaImage="/images/aims-logo.png"
-      schemaType="EducationalOrganization"
+      // schemaType="EducationalOrganization"
     />
     <CampusFacilities />
   </>

@@ -9,7 +9,7 @@ const FAQsPage = () => (
       description="Get answers to frequently asked questions about AIMS Institutes. Learn about admissions, application fees, scholarships, placements, and student life"
       path="/faqs"
       metaImage="/images/aims-logo.png"
-      schemaType="WebSite"
+      // schemaType="WebSite"
     />
     <AdmissionsFAQs />
   </>
