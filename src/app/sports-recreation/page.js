@@ -9,7 +9,7 @@ const page = () => (
       description="Dynamic student community business education with sports & recreation. Among colleges in India with international accreditation, AIMS fosters balance."
       path="/sports-recreation"
       metaImage="/images/aims-logo.png"
-      schemaType="EducationalOrganization"
+      // schemaType="EducationalOrganization"
     />
     <SportsRecreation />
   </>

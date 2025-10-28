@@ -9,7 +9,7 @@ const page = () => (
       description="Discover a dynamic student community in business education. AIMS fosters student development in business education as the best business school in Bangalore."
       path="/student-clubs"
       metaImage="/images/aims-logo.png"
-      schemaType="EducationalOrganization"
+      // schemaType="EducationalOrganization"
     />
     <StudentClubs />
   </>

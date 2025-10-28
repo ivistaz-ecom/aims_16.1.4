@@ -1,6 +1,6 @@
-import React from 'react'
-import Educationloan from '@/components/Educationloan/index'
-import SeoMetadata from '@/components/shared/Seo/SeoMetadata'
+import React from "react"
+import Educationloan from "@/components/Educationloan/index"
+import SeoMetadata from "@/components/shared/Seo/SeoMetadata"
 
 const page = () => (
   <>
@@ -9,7 +9,7 @@ const page = () => (
       description="AIMS Institutes helps students with education loan assistance. Find student-friendly options, low interest rates, and guidance for financing your studies."
       path="/education-loans"
       metaImage="/images/aims-logo.png"
-      schemaType="WebSite"
+      // schemaType="WebSite"
     />
     <Educationloan />
   </>

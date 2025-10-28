@@ -9,7 +9,7 @@ const page = () => (
       description="Experience valuebased education business school life through vibrant events and fests, built on a global business trends curriculum in Bangalore."
       path="/events-fests"
       metaImage="/images/aims-logo.png"
-      schemaType="EducationalOrganization"
+      // schemaType="EducationalOrganization"
     />
     <EventsFests />
   </>
