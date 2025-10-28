@@ -7,8 +7,11 @@ const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
+    email: "",
     contact: "",
     enquiry: "",
+    course: "",
+    hearAboutUs: "",
     message: "",
   });
 
@@ -29,6 +32,7 @@ const ContactForm = () => {
   const validateForm = () => {
     const newErrors = {};
     if (!formData.name.trim()) newErrors.name = "Name is required";
+    if (!formData.email.trim()) newErrors.email = "Email is required";
     if (!formData.enquiry.trim()) newErrors.enquiry = "Please select an enquiry type";
     if (!formData.message.trim()) newErrors.message = "Message is required";
     return newErrors;
@@ -51,8 +55,11 @@ const ContactForm = () => {
       const form = new FormData();
       form.append("your-name", formData.name);
       form.append("your-last-name", formData.lastName);
+      form.append("your-email", formData.email);
       form.append("your-contact", formData.contact);
       form.append("your-enquiry", formData.enquiry);
+      form.append("your-course", formData.course);
+      form.append("your-hear-about-us", formData.hearAboutUs);
       form.append("your-message", formData.message);
 
       // Add required CF7 parameters
@@ -88,8 +95,11 @@ const ContactForm = () => {
         setFormData({
           name: "",
           lastName: "",
+          email: "",
           contact: "",
           enquiry: "",
+          course: "",
+          hearAboutUs: "",
           message: "",
         });
         setErrors({});
@@ -105,8 +115,11 @@ const ContactForm = () => {
         setFormData({
           name: "",
           lastName: "",
+          email: "",
           contact: "",
           enquiry: "",
+          course: "",
+          hearAboutUs: "",
           message: "",
         });
         setErrors({});
@@ -120,8 +133,11 @@ const ContactForm = () => {
         setFormData({
           name: "",
           lastName: "",
+          email: "",
           contact: "",
           enquiry: "",
+          course: "",
+          hearAboutUs: "",
           message: "",
         });
         setErrors({});
@@ -137,8 +153,11 @@ const ContactForm = () => {
       setFormData({
         name: "",
         lastName: "",
+        email: "",
         contact: "",
         enquiry: "",
+        course: "",
+        hearAboutUs: "",
         message: "",
       });
       setErrors({});
@@ -173,7 +192,9 @@ const ContactForm = () => {
               </div>
 
               <div>
-                <label className="font-semibold text-base">Last Name</label>
+                <label className="font-semibold text-base">
+                  Last Name <span className="text-sm font-normal">(required)</span>
+                </label>
                 <input
                   type="text"
                   name="lastName"
@@ -185,11 +206,29 @@ const ContactForm = () => {
               </div>
             </div>
 
-            {/* 📞 Contact & Enquiry */}
+            {/* 📧 Email & Contact */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
               <div>
                 <label className="font-semibold text-base">
-                  Contact No <span className="text-sm font-normal">(optional)</span>
+                  Email ID <span className="text-sm font-normal">(required)</span>
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className={`w-full mt-2 bg-[#e1f4f1] text-[#1b2950] rounded-md p-3 focus:outline-none ${errors.email ? "border border-red-500" : ""
+                    }`}
+                />
+                {errors.email && (
+                  <p className="text-red-300 text-sm mt-1">{errors.email}</p>
+                )}
+              </div>
+
+              <div>
+                <label className="font-semibold text-base">
+                  Contact No <span className="text-sm font-normal"></span>
                 </label>
                 <input
                   type="tel"
@@ -200,7 +239,10 @@ const ContactForm = () => {
                   className="w-full mt-2 bg-[#e1f4f1] text-[#1b2950] rounded-md p-3 focus:outline-none"
                 />
               </div>
+            </div>
 
+            {/* 🔍 Enquiry */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
               <div className="relative">
                 <label className="font-semibold text-base">
                   Enquiry Type <span className="text-sm font-normal">(required)</span>
@@ -229,6 +271,78 @@ const ContactForm = () => {
                 {errors.enquiry && (
                   <p className="text-red-300 text-sm mt-1">{errors.enquiry}</p>
                 )}
+              </div>
+              {/* 🎓 Course */}
+              <div className="relative text-left">
+                <label className="font-semibold text-base">
+                  Course
+                </label>
+                <div className="relative mt-2">
+                  <select
+                    name="course"
+                    value={formData.course}
+                    onChange={handleChange}
+                    className="w-full appearance-none bg-[#e1f4f1] text-[#1b2950] rounded-md p-3 pr-10 focus:outline-none cursor-pointer"
+                  >
+                    <option value="">Choose</option>
+                    <option>Ph.D in Management</option>
+                    <option>MBA Master of Business Administration (General)</option>
+                    <option>BBA Bachelor of Business Administration</option>
+                    <option>BBA Aviation</option>
+                    <option>Master of Commerce MCOM</option>
+                    <option>Bachelor of Commerce BCOM</option>
+                    <option>BHM Bachelor of Hotel Management</option>
+                    <option>Certificate in Vocational Studies in QSR (Quick Service Restaurant)</option>
+                    <option>Culinary Professional Diploma (VET by EHL)</option>
+                    <option>Food & Beverage Service Professional Diploma (VET by EHL)</option>
+                    <option>Rooms Professional Diploma (VET by EHL)</option>
+                    <option>Master of Computer Application MCA</option>
+                    <option>Bachelor of Computer Application BCA</option>
+                    <option>AI/ML | Data Science | Full-Stack Development BCA+</option>
+                    <option>PCMB</option>
+                    <option>PCMC</option>
+                    <option>CEBA</option>
+                   
+                  </select>
+                  <RiArrowDropDownLine
+                    size={28}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-[#1b2950] pointer-events-none"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* 📢 Where did you hear about us */}
+            <div className="text-left">
+              <label className="font-semibold text-base mb-3 block">
+                Where did you hear about us?
+              </label>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                {[
+                  "Ads",
+                  "Social media",
+                  "Alumni",
+                  "Friend/colleague",
+                  "Current Students",
+                  "Event",
+                  "Google",
+                  "Others"
+                ].map((option) => (
+                  <label
+                    key={option}
+                    className="flex items-center gap-2 cursor-pointer hover:text-gray-200 transition-colors"
+                  >
+                    <input
+                      type="radio"
+                      name="hearAboutUs"
+                      value={option}
+                      checked={formData.hearAboutUs === option}
+                      onChange={handleChange}
+                      className="w-4 h-4 accent-[#A22977] cursor-pointer"
+                    />
+                    <span className="text-sm">{option}</span>
+                  </label>
+                ))}
               </div>
             </div>
 
