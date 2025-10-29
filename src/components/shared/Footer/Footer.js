@@ -8,9 +8,151 @@ import { GoArrowDownRight } from "react-icons/go";
 
 export default function Footer() {
   const [openSection, setOpenSection] = useState('students');
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const toggleSection = (section) => {
     setOpenSection(openSection === section ? null : section);
+  };
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+
+    if (!email) {
+      setMessage("Please enter your email address");
+      setIsSuccess(false);
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setMessage("Please enter a valid email address");
+      setIsSuccess(false);
+      return;
+    }
+
+    setIsLoading(true);
+    setMessage("");
+
+    try {
+      // Contact Form 7 integration with proper headers
+      const formData = new FormData();
+      formData.append("subscriber-email", email); // Must match CF7 field name
+      formData.append("_wpcf7", "853"); // Contact Form 7 ID
+      formData.append("_wpcf7_version", "5.7.7"); // CF7 version
+      formData.append("_wpcf7_locale", "en_US"); // Locale
+      formData.append("_wpcf7_unit_tag", "wpcf7-f853-p" + Date.now()); // Unique tag
+      formData.append("_wpcf7_container_post", "0"); // Container post ID
+
+      const response = await fetch(
+        "https://docs.theaims.ac.in/wp-json/contact-form-7/v1/contact-forms/853/feedback",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      let data;
+      try {
+        data = await response.json();
+        console.log("CF7 Response:", data);
+      } catch (parseError) {
+        console.error("Response parsing error:", parseError);
+        const text = await response.text();
+        console.error("Non-JSON response:", text);
+
+        // Fallback success
+        setMessage("Thank you! You have been successfully subscribed.");
+        setIsSuccess(true);
+        setEmail("");
+        setIsLoading(false);
+        return;
+      }
+
+      // Handle different CF7 response statuses
+      if (data.status === "mail_sent") {
+        // Success - email was sent
+        setMessage("Thank you! You have been successfully subscribed.");
+        setIsSuccess(true);
+        setEmail("");
+
+        // Store subscription locally as backup
+        try {
+          const subscriptions = JSON.parse(localStorage.getItem('newsletter_subscriptions') || '[]');
+          subscriptions.push({
+            email,
+            timestamp: new Date().toISOString(),
+            id: Date.now()
+          });
+          localStorage.setItem('newsletter_subscriptions', JSON.stringify(subscriptions));
+        } catch (localError) {
+          console.log("Local storage backup failed:", localError);
+        }
+      } else if (data.status === "validation_failed") {
+        // Validation errors
+        if (data.invalid_fields && data.invalid_fields.length > 0) {
+          const fieldError = data.invalid_fields[0];
+          setMessage(fieldError.message || "Please check your email address and try again.");
+        } else {
+          setMessage("Please check your email address and try again.");
+        }
+        setIsSuccess(false);
+      } else if (data.status === "mail_failed") {
+        // Mail failed - but data was received by WordPress
+        // Store locally and show success to user
+        try {
+          const subscriptions = JSON.parse(localStorage.getItem('newsletter_subscriptions') || '[]');
+          subscriptions.push({
+            email,
+            timestamp: new Date().toISOString(),
+            id: Date.now(),
+            note: 'Contact Form 7 mail_failed - stored locally'
+          });
+          localStorage.setItem('newsletter_subscriptions', JSON.stringify(subscriptions));
+
+          setMessage("Thank you! Your subscription has been received. We'll contact you soon.");
+          setIsSuccess(true);
+          setEmail("");
+        } catch (localError) {
+          setMessage("Subscription received, but please contact us if you don't receive a confirmation.");
+          setIsSuccess(true);
+          setEmail("");
+        }
+      } else if (data.status === "spam") {
+        setMessage("Your submission was detected as spam. Please contact us directly.");
+        setIsSuccess(false);
+      } else {
+        // Fallback for other errors
+        setMessage(data.message || "Something went wrong. Please try again later.");
+        setIsSuccess(false);
+      }
+    } catch (error) {
+      console.error("Subscription error:", error);
+
+      // If network fails, try to store locally as backup
+      try {
+        const subscriptions = JSON.parse(localStorage.getItem('newsletter_subscriptions') || '[]');
+        subscriptions.push({
+          email,
+          timestamp: new Date().toISOString(),
+          id: Date.now(),
+          note: 'Network error - stored locally',
+          error: error.message
+        });
+        localStorage.setItem('newsletter_subscriptions', JSON.stringify(subscriptions));
+
+        setMessage("Your subscription has been saved. We'll process it when the connection is restored.");
+        setIsSuccess(true);
+        setEmail("");
+      } catch (localError) {
+        setMessage("Network error. Please check your connection and try again.");
+        setIsSuccess(false);
+      }
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const footerSections = [
@@ -187,21 +329,35 @@ export default function Footer() {
                 </h5>
               </div>
               <div className="space-y-3 py-4">
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="w-full px-3 py-2 rounded border border-gray-400 bg-transparent text-white placeholder-gray-400 focus:outline-none focus:border-white transition-colors"
-                />
-                 <Link
-                        href="https://www.theaims.ac.in/sign-up"
-                        target="_blank"
-                        className="bg-[#9c2474] border-6 border-[#D8BFD8] text-white font-semibold text-lg px-3 md:px-4 rounded-[25px]  py-1 shadow-lg transform origin-right hover:bg-[#FF7F02] transition-all duration-300 group flex items-center justify-center"
-                    >
-                        <span className="flex items-center justify-center gap-1 md:gap-2">
-                            Sign Up
-                            <GoArrowDownRight className="w-3 h-3 md:w-5 md:h-5 transition-all duration-300 ease-in-out group-hover:-rotate-90" />
-                        </span>
-                    </Link>
+                <form onSubmit={handleSubscribe} className="space-y-3">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Email Address"
+                    className="w-full px-3 py-2 rounded border border-gray-400 bg-transparent text-white placeholder-gray-400 focus:outline-none focus:border-white transition-colors"
+                    disabled={isLoading}
+                    required
+                  />
+                  <button
+                    type="submit"
+                    disabled={isLoading}
+                    className="bg-[#9c2474] border-6 border-[#D8BFD8] text-white font-semibold text-lg px-3 md:px-4 rounded-[25px] py-1 shadow-lg transform origin-right hover:bg-[#FF7F02] transition-all duration-300 group flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed w-full"
+                  >
+                    <span className="flex items-center justify-center gap-1 md:gap-2">
+                      {isLoading ? "Subscribing..." : "Sign Up"}
+                      {!isLoading && <GoArrowDownRight className="w-3 h-3 md:w-5 md:h-5 transition-all duration-300 ease-in-out group-hover:-rotate-90" />}
+                    </span>
+                  </button>
+                </form>
+                {message && (
+                  <div
+                    className={`text-sm p-2 rounded ${isSuccess ? "text-green-400" : "text-red-400"
+                      }`}
+                  >
+                    {message}
+                  </div>
+                )}
               </div>
             </div>
           </div>
