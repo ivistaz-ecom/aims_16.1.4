@@ -11,13 +11,13 @@ const HeroBannerSoB = ({ announcements, pageType = "engineering" }) => {
     {
       desktop: "/home/banner-003.webp",
       tablet: "/home/home-banner-tab-02.webp",
-      mobile: "/home/mobile-mask.webp",
+      mobile: "/home/mobile-latest.webp",
       logo: "/white-empower.svg",
     },
     {
-      desktop: "/home/banner-004.webp",
+      desktop: "/home/banner-004-new.webp",
       tablet: "/home/home-banner-tab-03.webp",
-      mobile: "/home/mobile-carousel-02.webp",
+      mobile: "/home/mobile-carousel-02-new.webp",
       logo: "/white-empower.svg",
     },
   ];

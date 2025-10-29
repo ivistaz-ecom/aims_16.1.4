@@ -22,7 +22,7 @@ const Bullseye = () => {
      <div className="px-4 lg:px-8">
      <div className="container mx-auto hidden lg:block">
         <Image
-          src="/home/bullseye/logos.svg"
+          src="/home/bullseye/logos-new.webp"
           alt="bullseye"
           width={1000}
           height={1000}
