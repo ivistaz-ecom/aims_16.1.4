@@ -84,26 +84,67 @@ const HeroBannerSoB = ({ announcements, pageType = "engineering" }) => {
             key={index}
             className="relative w-full h-[83vh] md:h-[100vh] overflow-hidden"
           >
-            {/* Background Image - Desktop */}
-            <div
-              className="hidden lg:block w-full h-full bg-cover bg-top bg-no-repeat"
-              style={{ backgroundImage: `url(${banner.desktop})` }}
-            />
+            {/* First slide uses Next.js Image with priority for LCP optimization */}
+            {index === 0 ? (
+              <>
+                {/* Desktop Image - Priority */}
+                <Image
+                  src={banner.desktop}
+                  alt="Hero Banner"
+                  fill
+                  priority
+                  fetchPriority="high"
+                  quality={90}
+                  className="hidden lg:block object-cover object-top"
+                  sizes="100vw"
+                />
+                {/* Tablet Image - Priority */}
+                <Image
+                  src={banner.tablet}
+                  alt="Hero Banner"
+                  fill
+                  priority
+                  fetchPriority="high"
+                  quality={90}
+                  className="hidden md:block lg:hidden object-cover object-top"
+                  sizes="100vw"
+                />
+                {/* Mobile Image - Priority */}
+                <Image
+                  src={banner.mobile}
+                  alt="Hero Banner"
+                  fill
+                  priority
+                  fetchPriority="high"
+                  quality={90}
+                  className="md:hidden object-cover object-top"
+                  sizes="100vw"
+                />
+              </>
+            ) : (
+              <>
+                {/* Background Image - Desktop */}
+                <div
+                  className="hidden lg:block w-full h-full bg-cover bg-top bg-no-repeat"
+                  style={{ backgroundImage: `url(${banner.desktop})` }}
+                />
 
-            {/* Background Image - Tablet */}
-            <div
-              className="hidden md:block lg:hidden w-full h-full bg-cover bg-top bg-no-repeat"
-              style={{ backgroundImage: `url(${banner.tablet})` }}
-            />
+                {/* Background Image - Tablet */}
+                <div
+                  className="hidden md:block lg:hidden w-full h-full bg-cover bg-top bg-no-repeat"
+                  style={{ backgroundImage: `url(${banner.tablet})` }}
+                />
 
-            {/* Background Image - Mobile */}
-            <div
-              className="md:hidden w-full h-full bg-cover bg-top bg-no-repeat"
-              style={{ backgroundImage: `url(${banner.mobile})` }}
-            />
+                {/* Background Image - Mobile */}
+                <div
+                  className="md:hidden w-full h-full bg-cover bg-top bg-no-repeat"
+                  style={{ backgroundImage: `url(${banner.mobile})` }}
+                />
+              </>
+            )}
 
             {/* Top Logo Section */}
-            <div className="absolute lg:top-10 top-0 lg:right-0 -right-5">
+            <div className="absolute lg:top-10 top-0 lg:right-0 -right-5 z-10">
               <div className="container mx-auto py-4 px-6 lg:px-8">
                 <div className="flex lg:flex-row flex-col items-start justify-between md:gap-10 gap-4">
                   <div className="flex items-center">
@@ -112,6 +153,8 @@ const HeroBannerSoB = ({ announcements, pageType = "engineering" }) => {
                       alt="Empower Logo"
                       width={150}
                       height={150}
+                      priority={index === 0}
+                      fetchPriority={index === 0 ? "high" : "auto"}
                     />
                   </div>
                 </div>
@@ -119,7 +162,7 @@ const HeroBannerSoB = ({ announcements, pageType = "engineering" }) => {
             </div>
 
             {/* Bottom Content */}
-            <div className="absolute bottom-10 left-0 right-0 px-4 lg:px-0">
+            <div className="absolute bottom-10 left-0 right-0 px-4 lg:px-0 z-10">
               <div className="container mx-auto">
                 <div className="flex lg:flex-row flex-col items-center justify-between md:gap-4 gap-4">
                   <div className="flex items-center"></div>
