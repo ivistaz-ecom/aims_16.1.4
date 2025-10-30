@@ -117,26 +117,44 @@ const MapJourney = () => {
 
         <div className="container mx-auto pt-10 flex gap-5 items-center lg:px-0 px-4">
           <div>
-            <h5 className="text-2xl monser-700">Follow Us</h5>
+            <h4 className="text-2xl monser-700">Follow Us</h4>
           </div>
           <div className="flex gap-4">
             <Link
               href="https://www.instagram.com/aimsinstitutes1994/?hl=en"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="AIMS Institutes on Instagram"
+              title="AIMS Institutes on Instagram"
             >
-              <FaInstagram size={30} />
+              <FaInstagram size={30} aria-hidden="true" />
             </Link>
-            <Link href="https://www.facebook.com/AIMS1994" target="_blank">
-              <CiFacebook size={30} />
+            <Link
+              href="https://www.facebook.com/AIMS1994"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="AIMS Institutes on Facebook"
+              title="AIMS Institutes on Facebook"
+            >
+              <CiFacebook size={30} aria-hidden="true" />
             </Link>
-            <Link href="https://x.com/AIMSinstitutes" target="_blank">
-              <RiTwitterXFill size={30} />
+            <Link
+              href="https://x.com/AIMSinstitutes"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="AIMS Institutes on X (Twitter)"
+              title="AIMS Institutes on X (Twitter)"
+            >
+              <RiTwitterXFill size={30} aria-hidden="true" />
             </Link>
             <Link
               href="https://www.youtube.com/@AIMSInstitutesBangalore"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="AIMS Institutes on YouTube"
+              title="AIMS Institutes on YouTube"
             >
-              <SlSocialYoutube size={30} />
+              <SlSocialYoutube size={30} aria-hidden="true" />
             </Link>
           </div>
         </div>

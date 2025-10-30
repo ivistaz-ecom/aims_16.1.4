@@ -39,7 +39,7 @@ const slides = [
     alt: "card 1",
     link: "/news/a-proud-moment-for-bhm-dept-of-aims-institutes",
   },
-  
+
   {
     id: "s3",
     src: "/home/campus/slide-01.webp",
@@ -49,8 +49,8 @@ const slides = [
     alt: "card 3",
     link: "/news/a-milestone-achievement-for-bba-aviation-at-aims-institutes",
   },
- 
- 
+
+
 ];
 
 export default function AimsCarousel() {
@@ -136,9 +136,9 @@ export default function AimsCarousel() {
                       <p className="text-black text-sm font-medium text-center">
                         {slides[start].description}
                       </p>
-                      <h6  className="text-black text-sm font-medium text-center pt-1">
+                      <time className="text-black text-sm font-medium text-center pt-1">
                         {slides[start].date}
-                      </h6>
+                      </time>
                     </div>
                   )}
                 </motion.div>
@@ -191,9 +191,9 @@ export default function AimsCarousel() {
                           <p className="text-black text-sm md:text-base font-medium text-left break-words whitespace-normal">
                             {item.description}
                           </p>
-                          <h6 className="text-black text-sm font-medium text-left break-words whitespace-normal pt-1">
+                          <time className="text-black text-sm font-medium text-left break-words whitespace-normal pt-1">
                             {item.date}
-                          </h6>
+                          </time>
                         </div>
                       )}
                     </div>

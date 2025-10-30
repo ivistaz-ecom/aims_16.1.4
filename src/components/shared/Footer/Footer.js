@@ -312,10 +312,46 @@ export default function Footer() {
               <div className="py-4">
                 <h6 className="font-semibold text-xl lg:text-2xl mb-4">Follow Us</h6>
                 <div className="flex space-x-4 mt-2 text-2xl">
-                  <a target="_blank" href="https://www.instagram.com/aimsinstitutes1994/?hl=en" className="hover:text-gray-300 transition-colors"><FaInstagram /></a>
-                  <a target="_blank" href="https://www.facebook.com/AIMS1994" className="hover:text-gray-300 transition-colors"><FaFacebookF /></a>
-                  <a target="_blank" href="https://x.com/AIMSinstitutes" className="hover:text-gray-300 transition-colors"><FaXTwitter /></a>
-                  <a target="_blank" href="https://www.youtube.com/@AIMSInstitutesBangalore" className="hover:text-gray-300 transition-colors"><FaYoutube /></a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/aimsinstitutes1994/?hl=en"
+                    aria-label="AIMS Institutes on Instagram"
+                    title="AIMS Institutes on Instagram"
+                    className="hover:text-gray-300 transition-colors"
+                  >
+                    <FaInstagram aria-hidden="true" />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.facebook.com/AIMS1994"
+                    aria-label="AIMS Institutes on Facebook"
+                    title="AIMS Institutes on Facebook"
+                    className="hover:text-gray-300 transition-colors"
+                  >
+                    <FaFacebookF aria-hidden="true" />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://x.com/AIMSinstitutes"
+                    aria-label="AIMS Institutes on X (Twitter)"
+                    title="AIMS Institutes on X (Twitter)"
+                    className="hover:text-gray-300 transition-colors"
+                  >
+                    <FaXTwitter aria-hidden="true" />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.youtube.com/@AIMSInstitutesBangalore"
+                    aria-label="AIMS Institutes on YouTube"
+                    title="AIMS Institutes on YouTube"
+                    className="hover:text-gray-300 transition-colors"
+                  >
+                    <FaYoutube aria-hidden="true" />
+                  </a>
                 </div>
               </div>
 

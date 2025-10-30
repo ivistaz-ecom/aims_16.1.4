@@ -18,9 +18,11 @@ export default function CampusLifeSection() {
             and community. From industry labs and student clubs to fests and
             peer learning, you’ll find your rhythm, and your strengths.
           </p>
-          <Button variant="placement" showReadMore={false}>
-            <Link href="/campus-facilities" className="text-xl">A Look Into Campus Life</Link>
-          </Button>
+          <div className="flex justify-left">
+            <Button variant="placement" showReadMore={false} href="/campus-facilities">
+              <span className="text-xl">A Look Into Campus Life</span>
+            </Button>
+          </div>
         </div>
 
         {/* Right Image with Curved Shape */}
