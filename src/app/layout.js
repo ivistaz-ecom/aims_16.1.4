@@ -9,13 +9,13 @@ import ConditionalLayout from "../components/shared/ConditionalLayout"
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "600", "700"],
 })
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "600", "700"],
 })
 
 export const metadata = {
@@ -138,6 +138,42 @@ const RootLayout = ({ children }) => {
         `}
         </Script>
         {/* End Google Analytics */}
+
+        {/* Defer any external CSS from staging.theaims.ac.in to avoid render-blocking */}
+        <Script id="defer-external-styles" strategy="afterInteractive">
+          {`
+            (function() {
+              function deferLink(link) {
+                try {
+                  if (!link || link.dataset.deferApplied) return;
+                  const href = link.getAttribute('href') || '';
+                  var isTargetHost =
+                    (href.indexOf('staging.theaims.ac.in') !== -1) ||
+                    (href.indexOf('www.theaims.ac.in') !== -1);
+                  if (!isTargetHost || href.indexOf('/css/') === -1) return;
+                  link.dataset.deferApplied = '1';
+                  link.media = 'print';
+                  link.onload = function() { this.media = 'all'; };
+                } catch (_) {}
+              }
+
+              // Defer existing links
+              document.querySelectorAll('link[rel="stylesheet"]').forEach(deferLink);
+
+              // Observe future insertions
+              const observer = new MutationObserver((mutations) => {
+                for (const m of mutations) {
+                  m.addedNodes && m.addedNodes.forEach((node) => {
+                    if (node.tagName === 'LINK' && node.rel === 'stylesheet') {
+                      deferLink(node);
+                    }
+                  });
+                }
+              });
+              observer.observe(document.documentElement || document.body, { childList: true, subtree: true });
+            })();
+          `}
+        </Script>
 
         <ConditionalLayout>{children}</ConditionalLayout>
       </body>
