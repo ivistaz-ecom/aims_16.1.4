@@ -39,10 +39,10 @@ const HeroBanner = () => {
 
               {/* CTA Button */}
               <div className="flex justify-center">
-                <Button
+              <Button
                   showReadMore={false}
                   variant="placement"
-                  href="https://apply.theaims.ac.in/login"
+                  href="/bhm-enquiry-now"
                 >
                   Enquire Now
                 </Button>

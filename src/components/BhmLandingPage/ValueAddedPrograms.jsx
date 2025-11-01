@@ -4,9 +4,9 @@ import React from "react"
 
 const InternshipSection = () => {
   return (
-    <section className="bg-[#f5f0f5] flex flex-col items-center justify-center py-0 ">
+    <section className=" flex flex-col items-center justify-center  ">
       {/* Image */}
-      <div className="relative w-full min-h-[550px] md:min-h-[500px]">
+      <div className="relative w-full min-h-[560px] md:min-h-[500px]">
         <Image
           src="/bhm-landing/internship.webp" // replace with your image path
           alt="Internship"
@@ -17,7 +17,7 @@ const InternshipSection = () => {
 
         {/* Overlay Box */}
         <div
-          className="absolute left-1/2 -translate-x-1/2 -bottom-4 md:bottom-6 lg:bottom-12 lg:top-auto lg:translate-y-0 shadow-md text-center w-[90%] md:w-[60%] lg:w-[50%] px-6 py-6"
+          className="absolute left-1/2 -translate-x-1/2 bottom-1 md:bottom-6 lg:bottom-12 lg:top-auto lg:translate-y-0 shadow-md text-center w-[90%] md:w-[60%] lg:w-[50%] px-6 py-6"
           style={{
             borderRadius: "16px",
             background:
