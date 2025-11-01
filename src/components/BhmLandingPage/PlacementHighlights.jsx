@@ -6,31 +6,31 @@ const PlacementHighlights = () => {
     {
       id: 1,
       icon: "/mba-landing/runner.svg", // Runner icon
-      text: "Consistent 85%+ placement record across BHM streams",
-      highlightWords: ["85%+", "placement record"],
+      text: "Global placement pathways supported by VET by EHL certification",
+      highlightWords: ["VET by EHL certification"],
     },
     {
       id: 2,
       icon: "/mba-landing/company.svg", // Company buildings icon
-      text: "Top recruiters include Marriott, Taj, ITC, Oberoi, and more",
-      highlightWords: ["Marriott, Taj, ITC, Oberoi,"],
+      text: "Internships with leading hospitality and food service brands across India and abroad",
+      highlightWords: ["Internships"],
     },
     {
       id: 3,
       icon: "/mba-landing/money.svg", // Money icon
-      text: "Average package:<br/> ₹6 LPA | Highest: ₹18 LPA",
-      highlightWords: ["₹6 LPA ", "₹18 LPA"],
+      text: "Dedicated Career Services Cell providing personalised mentoring, mock interviews, and placement preparation",
+      highlightWords: ["mentoring, mock interviews, and placement preparation"],
     },
     {
       id: 4,
       icon: "/mba-landing/percent.svg", // Percentage icon
-      text: "Dedicated career mentorship and live hospitality projects",
-      highlightWords: ["career mentorship"],
+      text: "Alumni working in luxury hospitality, QSR management, and international service chains",
+      highlightWords: ["Alumni"],
     },
   ]
 
   return (
-    <section className="relative py-16 px-4">
+    <section className="relative py-10 px-4">
       {/* Full Background Cover */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         {/* Full pink background including curve */}
@@ -57,11 +57,11 @@ const PlacementHighlights = () => {
 
       <div className="relative z-10 container mx-auto max-w-6xl">
         {/* Header Section */}
-        <div className="text-center md:py-16 py-10">
-          <h5 className="text-4xl md:text-5xl lg:text-6xl playfair-500 text-[#002561] mb-6">
+        <div className="text-center lg:py-16 py-10 md:py-16">
+          <h5 className="text-4xl md:text-5xl lg:text-6xl playfair-500 text-[#002561] mb-6 ">
             Placement Highlights
           </h5>
-          <p className="text-lg md:text-xl lg:monser-500 monser-400 leading-relaxed max-w-4xl mx-auto">
+          <p className="text-lg md:text-xl lg:monser-500 monser-400 leading-relaxed max-w-4xl mx-auto  ">
             At AIMS Institutes, every student is guided toward measurable
             success. Our strong hospitality network ensures you're not just
             placed, you're prepared to perform from day one.
@@ -69,7 +69,7 @@ const PlacementHighlights = () => {
         </div>
 
         {/* Highlights Grid */}
-        <div className="bg-white rounded-lg  p-4 md:p-6 mb-8">
+        <div className="bg-white rounded-lg  p-4 md:p-6 ">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-6 lg:gap-6">
             {highlights.map((highlight, index) => (
               <div
@@ -110,7 +110,7 @@ const PlacementHighlights = () => {
                       // All other words get orange highlight
                       return text.replace(
                         word,
-                        `<span class="monser-600 text-[#FF6C02]">${word}</span>`
+                        `<span class="monser-600 text-[#000000]">${word}</span>`
                       )
                     }, highlight.text),
                   }}
@@ -120,25 +120,7 @@ const PlacementHighlights = () => {
           </div>
         </div>
 
-        {/* Placement Highlights Image */}
-        <div className="flex justify-center -mb-16">
-          {/* Mobile Image */}
-          <Image
-            src="/mba-landing/placements-mobile.svg"
-            alt="Placement Highlights"
-            width={1200}
-            height={400}
-            className="w-full max-w-6xl h-auto object-contain lg:hidden pb-10 md:pb-0"
-          />
-          {/* Desktop Image */}
-          <Image
-            src="/mba-landing/placements-2.svg"
-            alt="Placement Highlights"
-            width={1200}
-            height={400}
-            className="w-full max-w-6xl h-auto object-contain hidden lg:block"
-          />
-        </div>
+      
       </div>
     </section>
   )

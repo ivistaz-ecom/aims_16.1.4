@@ -3,7 +3,7 @@ import React from "react"
 const EligibilityAndDates = () => {
   const eligibilityData = [
     "Completed Pre-University Course (PUC) or equivalent; applicants with international qualifications like GCE/JGCSE/GCSE recognised",
-    "A pass certificate or diploma from a Secondary Stage Level Examination (12 Years) in any discipline, recognized by a national-level board or council of any country Selection includes a detailed online application, personal interview, and aptitude test",
+    "A pass certificate or diploma from a Secondary Stage Level Examination (12 Years) in any discipline, recognized by a national-level board or council of any country",
   ]
 
   const datesData = [
@@ -14,10 +14,10 @@ const EligibilityAndDates = () => {
 
   const Card = ({ title, gradient, iconColor, data }) => (
     <div
-      className="mb-8 overflow-hidden"
+      className="mb-8 overflow-hidden  mt-10"
       style={{
         borderRadius: "16px",
-        border: "1px solid #F0A2B8",
+        border: "1px solid #D0B6E2",
         background: "#FFF",
         boxShadow: "0 4px 6px 2px rgba(199, 199, 199, 0.25)",
       }}
@@ -75,8 +75,8 @@ const EligibilityAndDates = () => {
       <div className="container mx-auto max-w-6xl">
         <Card
           title="Eligibility"
-          gradient="linear-gradient(135deg, #E8B4F0 0%, #F0A2B8 100%)"
-          iconColor="#F0A2B8"
+          gradient="linear-gradient(103deg, #D0B6E2 13.3%, #FEDFFB 100.27%)"
+          iconColor="#FEDFFB"
           data={eligibilityData}
         />
 

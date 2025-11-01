@@ -31,12 +31,10 @@ const HeroBanner = () => {
               </h5>
 
               {/* Hero Paragraph */}
-              <p className="text-white text-lg md:text-xl lg:text-2xl monser-400 mb-8 leading-relaxed max-w-3xl mx-auto">
-                <span className="monser-700">VAT by EHL</span> accredited,{" "}
-                <span className="monser-700">NAAC A graded</span>, and{" "}
-                <span className="monser-700">industry-linked</span> - our BHM
-                program blends world-class training with hands-on experience in
-                5-star hotels.
+              <p className="text-white text-lg md:text-xl lg:text-2xl monser-400 mb-8 leading-relaxed max-w-4xl mx-auto">
+              Swiss-certified VET by EHL programs, NAAC A graded, and industry-linked - our hospitality program blends 
+                world-class training with hands-on experience in 5-star hotels.
+            
               </p>
 
               {/* CTA Button */}
@@ -46,7 +44,7 @@ const HeroBanner = () => {
                   variant="placement"
                   href="https://apply.theaims.ac.in/login"
                 >
-                  Start Your Application Today
+                  Enquire Now
                 </Button>
               </div>
             </div>

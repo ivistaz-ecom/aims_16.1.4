@@ -130,14 +130,7 @@ const scholarships = [
 const FeeconcessionTable = () => {
   return (
     <>
-      {/* <div className="bg-[#E6F8F6]  text-center py-5">
-        <h1 className="text-2xl md:text-3xl playfair-300 text-[#9B2564] -mt-2">
-          AIMS Commitment to Affordability
-        </h1>
-        <h5 className="text-lg md:text-4xl playfair-300 text-[#3B2A7B] -mt-6">
-          Fee Concession for Eligible Students
-        </h5>
-      </div> */}
+  
          <section className="">
         {/* Top Paragraph */}
         <div className="max-w-5xl mx-auto text-center text-[#1A2A5B] text-sm md:text-base leading-relaxed py-10 px-4">
@@ -176,7 +169,7 @@ const FeeconcessionTable = () => {
         </div>
       </section>
       <div className="lg:px-8">
-        <div className="container mx-auto p-6 mb-5">
+        <div className="container mx-auto lg:px-0 px-4 mb-5">
           <h2 className="text-center text-xl md:text-2xl font-bold mb-6 monser-500 ">
           Your Dreams, Our Support: AIMS Scholarship Program
           </h2>
@@ -215,7 +208,7 @@ const FeeconcessionTable = () => {
                       ) : (
                         // Bullet list for entries 1-3
                         <div>
-                          <ul className="list-disc pl-5 text-sm">
+                          <ul className="list-disc pl-5 text-md">
                             {item.documents.map((doc, idx) => (
                               <li key={idx}>{doc}</li>
                             ))}
