@@ -1,7 +1,6 @@
 "use client"
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import Select from "react-select"
-import Modal from "react-modal"
 import { GoArrowDownRight, GoArrowUpRight } from "react-icons/go"
 import { Country, State, City } from "country-state-city"
 
@@ -16,19 +15,7 @@ const ContactForm = () => {
   })
 
   const [errors, setErrors] = useState({})
-  const [status, setStatus] = useState({
-    loading: false,
-    success: null,
-    message: "",
-  })
-  const [showSuccessModal, setShowSuccessModal] = useState(false)
-
-  // Set app element for react-modal accessibility
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      Modal.setAppElement("body")
-    }
-  }, [])
+  const [showSuccess, setShowSuccess] = useState(false)
 
   // Get selected country and state objects for filtering
   const selectedCountry = Country.getAllCountries().find(
@@ -191,17 +178,33 @@ const ContactForm = () => {
     return newErrors
   }
 
-  // 💾 Save to server JSON file as backup (silent, no errors shown to user)
-  const saveToBackup = async (data) => {
+  // 💾 Send to WordPress Contact Form 7 as backup (fire-and-forget)
+  const saveToWordPress = async (data) => {
     try {
-      // Silently save backup - don't await or show any errors
-      fetch("/api/backup-enquiry", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      }).catch(() => {
+      // ⚙️ Create FormData matching CF7 field names
+      const form = new FormData()
+      form.append("name", data.name)
+      form.append("email", data.email)
+      form.append("phone", data.phone)
+      form.append("country", data.country)
+      form.append("state", data.state)
+      form.append("city", data.city)
+
+      // Add required CF7 parameters
+      form.append("_wpcf7", "886")
+      form.append("_wpcf7_version", "5.7.7")
+      form.append("_wpcf7_locale", "en_US")
+      form.append("_wpcf7_unit_tag", "wpcf7-f886-p" + Date.now())
+      form.append("_wpcf7_container_post", "0")
+
+      // Send to WordPress Contact Form 7 API (silent, no errors shown to user)
+      fetch(
+        "https://docs.theaims.ac.in/wp-json/contact-form-7/v1/contact-forms/886/feedback",
+        {
+          method: "POST",
+          body: form,
+        }
+      ).catch(() => {
         // Silently fail - don't log or show anything to user
       })
     } catch (error) {
@@ -219,8 +222,19 @@ const ContactForm = () => {
       return
     }
 
-    // ⚙️ Prepare data for Google Sheets
+    // ⚙️ Prepare data for Google Sheets (include sheetName for BHM)
     const googleSheetsData = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      country: selectedCountry?.name || formData.country,
+      state: selectedState?.name || formData.state,
+      city: formData.city,
+      sheetName: "BHM Enquiries", // BHM sheet name
+    }
+
+    // Prepare data for WordPress backup
+    const wordPressData = {
       name: formData.name,
       email: formData.email,
       phone: formData.phone,
@@ -229,13 +243,12 @@ const ContactForm = () => {
       city: formData.city,
     }
 
-    // Save to backup and Google Sheets in background (fire-and-forget)
-    // Both calls happen asynchronously without blocking the UI
-    saveToBackup(googleSheetsData)
+    // Send to WordPress as backup (fire-and-forget, no await)
+    saveToWordPress(wordPressData)
 
     // Send to Google Sheets (fire-and-forget, no await)
     fetch(
-      "https://script.google.com/macros/s/AKfycbwbLP5gvPkj8YVaSZ7Wx6ZKi7ojK8nAeokWX22qS0xzZ8rBrHowwOFmU3StqUCB1J_-/exec",
+      "https://script.google.com/macros/s/AKfycbxDhi4AcFcPtjdO8ss3TAI0Eda0YIPc6xBbMyIMNYGvTP0ksZrjUlcNfKygjtWchbzA/exec",
       {
         method: "POST",
         mode: "no-cors", // Bypass CORS - cannot use custom headers or read response
@@ -243,14 +256,7 @@ const ContactForm = () => {
         body: JSON.stringify(googleSheetsData), // Send as JSON string
       }
     ).catch(() => {
-      // Silently handle errors - data is already backed up
-    })
-
-    // Show success immediately - don't wait for API calls
-    setStatus({
-      loading: false,
-      success: true,
-      message: "",
+      // Silently handle errors
     })
 
     // Clear all fields immediately
@@ -264,8 +270,13 @@ const ContactForm = () => {
     })
     setErrors({})
 
-    // Show success modal immediately
-    setShowSuccessModal(true)
+    // Show success message
+    setShowSuccess(true)
+
+    // Hide success message after 10 seconds
+    setTimeout(() => {
+      setShowSuccess(false)
+    }, 10000)
   }
 
   // Get selected values for react-select (null if empty)
@@ -454,72 +465,18 @@ const ContactForm = () => {
                 </div>
               </button>
             </div>
+
+            {/* Success Message */}
+            {showSuccess && (
+              <div className="text-center mt-6">
+                <p className="text-lg md:text-xl text-green-600 font-semibold monser-600">
+                  ✓ We've received your enquiry. Our team will contact you soon!
+                </p>
+              </div>
+            )}
           </form>
         </div>
       </div>
-
-      {/* Success Modal */}
-      <Modal
-        isOpen={showSuccessModal}
-        onRequestClose={() => setShowSuccessModal(false)}
-        contentLabel="Success Message"
-        className="outline-none"
-        overlayClassName="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 bg-opacity-8 0 backdrop-blur-sm"
-        style={{
-          overlay: {
-            backgroundColor: "rgba(0, 0, 0, 0.6)",
-            zIndex: 9999,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          },
-          content: {
-            position: "relative",
-            inset: "auto",
-            border: "none",
-            background: "",
-            padding: 0,
-            maxWidth: "420px",
-            width: "100%",
-            outline: "none",
-          },
-        }}
-      >
-        <div className="bg-white rounded-2xl shadow-2xl p-6 md:p-8 text-center mx-auto">
-          {/* Success Icon */}
-          <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-4">
-            <svg
-              className="h-10 w-10 text-green-600"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 13l4 4L19 7"
-              />
-            </svg>
-          </div>
-
-          {/* Message */}
-          <h5 className="text-2xl font-semibold text-[#1b2950] mb-3 playfair-400">
-            We've received your enquiry.
-          </h5>
-          <p className="text-sm md:text-base text-gray-600 mb-5 monser-400 leading-relaxed">
-            Our team will contact you soon to guide you through the next steps.
-          </p>
-
-          {/* Close Button */}
-          <button
-            onClick={() => setShowSuccessModal(false)}
-            className="w-full bg-[#A22977] text-white py-2.5 px-6 rounded-lg text-sm md:text-base font-medium hover:bg-[#8a2266] transition-all duration-300 monser-400 shadow-md hover:shadow-lg"
-          >
-            Close
-          </button>
-        </div>
-      </Modal>
     </section>
   )
 }
