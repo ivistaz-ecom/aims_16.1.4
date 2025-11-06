@@ -19,7 +19,7 @@ export default function Header() {
                 height={120}
                 priority
                 quality={100}
-                className="h-12 w-auto lg:h-16 xl:h-20"
+                className="h-12 w-auto lg:h-18 xl:h-16"
               />
             </Link>
           </div>

@@ -294,7 +294,7 @@ const ContactForm = () => {
     <section className="bg-white text-center md:py-12 py-5">
       <h2 className="text-4xl font-serif text-[#1b2950] mb-10">Enquire Now</h2>
 
-      <div className="bg-[#41136b] text-white px-4 md:px-0 py-10 mx-auto">
+      <div className="bg-[#41136b] text-white px-4 md:px-0 py-10 mx-auto lg:px-14">
         <div className="container mx-auto">
           <form className="space-y-8" onSubmit={handleSubmit}>
             {/* 👤 Name */}

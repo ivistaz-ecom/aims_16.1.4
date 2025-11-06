@@ -8,10 +8,16 @@ import LandingPageHeader from "./HeaderForLandingPage/Header"
 const ConditionalLayout = ({ children }) => {
   const pathname = usePathname()
 
-  // Check if current path is mba-course-admissions or bhm-course-admissions
+  // Check if current path is a landing page (course admissions or enquiry pages)
   const isMBACourseAdmissions = pathname === "/mba-course-admissions"
   const isBHMCourseAdmissions = pathname === "/bhm-course-admissions"
-  const isLandingPage = isMBACourseAdmissions || isBHMCourseAdmissions
+  const isMBAEnquiryNow = pathname === "/mba-enquiry-now"
+  const isBHMEnquiryNow = pathname === "/bhm-enquiry-now"
+  const isLandingPage =
+    isMBACourseAdmissions ||
+    isBHMCourseAdmissions ||
+    isMBAEnquiryNow ||
+    isBHMEnquiryNow
 
   return (
     <>
