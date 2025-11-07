@@ -19,7 +19,7 @@ const AnnualReport = () => {
             <div className="px-4 lg:px-8">
                 <div className='container mx-auto flex flex-col py-10 space-y-4'>
                     <div className='space-y-2'>
-                        <p className='text-lg text-[#0C2165]'>
+                        <p className='text-lg'>
                             AIMS Institutes publishes its annual academic and administrative report as per statutory requirements
                         </p>
                         <p>

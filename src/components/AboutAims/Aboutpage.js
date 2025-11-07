@@ -44,7 +44,7 @@ const Aboutpage = () => {
               AIMS offers an environment that blends academic rigour with professional exposure. The institute provides world-class, state-of-the-art infrastructure, designed to foster innovation, creativity, and collaboration.
             </p>
             <p>
-              At AIMS, education goes beyond textbooks. The institution invites experts from corporate and non-profit sectors to provide students with real-world insights and practical learning experiences. In addition to the academic curriculum, special training programs by professional bodies are organised to enhance students’ presentation, communication, teamwork, leadership, and analytical skills, making them industry-ready professionals.
+              At AIMS, education goes beyond textbooks. The institution invites experts from corporate and non-profit sectors to provide students with <br className="hidden md:block lg:block 2xl:hidden" /> real-world insights and practical learning experiences. In addition to the academic curriculum, special training programs by professional bodies are organised to enhance students’ presentation, communication, teamwork, leadership, and analytical skills, making them industry-ready professionals.
             </p>
             <p>
               Driven by the belief that true education nurtures both intellect and character, AIMS continues to create leaders, entrepreneurs, and changemakers who are equipped to meet the challenges of the modern world.
