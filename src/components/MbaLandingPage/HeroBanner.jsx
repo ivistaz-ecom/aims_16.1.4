@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect } from "react"
-import Button from "@/shared/Button"
+import Image from "next/image"
 import HeroEnquiryForm from "./HeroEnquiryForm"
 
 const HeroBanner = () => {
@@ -68,24 +68,24 @@ const HeroBanner = () => {
         className="relative w-full h-[88vh] lg:h-[88vh] overflow-hidden"
       >
         {/* Background Image - Desktop */}
-        <div className="hidden md:block w-full h-full bg-cover bg-top bg-no-repeat bg-[url('/mba-landing/herobanner-desktop.webp')]" />
+        <div className="hidden md:block w-full h-full bg-cover bg-top bg-no-repeat bg-[url('/mba-landing/MBA_Banner_Desktop.webp')]" />
 
         {/* Background Image - Mobile */}
-        <div className="md:hidden w-full h-full bg-cover bg-top bg-no-repeat bg-[url('/mba-landing/mobile-banner.webp')]" />
+        <div className="md:hidden w-full h-full bg-cover bg-top bg-no-repeat bg-[url('/mba-landing/MBA_Banner_Mobile.webp')]" />
 
         {/* Gradient Overlay */}
-        <div
+        {/* <div
           className="absolute inset-0"
           style={{
             background:
               "linear-gradient(179deg, rgba(12, 33, 101, 0.00) 11%, #08101D 99%)",
           }}
-        ></div>
+        ></div> */}
 
         <div className="absolute inset-0 px-4 lg:px-10">
-          <div className="relative flex h-full w-full flex-col justify-end gap-10 pb-12 pt-16 lg:block lg:pb-0 lg:pt-0">
+          <div className="relative flex h-full w-full flex-col justify-end gap-10 pb-0 pt-16 lg:flex-row lg:items-end lg:justify-between lg:gap-12 lg:pb-12 lg:pt-20">
             {/* Hero Copy */}
-            <div className="order-1 max-w-[640px] text-center text-white lg:absolute lg:bottom-12 lg:left-10 lg:text-left lg:order-none">
+            <div className="order-1 max-w-[650px] text-center text-white lg:order-none lg:text-left">
               <h5 className="text-3xl md:text-5xl lg:text-6xl playfair-500 mb-5 tracking-wide">
                 An MBA That Helps You Get Hired
               </h5>
@@ -99,14 +99,14 @@ const HeroBanner = () => {
             </div>
 
             {/* Desktop Form */}
-            <div className="hidden lg:absolute lg:right-10 lg:top-10 lg:block lg:w-[38%]">
+            <div className="hidden lg:flex lg:w-full lg:max-w-[520px] lg:justify-end lg:flex-shrink-0">
               <HeroEnquiryForm />
             </div>
           </div>
         </div>
 
         {/* Empower Image - Top Left */}
-        {/* <div className="absolute top-5 left-0 right-0 lg:mx-10 mx-2">
+        <div className="absolute top-5 left-0 lg:mx-10 mx-2">
           <div className="container mx-auto md:py-4 py-0">
             <div className="flex items-end justify-end pb-10 md:pb-0 lg:pb-0">
               <Image
@@ -114,10 +114,18 @@ const HeroBanner = () => {
                 alt="Empowering Minds"
                 width={200}
                 height={200}
+                className="md:hidden"
+              />
+              <Image
+                src="/black-empower.svg"
+                alt="Empowering Minds"
+                width={200}
+                height={200}
+                className="hidden md:block"
               />
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </>
   )
