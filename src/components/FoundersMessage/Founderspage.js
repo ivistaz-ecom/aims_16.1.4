@@ -20,7 +20,7 @@ const foundersData = [
     message:
       "Having a single-minded focus on addressing student needs, we are clear that it is our responsibility to help our students realize their goals in an increasingly competitive world. We have consistently produced excellent results and AIMS alumni can be found at premier organizations in India and overseas. From academic excellence to leadership qualities, in a nurturing environment with required infrastructure, AIMS offers everything needed to succeed as a student.",
   },
-  
+
   {
     title: " CEO",
     titles: ["About  CEO", " CEO’s Message"],
@@ -68,7 +68,9 @@ Dr Ramamurthy has authored books like “Advanced Financial Accounting,” “Bu
 
 const FoundersMessage = () => {
   const [activeTabs, setActiveTabs] = useState(foundersData.map(() => 0)) // 0 = first tab (About)
-  const [showFullAbout, setShowFullAbout] = useState(foundersData.map(() => false))
+  const [showFullAbout, setShowFullAbout] = useState(
+    foundersData.map(() => false)
+  )
 
   const handleTabClick = (index, tabIndex) => {
     const updatedTabs = [...activeTabs]
@@ -131,6 +133,7 @@ const FoundersMessage = () => {
                       : "bg-white !text-[#A12876] border border-[#A12876] hover:bg-[#A12876] hover:!text-white"
                   }`}
                   onClick={() => handleTabClick(index, tabIndex)}
+                  cursor="pointer"
                 >
                   {tabTitle}
                 </Button>
@@ -138,7 +141,7 @@ const FoundersMessage = () => {
             </div>
 
             {/* Content */}
-            <div className="mt-4 text-left ">
+            <div className="mt-4 text-left">
               {activeTabs[index] === 0 ? (
                 <>
                   <p
@@ -153,6 +156,7 @@ const FoundersMessage = () => {
                     onClick={() => toggleReadMore(index)}
                   >
                     {showFullAbout[index] ? "Read Less" : "Read More"}
+                    
                   </button>
                 </>
               ) : (

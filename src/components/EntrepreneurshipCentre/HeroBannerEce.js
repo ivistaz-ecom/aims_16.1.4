@@ -31,7 +31,8 @@ const HeroBannerEce = ({ announcements, pageType = 'engineering' }) => {
                                         AIMS <br className='hidden lg:block' />
                                         Entrepreneurship Excellence Centre
                                         <br className='hidden lg:block' />
-                                        (AEEC)
+                                        <span className="lg:ml-0  ml-2  playfair-400">(AEEC)</span>
+                                      
                                     </h1>
                                 </div>
                                 {/* <div className="flex items-center">

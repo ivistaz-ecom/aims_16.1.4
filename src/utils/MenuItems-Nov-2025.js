@@ -3,7 +3,7 @@ export const MenuItems = [
         title: "About AIMS",
         links: [
             { name: "Overview", href: "/aims-overview" },
-            { name: "Act and Statutes or MoA", href: "/acts-and-statutes-moa" },
+            { name: "Acts and Statutes or MoA", href: "/acts-and-statutes-moa" },
             { name: "Institutional Development Plan", href: "/institutional-development-plan/IDP.pdf" },
             // { name: "Swayam-NPTEL", href: "/upcoming-page" },
             { name: "Accreditation and Rankings", href: "/accreditations-rankings" },
@@ -32,12 +32,12 @@ export const MenuItems = [
         links: [
             { name: "Academic Program Details", href: "/upcoming-page" },
             { name: "Academic Calendar", href: "/aims-academic-calendar" },
-            { name: "Examinations", href: "/upcoming-page" },
+            { name: "Examinations", href: "/examinations" },
             // { name: "Schools & Departments", href: "/upcoming-page" },
-            { name: "Faculty Details", href: "/upcoming-page" },
+            { name: "Faculty Details", href: "/aims-list-of-faculty" },
             { name: "Swayam NPTEL", href: "/upcoming-page" },
-            { name: "Internal Quality Assurance Cell (IQAC)", href: "/upcoming-page" },
-            { name: "Library & Information Centre", href: "/upcoming-page" },
+            { name: "Internal Quality Assurance Cell (IQAC)", href: "/iqac-internal-quality-assurance-cell" },
+            { name: "Library & Information Centre", href: "/library-and-information-centre" },
             { name: "Academic Collaborations", href: "/upcoming-page" },
         ],
     },
@@ -45,7 +45,7 @@ export const MenuItems = [
         title: "Admissions & Fee",
         links: [
             { name: "Admissions Process & Guidelines", href: "/admission-process" },
-            { name: "Fee Refund policy", href: "/upcoming-page" },
+            { name: "Fee Refund policy", href: "/Fee Payment Terms & Conditions (2).pdf" },
             { name: "Scholarships", href: "/scholarships" },
             { name: "Education Loans", href: "/education-loans" },
             { name: "FAQ", href: "/faqs" },
@@ -54,7 +54,7 @@ export const MenuItems = [
     {
         title: "Research",
         links: [
-            { name: "Research & Development Cell", href: "/upcoming-page" },
+            { name: "Research & Development Cell", href: "/centre-for-research" },
             { name: "Entrepreneurship Cell", href: "/upcoming-page" },
             { name: "Central Facilities", href: "/upcoming-page" },
             { name: "AIMS Journal of Research", href: "/aims-journal-of-research" },
@@ -82,7 +82,7 @@ export const MenuItems = [
             { name: "Placement Cell", href: "/upcoming-page" },
             { name: "Health facilities", href: "/upcoming-page" },
             { name: "Internal Complaint Committee", href: "/upcoming-page" },
-            { name: "Student Grievance Redressal Committee (SGRC)", href: "/upcoming-page" },
+            { name: "Student Grievance Redressal Committee (SGRC)", href: "/grievance-redressal" },
             { name: "Anti-Ragging Cell", href: "/cells-committees-antiragging-sexual-harassment-grievances-equal-opportunity" },
             { name: "Anti-Sexual Harassment Committee", href: "/cells-committees-antiragging-sexual-harassment-grievances-equal-opportunity" },
             { name: "Equal Opportunity Cell", href: "/cells-committees-antiragging-sexual-harassment-grievances-equal-opportunity" },

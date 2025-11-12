@@ -28,8 +28,8 @@ const HeroBannerCfc = ({ announcements, pageType = 'engineering' }) => {
                                 <div className="flex items-center">
                                     <h1 className="text-white text-2xl lg:text-[60px] playfair-300 lg:leading-16 md:text-start text-center">
                                         AIMS Centre for <span className='italic playfair-400 text-[#D2EEE8]'>Consulting</span>
-                                        <br className='hidden lg:block' />
-                                        (ACC)
+                                        <br className='hidden lg:block' />{""}
+                                        <span className="lg:ml-0  ml-2  playfair-400">(ACC)</span>
                                     </h1>
                                 </div>
                             </div>
