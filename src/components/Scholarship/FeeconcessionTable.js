@@ -6,14 +6,14 @@ const scholarships = [
     slno: 1,
     category: "Smt. Nagarathnamma Scholarship (Max 2 Candidates per Program)",
     eligibility:
-      "90% or above in 12th / A Level (for UG) or Graduation (for PG)",
+      "90% or above in 12th/A Level (for UG) or Graduation (for PG)",
     documents: [
       "10th & 12th academic transcripts (UG)",
       "10th, 12th, Graduation transcripts (PG)",
       "Evidence of community service",
       "Certificates of national/international achievements (if any)",
       "2 Letters of Recommendation",
-      "Aadhar Card / PAN Card copies",
+      "Aadhar Card/PAN Card copies",
       "2 Passport size photographs",
     ],
     scholarship: "100%",
@@ -22,14 +22,14 @@ const scholarships = [
     slno: 2,
     category: "AIMS Merit Scholarship (Max 2 Candidates per Program)",
     eligibility:
-      "90% or above in 12th / A Level (for UG) or Graduation (for PG)",
+      "90% or above in 12th/A Level (for UG) or Graduation (for PG)",
     documents: [
       "10th & 12th academic transcripts (UG)",
       "10th, 12th, Graduation transcripts (PG)",
       "Evidence of community service",
       "Certificates of national/international achievements (if any)",
       "2 Letters of Recommendation",
-      "Aadhar Card / PAN Card copies",
+      "Aadhar Card/PAN Card copies",
       "2 Passport size photographs",
     ],
     scholarship: "50%",
@@ -38,13 +38,13 @@ const scholarships = [
     slno: 3,
     category: "AIMS Scholarship for Sports (Max 2 Candidates per Program)",
     eligibility:
-      "Recognized District/Zonal /State/National level performer + 60% marks in 12th / A Level (for UG) or Graduation (for PG)",
+      "Recognised District/Zonal/State/National level performer + 60% marks in 12th/A Level (for UG) or Graduation (for PG)",
     documents: [
       "10th & 12th academic transcripts (UG)",
       "10th, 12th, Graduation transcripts (PG)",
       "Sports achievement certificates",
       "2 Letters of Recommendation",
-      "Aadhar Card / PAN Card copies",
+      "Aadhar Card/PAN Card copies",
       "2 Passport size photographs",
     ],
     scholarship:
@@ -67,7 +67,7 @@ const scholarships = [
   {
     slno: 5,
     category:
-      "AIMS Alumni / Staff Referral / Student Referral / AIMERS Siblings",
+      "AIMS Alumni/Staff Referral/Student Referral/AIMERS Siblings",
     eligibility:
       "Completion of 12th/'A' Level for UG and graduation for PG from a recognized institution",
     documents: [
@@ -82,7 +82,7 @@ const scholarships = [
   {
     slno: 6,
     category:
-      "Defence & Armed Forces / Peenya Industrial Association Employees",
+      "Defence & Armed Forces/Peenya Industrial Association Employees",
     eligibility:
       "Indian citizen; Completion of 12th/'A' Level for UG and graduation for PG",
     documents: [
@@ -97,7 +97,7 @@ const scholarships = [
   },
   {
     slno: 7,
-    category: "SC / ST Karnataka Students",
+    category: "SC/ST Karnataka Students",
     eligibility:
       "Indian citizen; Completion of 12th/'A' Level for UG and graduation for PG",
     documents: [

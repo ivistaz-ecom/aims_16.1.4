@@ -49,9 +49,9 @@ const HowToApply = () => {
                   className="text-[#A22877] underline monser-600 hover:text-[#8b1f5f]"
                 >
                   Apply Now
-                </a>{" "}
-                button at the top-right of this website. The application is
-                straightforward and designed to support students at every stage.
+                </a>
+                {""} button. The application is straightforward and designed to
+                support students at every stage.
               </p>
 
               <div className="space-y-3 sm:space-y-4">
@@ -73,6 +73,21 @@ const HowToApply = () => {
                     <span className="monser-600">
                       important deadlines for college admissions 2025
                     </span>
+                  </li>
+                  <li className="text-base md:text-lg monser-400 leading-relaxed pl-2">
+                    See{" "}
+                    <span className="monser-600">
+                      <a
+                        href="/Admission Policies and Procedures.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#A22877] underline monser-600 hover:text-[#8b1f5f]"
+                      >
+                        Admission Policies & Procedures
+                      </a>
+                    </span>
+                    {" "}
+                      for eligibility, scholarships & transfer rules
                   </li>
                 </ul>
               </div>

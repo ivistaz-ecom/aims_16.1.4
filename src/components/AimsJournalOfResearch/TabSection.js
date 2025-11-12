@@ -9,7 +9,7 @@ const AdmissionTabsSection = () => {
 
       subheading: "Submission Guidelines",
       subcontent:
-        "Authors must ensure the following before submission to minimize the risk of rejection.",
+        "Authors must ensure the following before submission to minimise the risk of rejection.",
       pointsheading: "Author information:",
       points: [
         "Information of all co-authors to be provided",
