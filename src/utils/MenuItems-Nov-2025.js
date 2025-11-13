@@ -45,7 +45,7 @@ export const MenuItems = [
         title: "Admissions & Fee",
         links: [
             { name: "Admissions Process & Guidelines", href: "/admission-process" },
-            { name: "Fee Refund policy", href: "/fee-refund-policy/Fee Payment Terms & Conditions.pdf" },
+            { name: "Fee Refund policy", href: "/fee-refund-policy/fee-payment-terms-and-conditions.pdf" },
             { name: "Scholarships", href: "/scholarships" },
             { name: "Education Loans", href: "/education-loans" },
             { name: "FAQ", href: "/faqs" },
