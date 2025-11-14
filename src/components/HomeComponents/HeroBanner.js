@@ -237,7 +237,7 @@ const HeroBannerSoB = ({ announcements, pageType = "admissions" }) => {
             </div>
 
             {/* Bottom Content */}
-            <div className="absolute top-[56%] lg:top-auto md:top-auto lg:bottom-44  bottom-0 md:bottom-52 left-1/2 lg:left-44 px-4 lg:px-0 z-10 -translate-x-1/2 lg:translate-x-0">
+            <div className="absolute top-[47%] lg:top-auto md:top-auto lg:bottom-44  bottom-0 md:bottom-52 left-1/2 lg:left-44 px-4 lg:px-0 z-10 -translate-x-1/2 lg:translate-x-0">
               <div className="container mx-auto">
                 <div className="flex lg:flex-row flex-col items-center justify-center lg:justify-between text-center lg:text-left md:gap-4 gap-4">
                   {index === 1 ? (
