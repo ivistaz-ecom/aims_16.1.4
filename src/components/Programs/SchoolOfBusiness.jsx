@@ -18,7 +18,7 @@ const programs = [
   },
   {
     title: "BBA+ CA/ACCA",
-    href: "/upcoming-page",
+    href: "/business-school/bachelor-business-administration",
   },
 ]
 

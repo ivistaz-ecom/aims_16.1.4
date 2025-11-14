@@ -1,11 +1,119 @@
-"use client";
-import React, { useState } from "react";
-import { RiArrowDropDownLine } from "react-icons/ri";
-import { GoArrowDownRight, GoArrowUpRight } from "react-icons/go";
+"use client"
+import React, { useState } from "react"
+import Select from "react-select"
+import { GoArrowDownRight, GoArrowUpRight } from "react-icons/go"
+
+const GOOGLE_SHEETS_ENDPOINT =
+  "https://script.google.com/macros/s/AKfycbxbhsBMXJPLq4plqcQPe1FKVz6i_W8dkgVBDz36aJ9o7ITSFpFmN0uoFKY7ShTKVbPj/exec"
+
+const enquiryOptions = [
+  {
+    value: "Academics - Principal / Registrar / Programme Director",
+    label: "Academics - Principal / Registrar / Programme Director",
+  },
+  { value: "Admission", label: "Admission" },
+  { value: "Alumni", label: "Alumni" },
+  { value: "Events", label: "Events" },
+  {
+    value: "Placements / Corporate Relations",
+    label: "Placements / Corporate Relations",
+  },
+  { value: "Others", label: "Others" },
+]
+
+const courseOptions = [
+  { value: "Ph.D in Management", label: "Ph.D in Management" },
+  {
+    value: "MBA Master of Business Administration (General)",
+    label: "MBA Master of Business Administration (General)",
+  },
+  {
+    value: "BBA Bachelor of Business Administration",
+    label: "BBA Bachelor of Business Administration",
+  },
+  { value: "BBA Aviation", label: "BBA Aviation" },
+  { value: "Master of Commerce MCOM", label: "Master of Commerce MCOM" },
+  { value: "Bachelor of Commerce BCOM", label: "Bachelor of Commerce BCOM" },
+  {
+    value: "BHM Bachelor of Hotel Management",
+    label: "BHM Bachelor of Hotel Management",
+  },
+  {
+    value:
+      "Certificate in Vocational Studies in QSR (Quick Service Restaurant)",
+    label:
+      "Certificate in Vocational Studies in QSR (Quick Service Restaurant)",
+  },
+  {
+    value: "Culinary Professional Diploma (VET by EHL)",
+    label: "Culinary Professional Diploma (VET by EHL)",
+  },
+  {
+    value: "Food & Beverage Service Professional Diploma (VET by EHL)",
+    label: "Food & Beverage Service Professional Diploma (VET by EHL)",
+  },
+  {
+    value: "Rooms Professional Diploma (VET by EHL)",
+    label: "Rooms Professional Diploma (VET by EHL)",
+  },
+  {
+    value: "Master of Computer Application MCA",
+    label: "Master of Computer Application MCA",
+  },
+  {
+    value: "Bachelor of Computer Application BCA",
+    label: "Bachelor of Computer Application BCA",
+  },
+  {
+    value: "AI/ML | Data Science | Full-Stack Development BCA+",
+    label: "AI/ML | Data Science | Full-Stack Development BCA+",
+  },
+  { value: "PCMB", label: "PCMB" },
+  { value: "PCMC", label: "PCMC" },
+  { value: "CEBA", label: "CEBA" },
+]
+
+const getSelectStyles = (hasError) => ({
+  control: (provided, state) => ({
+    ...provided,
+    backgroundColor: "#e1f4f1",
+    borderColor: hasError
+      ? "#f87171"
+      : state.isFocused
+      ? "#A22977"
+      : "transparent",
+    borderWidth: "2px",
+    borderRadius: "0.375rem",
+    boxShadow: "none",
+    minHeight: "48px",
+  }),
+  placeholder: (provided) => ({
+    ...provided,
+    color: "#6b7280",
+  }),
+  singleValue: (provided) => ({
+    ...provided,
+    color: "#1b2950",
+  }),
+  option: (provided, state) => ({
+    ...provided,
+    backgroundColor: state.isSelected
+      ? "#A22977"
+      : state.isFocused
+      ? "#f3e8ff"
+      : "white",
+    color: state.isSelected ? "#ffffff" : "#1b2950",
+    cursor: "pointer",
+  }),
+  menu: (provided) => ({
+    ...provided,
+    zIndex: 30,
+  }),
+})
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    name: "",
+    fullName: "",
     lastName: "",
     email: "",
     contact: "",
@@ -13,156 +121,126 @@ const ContactForm = () => {
     course: "",
     hearAboutUs: "",
     message: "",
-  });
+  })
 
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState({})
   const [status, setStatus] = useState({
     loading: false,
     success: null,
     message: "",
-  });
+  })
+
+  const sendToGoogleSheets = (payload) => {
+    fetch(GOOGLE_SHEETS_ENDPOINT, {
+      method: "POST",
+      mode: "no-cors",
+      redirect: "follow",
+      body: JSON.stringify(payload),
+    }).catch(() => {
+      // Silent fail
+    })
+  }
 
   // 🧠 Handle input change
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: "" });
-  };
+    const { name, value } = e.target
+    const nextValue =
+      name === "contact" ? value.replace(/\D/g, "").slice(0, 10) : value
+
+    setFormData({ ...formData, [name]: nextValue })
+    setErrors({ ...errors, [name]: "" })
+  }
+
+  const handleSelectChange = (field) => (option) => {
+    setFormData((prev) => ({ ...prev, [field]: option ? option.value : "" }))
+    setErrors((prev) => ({ ...prev, [field]: "" }))
+  }
 
   // ✅ Validate required fields
   const validateForm = () => {
-    const newErrors = {};
-    if (!formData.name.trim()) newErrors.name = "Name is required";
-    if (!formData.email.trim()) newErrors.email = "Email is required";
-    if (!formData.enquiry.trim()) newErrors.enquiry = "Please select an enquiry type";
-    if (!formData.message.trim()) newErrors.message = "Message is required";
-    return newErrors;
-  };
+    const newErrors = {}
+    if (!formData.fullName.trim()) newErrors.fullName = "Full Name is required"
+    if (!formData.email.trim()) newErrors.email = "Email is required"
+    if (formData.contact.trim().length !== 10)
+      newErrors.contact = "Contact number must be 10 digits"
+    if (!formData.enquiry.trim())
+      newErrors.enquiry = "Please select an enquiry type"
+    if (!formData.message.trim()) newErrors.message = "Message is required"
+    return newErrors
+  }
 
   // 🚀 Handle submit
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault()
 
-    const validationErrors = validateForm();
+    const validationErrors = validateForm()
     if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-      return;
+      setErrors(validationErrors)
+      return
     }
 
-    setStatus({ loading: true, success: null, message: "" });
-
-    try {
-      // ⚙️ Create FormData matching your CF7 field names
-      const form = new FormData();
-      form.append("your-name", formData.name);
-      form.append("your-last-name", formData.lastName);
-      form.append("your-email", formData.email);
-      form.append("your-contact", formData.contact);
-      form.append("your-enquiry", formData.enquiry);
-      form.append("your-course", formData.course);
-      form.append("your-hear-about-us", formData.hearAboutUs);
-      form.append("your-message", formData.message);
-
-      // Add required CF7 parameters
-      form.append("_wpcf7", "675");
-      form.append("_wpcf7_version", "5.7.7");
-      form.append("_wpcf7_locale", "en_US");
-      form.append("_wpcf7_unit_tag", "wpcf7-f675-p" + Date.now());
-      form.append("_wpcf7_container_post", "0");
-
-      const response = await fetch(
-        "https://docs.theaims.ac.in/wp-json/contact-form-7/v1/contact-forms/675/feedback",
-        {
-          method: "POST",
-          body: form,
-        }
-      );
-
-      let result;
-      try {
-        result = await response.json();
-        console.log("CF7 Response:", result);
-      } catch (parseError) {
-        console.error("Response parsing error:", parseError);
-        const text = await response.text();
-        console.error("Non-JSON response:", text);
-
-        // If CF7 REST API fails, show success message anyway
-        setStatus({
-          loading: false,
-          success: true,
-          message: "✅ Thank you! Your message has been sent successfully.",
-        });
-        setFormData({
-          name: "",
-          lastName: "",
-          email: "",
-          contact: "",
-          enquiry: "",
-          course: "",
-          hearAboutUs: "",
-          message: "",
-        });
-        setErrors({});
-        return;
-      }
-
-      if (result.status === "mail_sent" || response.ok) {
-        setStatus({
-          loading: false,
-          success: true,
-          message: "✅ Thank you! Your message has been sent successfully.",
-        });
-        setFormData({
-          name: "",
-          lastName: "",
-          email: "",
-          contact: "",
-          enquiry: "",
-          course: "",
-          hearAboutUs: "",
-          message: "",
-        });
-        setErrors({});
-      } else {
-        // Even if CF7 doesn't return success, show success message
-        setStatus({
-          loading: false,
-          success: true,
-          message: "✅ Thank you! Your message has been sent successfully.",
-        });
-        setFormData({
-          name: "",
-          lastName: "",
-          email: "",
-          contact: "",
-          enquiry: "",
-          course: "",
-          hearAboutUs: "",
-          message: "",
-        });
-        setErrors({});
-      }
-    } catch (err) {
-      console.error("Form error:", err);
-      // Show success message even on error to avoid showing error to user
-      setStatus({
-        loading: false,
-        success: true,
-        message: "✅ Thank you! Your message has been sent successfully.",
-      });
-      setFormData({
-        name: "",
-        lastName: "",
-        email: "",
-        contact: "",
-        enquiry: "",
-        course: "",
-        hearAboutUs: "",
-        message: "",
-      });
-      setErrors({});
+    const payload = {
+      firstName: formData.fullName,
+      lastName: formData.lastName,
+      email: formData.email,
+      contact: formData.contact,
+      enquiry: formData.enquiry,
+      course: formData.course,
+      hearAboutUs: formData.hearAboutUs,
+      message: formData.message,
+      sheetName: "Contact Us",
     }
-  };
+
+    sendToGoogleSheets(payload)
+
+    // Fire-and-forget CF7 submission
+    const form = new FormData()
+    form.append("your-full-name", formData.fullName)
+    form.append("your-last-name", formData.lastName)
+    form.append("your-email", formData.email)
+    form.append("your-contact", formData.contact)
+    form.append("your-enquiry", formData.enquiry)
+    form.append("your-course", formData.course)
+    form.append("your-hear-about-us", formData.hearAboutUs)
+    form.append("your-message", formData.message)
+    form.append("_wpcf7", "675")
+    form.append("_wpcf7_version", "5.7.7")
+    form.append("_wpcf7_locale", "en_US")
+    form.append("_wpcf7_unit_tag", "wpcf7-f675-p" + Date.now())
+    form.append("_wpcf7_container_post", "0")
+
+    fetch(
+      "https://docs.theaims.ac.in/wp-json/contact-form-7/v1/contact-forms/675/feedback",
+      {
+        method: "POST",
+        body: form,
+      }
+    )
+      .then((response) => response.json().catch(() => null))
+      .then((result) => {
+        console.log("CF7 Response:", result)
+      })
+      .catch((err) => {
+        console.error("CF7 submission error:", err)
+      })
+
+    setStatus({
+      loading: false,
+      success: true,
+      message: "✅ Thank you! Your message has been sent successfully.",
+    })
+    setFormData({
+      fullName: "",
+      lastName: "",
+      email: "",
+      contact: "",
+      enquiry: "",
+      course: "",
+      hearAboutUs: "",
+      message: "",
+    })
+    setErrors({})
+  }
 
   return (
     <section className="bg-white text-center md:py-12 py-5">
@@ -175,25 +253,28 @@ const ContactForm = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
               <div>
                 <label className="font-semibold text-base">
-                  Name <span className="text-sm font-normal">(required)</span>
+                  Full Name{" "}
+                  <span className="text-sm font-normal">(required)</span>
                 </label>
                 <input
                   type="text"
-                  name="name"
-                  placeholder="First Name"
-                  value={formData.name}
+                  name="fullName"
+                  placeholder="Full Name"
+                  value={formData.fullName}
                   onChange={handleChange}
-                  className={`w-full mt-2 bg-[#e1f4f1] text-[#1b2950] rounded-md p-3 focus:outline-none ${errors.name ? "border border-red-500" : ""
-                    }`}
+                  className={`w-full mt-2 bg-[#e1f4f1] text-[#1b2950] rounded-md p-3 focus:outline-none ${
+                    errors.fullName ? "border border-red-500" : ""
+                  }`}
                 />
-                {errors.name && (
-                  <p className="text-red-300 text-sm mt-1">{errors.name}</p>
+                {errors.fullName && (
+                  <p className="text-red-300 text-sm mt-1">{errors.fullName}</p>
                 )}
               </div>
 
               <div>
                 <label className="font-semibold text-base">
-                  Last Name <span className="text-sm font-normal">(required)</span>
+                  Last Name{" "}
+                  <span className="text-sm font-normal">(required)</span>
                 </label>
                 <input
                   type="text"
@@ -210,7 +291,8 @@ const ContactForm = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
               <div>
                 <label className="font-semibold text-base">
-                  Email ID <span className="text-sm font-normal">(required)</span>
+                  Email ID{" "}
+                  <span className="text-sm font-normal">(required)</span>
                 </label>
                 <input
                   type="email"
@@ -218,8 +300,9 @@ const ContactForm = () => {
                   placeholder="Email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full mt-2 bg-[#e1f4f1] text-[#1b2950] rounded-md p-3 focus:outline-none ${errors.email ? "border border-red-500" : ""
-                    }`}
+                  className={`w-full mt-2 bg-[#e1f4f1] text-[#1b2950] rounded-md p-3 focus:outline-none ${
+                    errors.email ? "border border-red-500" : ""
+                  }`}
                 />
                 {errors.email && (
                   <p className="text-red-300 text-sm mt-1">{errors.email}</p>
@@ -236,8 +319,13 @@ const ContactForm = () => {
                   placeholder="Number"
                   value={formData.contact}
                   onChange={handleChange}
-                  className="w-full mt-2 bg-[#e1f4f1] text-[#1b2950] rounded-md p-3 focus:outline-none"
+                  className={`w-full mt-2 bg-[#e1f4f1] text-[#1b2950] rounded-md p-3 focus:outline-none ${
+                    errors.contact ? "border border-red-500" : ""
+                  }`}
                 />
+                {errors.contact && (
+                  <p className="text-red-300 text-sm mt-1">{errors.contact}</p>
+                )}
               </div>
             </div>
 
@@ -245,27 +333,25 @@ const ContactForm = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
               <div className="relative">
                 <label className="font-semibold text-base">
-                  Enquiry Type <span className="text-sm font-normal">(required)</span>
+                  Enquiry Type{" "}
+                  <span className="text-sm font-normal">(required)</span>
                 </label>
-                <div className="relative mt-2">
-                  <select
+                <div className="mt-2">
+                  <Select
+                    inputId="contact-enquiry"
+                    instanceId="contact-enquiry"
                     name="enquiry"
-                    value={formData.enquiry}
-                    onChange={handleChange}
-                    className={`w-full appearance-none bg-[#e1f4f1] text-[#1b2950] rounded-md p-3 pr-10 focus:outline-none cursor-pointer ${errors.enquiry ? "border border-red-500" : ""
-                      }`}
-                  >
-                    <option value="">Choose</option>
-                    <option>Academics - Principal / Registrar / Programme Director</option>
-                    <option>Admission</option>
-                    <option>Alumni</option>
-                    <option>Events</option>
-                    <option>Placements / Corporate Relations</option>
-                    <option>Others</option>
-                  </select>
-                  <RiArrowDropDownLine
-                    size={28}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-[#1b2950] pointer-events-none"
+                    placeholder="Choose"
+                    options={enquiryOptions}
+                    value={
+                      enquiryOptions.find(
+                        (option) => option.value === formData.enquiry
+                      ) || null
+                    }
+                    onChange={handleSelectChange("enquiry")}
+                    styles={getSelectStyles(Boolean(errors.enquiry))}
+                    classNamePrefix="contact-select"
+                    isClearable
                   />
                 </div>
                 {errors.enquiry && (
@@ -274,39 +360,23 @@ const ContactForm = () => {
               </div>
               {/* 🎓 Course */}
               <div className="relative text-left">
-                <label className="font-semibold text-base">
-                  Course
-                </label>
-                <div className="relative mt-2">
-                  <select
+                <label className="font-semibold text-base">Course</label>
+                <div className="mt-2">
+                  <Select
+                    inputId="contact-course"
+                    instanceId="contact-course"
                     name="course"
-                    value={formData.course}
-                    onChange={handleChange}
-                    className="w-full appearance-none bg-[#e1f4f1] text-[#1b2950] rounded-md p-3 pr-10 focus:outline-none cursor-pointer"
-                  >
-                    <option value="">Choose</option>
-                    <option>Ph.D in Management</option>
-                    <option>MBA Master of Business Administration (General)</option>
-                    <option>BBA Bachelor of Business Administration</option>
-                    <option>BBA Aviation</option>
-                    <option>Master of Commerce MCOM</option>
-                    <option>Bachelor of Commerce BCOM</option>
-                    <option>BHM Bachelor of Hotel Management</option>
-                    <option>Certificate in Vocational Studies in QSR (Quick Service Restaurant)</option>
-                    <option>Culinary Professional Diploma (VET by EHL)</option>
-                    <option>Food & Beverage Service Professional Diploma (VET by EHL)</option>
-                    <option>Rooms Professional Diploma (VET by EHL)</option>
-                    <option>Master of Computer Application MCA</option>
-                    <option>Bachelor of Computer Application BCA</option>
-                    <option>AI/ML | Data Science | Full-Stack Development BCA+</option>
-                    <option>PCMB</option>
-                    <option>PCMC</option>
-                    <option>CEBA</option>
-
-                  </select>
-                  <RiArrowDropDownLine
-                    size={28}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-[#1b2950] pointer-events-none"
+                    placeholder="Choose"
+                    options={courseOptions}
+                    value={
+                      courseOptions.find(
+                        (option) => option.value === formData.course
+                      ) || null
+                    }
+                    onChange={handleSelectChange("course")}
+                    styles={getSelectStyles(false)}
+                    classNamePrefix="contact-select"
+                    isClearable
                   />
                 </div>
               </div>
@@ -326,7 +396,7 @@ const ContactForm = () => {
                   "Current Students",
                   "Event",
                   "Google",
-                  "Others"
+                  "Others",
                 ].map((option) => (
                   <label
                     key={option}
@@ -357,8 +427,9 @@ const ContactForm = () => {
                 placeholder="Type message"
                 value={formData.message}
                 onChange={handleChange}
-                className={`w-full mt-2 bg-[#e1f4f1] text-[#1b2950] rounded-md p-3 focus:outline-none ${errors.message ? "border border-red-500" : ""
-                  }`}
+                className={`w-full mt-2 bg-[#e1f4f1] text-[#1b2950] rounded-md p-3 focus:outline-none ${
+                  errors.message ? "border border-red-500" : ""
+                }`}
               ></textarea>
               {errors.message && (
                 <p className="text-red-300 text-sm mt-1">{errors.message}</p>
@@ -368,8 +439,9 @@ const ContactForm = () => {
             {/* 🌐 Global Status */}
             {status.message && (
               <p
-                className={`text-sm font-medium ${status.success ? "text-green-300" : "text-red-300"
-                  }`}
+                className={`text-sm font-medium ${
+                  status.success ? "text-green-300" : "text-red-300"
+                }`}
               >
                 {status.message}
               </p>
@@ -397,7 +469,7 @@ const ContactForm = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ContactForm;
+export default ContactForm

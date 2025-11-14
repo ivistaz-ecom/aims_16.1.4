@@ -15,7 +15,7 @@ const itPrograms = [
   },
   {
     title: "AI/ML | Data Science | Full-Stack Development BCA+",
-    href: "/upcoming-page",
+    href: "/information-technology-school/bachelor-computer-applications",
   },
 ]
 

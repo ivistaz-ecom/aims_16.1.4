@@ -5,7 +5,7 @@ import Image from "next/image"
 import ProgramButton from "./ProgramButton"
 
 const financePrograms = [
-  { title: "PhD in Commerce", href: "/upcoming-page" },
+  { title: "PhD in Commerce", href: "/phd-doctoral-programs" },
   {
     title: "Master of Commerce M.Com",
     href: "/finance-commerce-school/master-of-commerce",
@@ -14,7 +14,10 @@ const financePrograms = [
     title: "Bachelor of Commerce B.Com",
     href: "/finance-commerce-school/bachelor-of-commerce",
   },
-  { title: "CA/ACCA B.Com", href: "/upcoming-page" },
+  {
+    title: "CA/ACCA B.Com",
+    href: "/finance-commerce-school/bachelor-of-commerce",
+  },
 ]
 
 const SchoolOfFinance = () => {
