@@ -15,6 +15,8 @@ const ReadyToDraw = ({
   tertiaryButtonText = null,
   bgColor = "bg-[#A22877]",
   arrowImage = "/MBA/arrow.svg",
+  swayamText = "Swayam",
+  nptelText = "NPTEL",
 }) => {
   return (
     <>
@@ -44,6 +46,27 @@ const ReadyToDraw = ({
                   </Button>
                 )}
 
+                {swayamText && (
+                  <Button
+                    variant="secondary"
+                    className="whitespace-nowrap "
+                    href="https://swayam.gov.in/"
+                    target="_blank"
+                  >
+                    {swayamText}
+                  </Button>
+                )}
+
+                {nptelText && (
+                  <Button
+                    variant="secondary"
+                    className="whitespace-nowrap "
+                    href="https://nptel.ac.in/"
+                    target="_blank"
+                  >
+                    {nptelText}
+                  </Button>
+                )}
                 {/* {secondaryButtonText && (
                   <Button
                     variant="secondary"
