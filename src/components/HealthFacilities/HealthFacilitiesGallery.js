@@ -13,7 +13,7 @@ const useLoadSlickCss = () => {
 };
 
 // Generic Carousel Component
-const SportsFacilitiesGalleryCarousel = ({ title, description, category }) => {
+const HealthFacilitiesGalleryCarousel = ({ title, description, category }) => {
   useLoadSlickCss();
   const sliderRef = useRef(null);
   const [slides, setSlides] = useState([]);
@@ -103,9 +103,7 @@ const SportsFacilitiesGalleryCarousel = ({ title, description, category }) => {
             {typeof description === "string"
               ? description
                   .split(/\n\s*\n/)
-                  .map((paragraph, idx) => (
-                    <p key={idx}>{paragraph.trim()}</p>
-                  ))
+                  .map((paragraph, idx) => <p key={idx}>{paragraph.trim()}</p>)
               : description}
           </div>
         </div>
@@ -162,18 +160,18 @@ const SportsFacilitiesGalleryCarousel = ({ title, description, category }) => {
 };
 
 // Page Component
-const SportsFacilitiesGallery = () => {
+const HealthFacilitiesGallery = () => {
   return (
     <>
-      <SportsFacilitiesGalleryCarousel
-        title="Sports Facilities"
-        description={`The AIMS campus offers well-maintained sports facilities to promote physical fitness, teamwork, and overall well-being among students and staff. The sports complex includes indoor and outdoor spaces for games such as badminton, basketball, football, cricket, and table tennis. 
+      <HealthFacilitiesGalleryCarousel
+        title="Health Facilities"
+        description={`AIMS Institutes has an on-campus medical and health centre that offers first-aid and basic medical assistance for students and staff. To promote holistic development, the institute conducts regular health-awareness programs, medical camps, and blood-donation drives. 
             
-        Regular sports events, inter-departmental tournaments, and fitness activities are organized to encourage participation and healthy competition. The institute also provides access to gym equipment and training areas to support daily exercise routines. These facilities foster a balanced lifestyle and help build a strong sense of community within the campus.`}
-        category="Sports Facilities"
+        In addition to physical wellness, AIMS organises mental-health awareness programs in collaboration with NGOs. Health services are available from 9:30 a.m. to 5:30 p.m. with a dedicated practitioner and nurse. For emergencies, the institution has MoUs with nearby hospitals to ensure timely medical support.`}
+        category="Health Facilities"
       />
     </>
   );
 };
 
-export default SportsFacilitiesGallery;
+export default HealthFacilitiesGallery;

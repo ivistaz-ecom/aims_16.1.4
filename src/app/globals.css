@@ -355,3 +355,28 @@ h5 .wp-h5 {
     width: 100%;
   }
 } */
+
+.wb-marker-purple::marker {
+  color: #531675 !important;
+}
+.wb-marker-purple-secondary::marker {
+  color: #A22877 !important;
+}
+.wb-marker-purple-secondary-fill::marker {
+  color: #990099 !important;
+}
+.wb-marker-purple-secondary-fill-2::marker {
+  color: #6E3299 !important;
+}
+.wb-marker-orange::marker {
+  color: #FF6C02 !important;
+}
+.wb-marker-light-pink::marker {
+  color: #D264AB !important;
+}
+.wb-marker-blue::marker {
+  color: #3366CC !important;
+}
+.wb-marker-light-pink-secondary::marker {
+  color: #F5BBBC !important;
+}

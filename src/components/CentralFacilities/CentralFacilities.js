@@ -50,8 +50,12 @@ const facilitySections = [
       "The AV Room is equipped with high-definition projectors, interactive displays, and sound systems to support research presentations, seminars, workshops, and video conferencing. It facilitates academic discussions, training sessions, and virtual collaborative meetings.",
     labs: [
       {
-        src: "/central-facilities/av-room.png",
+        src: "/central-facilities/av-1.png",
         title: "AV Room",
+      },
+      {
+        src: "/central-facilities/av-2.png",
+        // title: "AV Room",
       },
     ],
   },
