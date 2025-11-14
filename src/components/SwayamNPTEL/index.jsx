@@ -15,8 +15,8 @@ const index = () => {
       <ReadyToDraw
         title="Here are a few resources that will help you in enrolling courses online:"
         subtitle={false}
-        swayamText="Swayam"
-        nptelText="NPTEL"
+        swayamText={true}
+        nptelText={true}
         primaryButtonText={false}
         tertiaryButtonText={false}
         secondaryButtonText={false}

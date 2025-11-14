@@ -1,9 +1,9 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import ApplicationMarquee from "../../shared/ApplicationMarquee";
-import Image from "next/image";
-import dynamic from "next/dynamic";
-import "react-multi-carousel/lib/styles.css";
+"use client"
+import React, { useState, useEffect } from "react"
+import ApplicationMarquee from "../../shared/ApplicationMarquee"
+import Image from "next/image"
+import dynamic from "next/dynamic"
+import "react-multi-carousel/lib/styles.css"
 
 // Fallback component to show first banner while Carousel loads
 const BannerFallback = () => {
@@ -12,7 +12,7 @@ const BannerFallback = () => {
     tablet: "/home/home-banner-tab-02.webp",
     mobile: "/home/mobile-latest.webp",
     logo: "/white-empower.svg",
-  };
+  }
 
   return (
     <div className="relative w-full h-[83vh] md:h-[100vh] overflow-hidden">
@@ -65,14 +65,14 @@ const BannerFallback = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 // Dynamically import Carousel with SSR disabled to avoid hydration mismatch
 const Carousel = dynamic(() => import("react-multi-carousel"), {
   ssr: false,
   loading: () => <BannerFallback />,
-});
+})
 
 const HeroBannerSoB = ({ announcements, pageType = "admissions" }) => {
   // You can add as many banner slides as you want here
@@ -84,18 +84,24 @@ const HeroBannerSoB = ({ announcements, pageType = "admissions" }) => {
       logo: "/white-empower.svg",
     },
     {
-      desktop: "/home/banner-004-new.webp",
-      tablet: "/home/home-banner-tab-03.webp",
-      mobile: "/home/mobile-carousel-02-new.webp",
+      desktop: "/home/desktop-home-banner-slider02.webp",
+      tablet: "/home/tab-home-banner-slider002.webp",
+      mobile: "/home/mobile-home-banner-slider02.webp",
       logo: "/white-empower.svg",
     },
-  ];
+    {
+      desktop: "/home/desktop-home-banner-slider03.webp",
+      tablet: "/home/tab-home-banner-slider03.webp",
+      mobile: "/home/mobile-home-banner-slider003.webp",
+      logo: "/white-empower.svg",
+    },
+  ]
 
   const responsive = {
     desktop: { breakpoint: { max: 3000, min: 1024 }, items: 1 },
     tablet: { breakpoint: { max: 1024, min: 464 }, items: 1 },
     mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
-  };
+  }
 
   return (
     <>
@@ -231,10 +237,22 @@ const HeroBannerSoB = ({ announcements, pageType = "admissions" }) => {
             </div>
 
             {/* Bottom Content */}
-            <div className="absolute bottom-10 left-0 right-0 px-4 lg:px-0 z-10">
+            <div className="absolute top-[56%] lg:top-auto md:top-auto lg:bottom-44  bottom-0 md:bottom-52 left-1/2 lg:left-44 px-4 lg:px-0 z-10 -translate-x-1/2 lg:translate-x-0">
               <div className="container mx-auto">
-                <div className="flex lg:flex-row flex-col items-center justify-between md:gap-4 gap-4">
-                  <div className="flex items-center"></div>
+                <div className="flex lg:flex-row flex-col items-center justify-center lg:justify-between text-center lg:text-left md:gap-4 gap-4">
+                  {index === 1 ? (
+                    <a
+                      href="https://apply.theaims.ac.in/login"
+                      target="_blank"
+                      rel="noreferrer"
+                      variant="placement"
+                      className="inline-flex items-center justify-center rounded-[26.5px] border-6 border-[#D8BFD8] bg-[#A22977] px-4 py-2 text-base font-semibold uppercase tracking-wide text-white transition hover:bg-[#ff6c01] hover:text-white"
+                    >
+                      Apply Now
+                    </a>
+                  ) : (
+                    <div className="flex items-center" />
+                  )}
                 </div>
               </div>
             </div>

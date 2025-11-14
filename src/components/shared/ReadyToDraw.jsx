@@ -39,34 +39,35 @@ const ReadyToDraw = ({
                   <Button
                     variant="secondary"
                     className="whitespace-nowrap "
-                    href="/enquiry-now"
+                    href="https://apply.theaims.ac.in/login"
                     target="_blank"
                   >
                     {primaryButtonText}
                   </Button>
                 )}
 
-                {swayamText && (
-                  <Button
-                    variant="secondary"
-                    className="whitespace-nowrap "
-                    href="https://swayam.gov.in/"
-                    target="_blank"
-                  >
-                    {swayamText}
-                  </Button>
-                )}
+{swayamText === true && (
+  <Button
+    variant="secondary"
+    className="whitespace-nowrap "
+    href="https://swayam.gov.in/"
+    target="_blank"
+  >
+    Swayam
+  </Button>
+)}
 
-                {nptelText && (
-                  <Button
-                    variant="secondary"
-                    className="whitespace-nowrap "
-                    href="https://nptel.ac.in/"
-                    target="_blank"
-                  >
-                    {nptelText}
-                  </Button>
-                )}
+{nptelText === true && (
+  <Button
+    variant="secondary"
+    className="whitespace-nowrap "
+    href="https://nptel.ac.in/"
+    target="_blank"
+  >
+    NPTEL
+  </Button>
+)}
+
                 {/* {secondaryButtonText && (
                   <Button
                     variant="secondary"

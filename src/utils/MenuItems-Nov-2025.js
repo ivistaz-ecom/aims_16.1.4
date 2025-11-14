@@ -103,7 +103,7 @@ export const MenuItems = [
         name: "Entrepreneurship Excellence Centre",
         href: "/entrepreneurship-excellence-centre",
       },
-      { name: "Consultancy Projects", href: "/upcoming-page" },
+      { name: "Consultancy Projects", href: "/centre-for-research#ICSSR" },
     ],
   },
   {
@@ -112,7 +112,7 @@ export const MenuItems = [
       { name: "Sports Facilities", href: "/sports-facilities" },
       { name: "NCC/NSS", href: "/pdf/nss/About-NSS.pdf" },
       { name: "Hostel Details", href: "/hostel-details" },
-      { name: "Placement Cell", href: "/upcoming-page" },
+      { name: "Placement Cell", href: "/placement" },
       { name: "Health facilities", href: "/health-facilities" },
       {
         name: "Internal Complaint Committee",
@@ -152,4 +152,4 @@ export const MenuItems = [
       { name: "Careers", href: "/careers" },
     ],
   },
-];
+]
