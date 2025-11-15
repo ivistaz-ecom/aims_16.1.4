@@ -11,6 +11,7 @@ const ExaminerData = [
     name: "Dr. B A Karunakara Reddy",
     study: "B.Com, M.Com, MBA, Ph.D",
     designation: "COE, AIMS Institutes.",
+    email: "examinations@theaims.ac.in",
     image: "/controller-of-examination/karunakara.png",
   },
 ];
@@ -85,20 +86,22 @@ const ExaminerPage = () => {
 
             {/* Text Section */}
             <div className="lg:w-2/3 space-y-5 text-center lg:text-left">
-            <div className="text-[#000] lg:text-[36px] text-[24px] monser-500">
-            {item.name}
-            </div>
-
+              <div className="text-[#000] lg:text-[36px] text-[24px] monser-500">
+                {item.name}
+              </div>
 
               <div>
-              <div className="-mt-5 text-[20px] md:text-[20px] lg:text-[20px] text-black !font-regular whitespace-pre-line">
-                {item.study}
-              </div>
-              <div className="mt-3 text-[20px] md:text-[20px] lg:text-[28px] text-[#0C2165] !font-semibold whitespace-pre-line">
-                {item.title}
-              </div>
+                <div className="-mt-5 text-[20px] md:text-[20px] lg:text-[20px] text-black !font-regular whitespace-pre-line">
+                  {item.study}
+                </div>
+                <div className="mt-3 text-[20px] md:text-[20px] lg:text-[28px] text-[#0C2165] !font-semibold whitespace-pre-line">
+                  {item.title}
+                </div>
                 <div className="-mt-1 text-[20px] md:text-[20px] lg:text-[20px] text-black !font-regular whitespace-pre-line">
                   {item.designation}
+                </div>
+                <div className="-mt-1 text-[20px] md:text-[20px] lg:text-[20px] text-black !font-regular whitespace-pre-line">
+                  <a href={`mailto:${item.email}`} className="text-[#A12876] underline"> {item.email}</a>
                 </div>
               </div>
 

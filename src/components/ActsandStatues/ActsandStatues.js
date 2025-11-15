@@ -1,5 +1,5 @@
-import Link from "next/link"
-import React from "react"
+import Link from "next/link";
+import React from "react";
 
 const STATUTES_AND_POLICIES = [
   {
@@ -40,22 +40,22 @@ const STATUTES_AND_POLICIES = [
   },
   {
     title: "Environment & Sustainability Policy",
-    href: "/environment-sustainability-policy-report",
+    href: "/acts-and-statutes-moa/Environment-and-Sustainability-Policy.pdf",
   },
   { title: "IT Policy", href: "/acts-and-statutes-moa/IT Policy.pdf" },
   { title: "HR Policy", href: "/acts-and-statutes-moa/HR Policy_merged.pdf" },
-  { title: "ER Policy", href: null },
+  // { title: "ER Policy", href: null },
   {
     title: "Admission Policy",
     href: "/acts-and-statutes-moa/Admission policy.pdf",
   },
-  { title: "Research Policy", href: "/ACR - Policy (1).pdf" },
+  { title: "Research Policy", href: "/acts-and-statutes-moa/Research-Policy.pdf" },
   {
     title: "Library Policies and Procedures",
     href: "/acts-and-statutes-moa/Library Policy and Procedures.pdf",
   },
-  { title: "Student Exit Policy", href: "/student-information-zone" },
-]
+  { title: "Student Exit Policy", href: "/acts-and-statutes-moa/Student-Exit-Policy.pdf"},
+];
 
 const ActsandStatues = () => {
   return (
@@ -98,7 +98,7 @@ const ActsandStatues = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default ActsandStatues
+export default ActsandStatues;

@@ -10,6 +10,8 @@ const AQARComponent = () => {
       content: {
         heading: "AQAR",
         documents: [
+          { year: "2023-24", link: "/iqac/aqar/AQAR+2023-24.pdf" },
+          { year: "2022-23", link: "/iqac/aqar/AQAR+2022-23.pdf" },
           { year: "2021-22", link: "/iqac/aqar/AQAR+-2021-2022.pdf" },
           { year: "2020-21", link: "/iqac/aqar/AQAR+2020-2021.pdf" },
           { year: "2019-20", link: "/iqac/aqar/AQAR+2019-20.pdf" },

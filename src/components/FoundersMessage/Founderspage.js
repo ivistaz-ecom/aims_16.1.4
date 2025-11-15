@@ -9,6 +9,7 @@ const foundersData = [
     titles: ["About  Founder", " Founder’s Message"],
     name: "Dr Kerron G Reddy",
     names: "Founder, AIMS Institutes",
+    email: "aimsedu@gmail.com",
     image: "/founders-message/leader-img1.webp",
     about: `Dr Kerron G Reddy is the Founder of AIMS Institutes, Peenya, Bangalore, Karnataka, India which she established in 1994. She is an accomplished educationist with demonstrated ability to lead, teach, motivate, and direct students while maintaining high interest and achievement in research, projects and consultancy services. A multifaceted social entrepreneur, administrator and academician, she has over 30 years’ rich experience in institution building, teaching, research and running the operations of premier institutions of higher education in India and overseas.
   
@@ -26,6 +27,7 @@ const foundersData = [
     titles: ["About  CEO", " CEO’s Message"],
     name: "Meka Priyanandan Reddy",
     names: "CEO, AIMS Institutes",
+    email: "priyanandan@theaims.ac.in",
     image: "/founders-message/leader-img2.webp",
     about: `Dr Meka Priyanandan Reddy is the CEO of AIMS Institutes, having dedicated over two decades to integrating higher education and technology. Earlier, as the COO of AIMS Institutes for over a decade, he pioneered innovative collaborations that have yielded profound regional and global impacts.
 
@@ -41,6 +43,7 @@ He is a member of “Chaîne des Rôtisseurs,” an International Association of
     titles: ["About  Executive Director", " Executive Director’s Message"],
     name: "Dr Roja Reddy Meka",
     names: "Executive Director, AIMS Institutes",
+    email: "rojareddy@theaims.ac.in",
     image: "/founders-message/leader-img3.webp",
     about: `Dr Roja Reddy Meka is a visionary educationist, institutional leader, and academic strategist, widely respected for her transformational contributions to higher education in India. She has spent over 16 years crafting academic experiences that empower learners, inspire faculty, and elevate institutions. Her leadership journey began in 2008 as Director of Admissions at AIMS Institutes, Bangalore where she revolutionised admission procedures, championed diversity, and instituted systems to manage over 21 academic programs. From 2012 to 2022, she concurrently served as Director of Undergraduate Education, playing a central role in faculty recruitment, curriculum development, and academic operations across nine major programs. Under her stewardship, key UG programs like BBA, BCA & BHM have been consistently ranked in national excellence categories by GHRDC and RI World Rankings.
   
@@ -56,6 +59,7 @@ He is a member of “Chaîne des Rôtisseurs,” an International Association of
     titles: ["About Principal", "Principal's Message"],
     name: "Dr Rama Murthy",
     names: "Principal, AIMS Institutes",
+    email: "principal@theaims.ac.in",
     image: "/founders-message/leader-img4.webp",
     about: `As the Principal of AIMS Institutes, Dr Ramamurthy focuses on strengthening academic programs, promoting research, and enhancing industry collaborations. He has held several leadership roles, including Associate Professor, Program Director, and Registrar, before becoming Principal.
 
@@ -118,6 +122,9 @@ const FoundersMessage = () => {
               </div>
               <div className="-mt-2 text-[20px] md:text-[20px] lg:text-[28px] text-black !font-semibold whitespace-pre-line">
                 {item.names}
+              </div>
+              <div className="-mt-2 text-[20px] md:text-[20px] lg:text-[28px] text-black !font-semibold whitespace-pre-line"> 
+                <a href={`mailto:${item.email}`} className="text-[#A12876] underline"> {item.email}</a>
               </div>
             </div>
 

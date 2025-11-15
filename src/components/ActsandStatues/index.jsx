@@ -1,12 +1,12 @@
-import React from 'react'
-import ActsandStatues from './ActsandStatues'
+import React from "react";
+import ActsandStatues from "./ActsandStatues";
 
 const index = () => {
-    return (
-        <>
-            <ActsandStatues />
-        </>
-    )
-}
+  return (
+    <>
+      <ActsandStatues />
+    </>
+  );
+};
 
-export default index    
+export default index;

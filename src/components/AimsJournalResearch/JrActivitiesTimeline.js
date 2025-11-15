@@ -4,9 +4,94 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 
 const JrActivitiesTimeline = () => {
-    const [selectedYear, setSelectedYear] = useState(2011)
+    const [selectedYear, setSelectedYear] = useState('2025-26')
 
     const iqacData = {
+        '2025-26': [
+            "Workshop on Outcome Based Education, CO-PO automation",
+            "Orientation Session on The Autonomous Process in Higher Education Institutions",
+            "Instituted membership with ICT Academy",
+            "Orientation on : Financial Literacy and Mutual funds for Non-teaching staff (26-4-2025)",
+            "Navigating the new Self Appraisal Framework",
+            "Submission of Autonomous Application in UGC Portal",
+            "Submission of AISHE Report 2024-25",
+            "Submission of Autonomous Application to Bangalore University",
+            "Coordinated with team from Gujarath on our Best Practices in NAAC frame work",
+            "Organised Entrepreneurship Development Program in association with Coir Board for SC-ST students",
+            "Organised Reginal Seminar on Improving the Cost and Quality Competitiveness of the MSME in the Coir Sector",
+            "Academic Audit, Feedback Analysis on Teaching and Learning"
+        ],
+        '2024-25': [
+            "Preparation for EOA – AICTE programs",
+            "CBTE Sessions",
+            "FDP - New Pedagogical Tools",
+            "Preparation for AISHE - MHRD",
+            "CBTE Sessions",
+            "Presentation of Results/KG and SG",
+            "CBTE Sessions",
+            "Internal Quality Audits – UG",
+            "Internal Quality Audits – Focus Centers",
+            "Internal Quality Audits – PG (on completion of course)",
+            "BU Annual Report",
+            "FDP on Research based Teaching",
+            "Session on Study skills and Transferable skills",
+            "FDP - Autonomous Status",
+            "CBTE Sessions",
+            "AIQAC Annual Report 23-24",
+            "CBTE Sessions",
+            "FDP in association with Library",
+            "IQAC Advisory Board Meeting",
+            "Preparation of Dashboard for UG & PG ODD",
+            "National Conference on Quality",
+            "Preparation of Dashboard for UG EVEN",
+            "Preparations for NIRF",
+            "Preparation of Dashboard for PG EVEN"
+        ],
+        '2023-24': [
+            "Preparation for EOA – AICTE programs",
+            "Digital Literacy Program with NASSCOMM",
+            "Preparation for AISHE - MHRD",
+            "Presentation of Results/KG and SG",
+            "Internal Quality Audits – Non-Academic Programs",
+            "Internal Quality Audits – UG",
+            "Internal Quality Audits – Focus Centers",
+            "Internal Quality Audits – PG (on completion of course)",
+            "AIQAC Annual Report 22-23",
+            "BU Annual Report",
+            "Preparation of Dashboard for UG & PG ODD",
+            "FDP on Intellectual Property Rights with CIPAM",
+            "Preparation of Dashboard for UG EVEN",
+            "Preparations for NIRF",
+            "CBTE Sessions",
+            "CBTE Sessions",
+            "FDP - Reflections on Course Files and Outcomes Based Teaching Learning",
+            "Preparation of Dashboard for PG EVEN"
+        ],
+        '2022-23': [
+            "Webinar on Sculpting Change in Decision Making with Data and Analytics",
+            "Application for UGC 2f & 12B",
+            "Establish IIC",
+            "BU Annual Report",
+            "FDP on NEP 2020 - A Teacher's Role",
+            "AIQAC Annual Report 21-22",
+            "Workshop on Academic Writing with ACR",
+            "FDP on Design Thinking with ACR",
+            "FDP on Research",
+            "Review Meeting - Observations of NAAC Peer Team",
+            "Preparation of Dashboard for UG ODD",
+            "Students Feedback 1 – UG Programs",
+            "Preparation of Dashboard for PG ODD",
+            "FDP on Bloom's Taxonomy",
+            "Internal Quality Audits – Focus Centers",
+            "Students Feedback 1 – PG Programs",
+            "Internal Quality Audits – UG (on completion of course)",
+            "Preparation of Dashboard for UG EVEN",
+            "Preparation for AISHE - MHRD",
+            "Faculty Orientation Program on \"Outcome Based Teaching and Learning\"",
+            "Preparations for NIRF",
+            "Internal Quality Audits – PG (on completion of course)",
+            "Preparation of Dashboard for PG EVEN"
+        ],
         2020: [
             "Successful re-accreditation of the B-school Programs on 12th and 13th January 2020 by the Peer team from IACBE, USA. The MBA, M.Com, M.Com (Financial Accounting), BBA, B.Com and PhD –Management Programs successfully accredited by IACBE",
             "Webinar on AI Powered Disambiguation of Complex Text by Dr. Preethu Rose, Research Scientist, TCS on June 10, 2020",
@@ -157,7 +242,7 @@ const JrActivitiesTimeline = () => {
         ]
     }
 
-    const years = [2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011]
+    const years = ['2025-26', '2024-25', '2023-24', '2022-23', 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011]
 
     return (
         <div className='relative overflow-hidden'>
