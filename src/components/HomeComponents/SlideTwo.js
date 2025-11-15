@@ -130,7 +130,7 @@ const courses = [
     programs3: [
       {
         name: "CEBA",
-        link: "/pre-university-college/commerce-heba",
+        link: "/pre-university-college/commerce-ceba",
       },
     ],
     leftImage: "/home/course/puc-left.webp",
