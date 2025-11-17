@@ -35,7 +35,7 @@ const accordionData = [
         Call: <a href="tel:+917026191114" class="text-[#A22977] underline">+91-702-619-1114</a> or 
         <a href="tel:+918028390433" class="text-[#A22977] underline">(080)-28390433</a> /
         <a href="tel:+918028390434" class="text-[#A22977] underline">28390434</a><br />
-         Email id: <a href="mailto:placements@theaims.ac.in" class="text-[#A22977] underline">placements@theaims.ac.in</a>
+         Email: <a href="mailto:placements@theaims.ac.in" class="text-[#A22977] underline">placements@theaims.ac.in</a>
       </p>
     `,
   },
