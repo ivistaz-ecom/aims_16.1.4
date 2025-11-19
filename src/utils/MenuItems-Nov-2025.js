@@ -12,7 +12,7 @@ export const MenuItems = [
       { name: "Accreditation and Rankings", href: "/accreditations-rankings" },
       // { name: "NAAC Accreditation", href: "/naac-accreditation" },
       // { name: "NIRF", href: "/nirf-ranking" },
-      { name: "UGC 2 (f) & 12B", href: "/ugc/2f and 12b certificate.pdf" },
+      { name: "UGC 2 (f) & 12B", href: "/ugc/2f_and_12b_certificate.pdf" },
       { name: "Annual Reports", href: "/annual-reports" },
       { name: "Annual Accounts", href: "/annual-accounts" },
     ],
@@ -150,6 +150,7 @@ export const MenuItems = [
       { name: "Events", href: "/events" },
       { name: "Blogs", href: "/blogs" },
       { name: "Careers", href: "/careers" },
+      { name: "RTI", href: "/right-to-information" },
     ],
   },
 ]
