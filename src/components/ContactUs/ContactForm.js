@@ -6,6 +6,10 @@ import { GoArrowDownRight, GoArrowUpRight } from "react-icons/go"
 const GOOGLE_SHEETS_ENDPOINT =
   "https://script.google.com/macros/s/AKfycbxbhsBMXJPLq4plqcQPe1FKVz6i_W8dkgVBDz36aJ9o7ITSFpFmN0uoFKY7ShTKVbPj/exec"
 
+// Salesforce Configuration
+const SALESFORCE_ORG_ID = "00DF9000001Fwgc"
+const SALESFORCE_WEB_TO_LEAD_ENDPOINT = `https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=${SALESFORCE_ORG_ID}`
+
 const enquiryOptions = [
   {
     value: "Academics - Principal / Registrar / Programme Director",
@@ -23,54 +27,60 @@ const enquiryOptions = [
 
 const courseOptions = [
   { value: "Ph.D in Management", label: "Ph.D in Management" },
+  { value: "Ph.D in Commerce", label: "Ph.D in Commerce" },
   {
-    value: "MBA Master of Business Administration (General)",
-    label: "MBA Master of Business Administration (General)",
+    value: "Master of Business Administration (MBA)",
+    label: "Master of Business Administration (MBA)",
   },
-  {
-    value: "BBA Bachelor of Business Administration",
-    label: "BBA Bachelor of Business Administration",
-  },
-  { value: "BBA Aviation", label: "BBA Aviation" },
   { value: "Master of Commerce MCOM", label: "Master of Commerce MCOM" },
-  { value: "Bachelor of Commerce BCOM", label: "Bachelor of Commerce BCOM" },
   {
-    value: "BHM Bachelor of Hotel Management",
-    label: "BHM Bachelor of Hotel Management",
+    value: "Post Graduate Diploma in Management (PGDM)",
+    label: "Post Graduate Diploma in Management (PGDM)",
+  },
+  {
+    value: "Master of Computer Application (MCA)",
+    label: "Master of Computer Application (MCA)",
+  },
+  {
+    value: "Bachelor of Business Administration (BBA)",
+    label: "Bachelor of Business Administration (BBA)",
   },
   {
     value:
-      "Certificate in Vocational Studies in QSR (Quick Service Restaurant)",
+      "Bachelor of Business Administration in Aviation Management (BBA Aviation)",
     label:
-      "Certificate in Vocational Studies in QSR (Quick Service Restaurant)",
+      "Bachelor of Business Administration in Aviation Management (BBA Aviation)",
   },
   {
-    value: "Culinary Professional Diploma (VET by EHL)",
-    label: "Culinary Professional Diploma (VET by EHL)",
+    value: "Bachelor of Commerce (BCOM)",
+    label: "Bachelor of Commerce (BCOM)",
   },
   {
-    value: "Food & Beverage Service Professional Diploma (VET by EHL)",
-    label: "Food & Beverage Service Professional Diploma (VET by EHL)",
+    value: "Bachelor of Hotel Management (BHM)",
+    label: "Bachelor of Hotel Management (BHM)",
   },
   {
-    value: "Rooms Professional Diploma (VET by EHL)",
-    label: "Rooms Professional Diploma (VET by EHL)",
+    value: "Bachelor of Computer Application (BCA)",
+    label: "Bachelor of Computer Application (BCA)",
   },
   {
-    value: "Master of Computer Application MCA",
-    label: "Master of Computer Application MCA",
+    value: "Swiss International Culinary Professional Diploma (CII-VET by EHL)",
+    label: "Swiss International Culinary Professional Diploma (CII-VET by EHL)",
   },
   {
-    value: "Bachelor of Computer Application BCA",
-    label: "Bachelor of Computer Application BCA",
+    value:
+      "Swiss International Food & Beverage Service Professional Diploma (CII-VET by EHL)",
+    label:
+      "Swiss International Food & Beverage Service Professional Diploma (CII-VET by EHL)",
   },
   {
-    value: "AI/ML | Data Science | Full-Stack Development BCA+",
-    label: "AI/ML | Data Science | Full-Stack Development BCA+",
+    value: "Swiss International Rooms Professional Diploma (CII-VET by EHL)",
+    label: "Swiss International Rooms Professional Diploma (CII-VET by EHL)",
   },
+  { value: "CEBA", label: "CEBA" },
   { value: "PCMB", label: "PCMB" },
   { value: "PCMC", label: "PCMC" },
-  { value: "CEBA", label: "CEBA" },
+  { value: "Chai Point", label: "Chai Point" },
 ]
 
 const getSelectStyles = (hasError) => ({
@@ -113,7 +123,7 @@ const getSelectStyles = (hasError) => ({
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    fullName: "",
+    firstName: "",
     lastName: "",
     email: "",
     contact: "",
@@ -141,6 +151,83 @@ const ContactForm = () => {
     })
   }
 
+  // Send to Salesforce Web-to-Lead using hidden form
+  const sendToSalesforce = (formData) => {
+    try {
+      // Create a hidden iframe for silent submission
+      let hiddenIframe = document.getElementById("salesforce-hidden-iframe")
+      if (!hiddenIframe) {
+        hiddenIframe = document.createElement("iframe")
+        hiddenIframe.id = "salesforce-hidden-iframe"
+        hiddenIframe.name = "salesforce-hidden-iframe"
+        hiddenIframe.style.display = "none"
+        hiddenIframe.style.width = "0"
+        hiddenIframe.style.height = "0"
+        hiddenIframe.style.border = "none"
+        document.body.appendChild(hiddenIframe)
+      }
+
+      // Create a hidden form element
+      const form = document.createElement("form")
+      form.method = "POST"
+      form.action = SALESFORCE_WEB_TO_LEAD_ENDPOINT
+      form.style.display = "none"
+      form.target = "salesforce-hidden-iframe"
+
+      // Helper function to create hidden input
+      const createInput = (name, value) => {
+        const input = document.createElement("input")
+        input.type = "hidden"
+        input.name = name
+        input.value = value || ""
+        return input
+      }
+
+      // Helper function to create hidden textarea (for description)
+      const createTextarea = (name, value) => {
+        const textarea = document.createElement("textarea")
+        textarea.name = name
+        textarea.value = value || ""
+        textarea.style.display = "none"
+        return textarea
+      }
+
+      // Add all form fields
+      form.appendChild(createInput("oid", SALESFORCE_ORG_ID))
+      form.appendChild(createInput("retURL", window.location.origin))
+
+      // Standard Lead Fields
+      form.appendChild(createInput("first_name", formData.firstName || ""))
+      form.appendChild(createInput("last_name", formData.lastName || ""))
+      form.appendChild(createInput("email", formData.email || ""))
+      form.appendChild(createInput("phone", formData.contact || ""))
+
+      // Custom Fields
+      form.appendChild(createInput("00Nfv00000205Zd", formData.enquiry || ""))
+      form.appendChild(createInput("00Nfv000002CGXh", formData.course || ""))
+      form.appendChild(
+        createInput("00Nfv00000205OL", formData.hearAboutUs || "")
+      )
+
+      // Add description/message field
+      if (formData.message) {
+        form.appendChild(createTextarea("description", formData.message))
+      }
+      // Add lead_source field
+      form.appendChild(createInput("lead_source", "Website Contact Us"))
+      // Append form to body and submit
+      document.body.appendChild(form)
+      form.submit()
+
+      // Remove form after a short delay
+      setTimeout(() => {
+        document.body.removeChild(form)
+      }, 100)
+    } catch (error) {
+      // Silent error handling
+    }
+  }
+
   // 🧠 Handle input change
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -159,7 +246,8 @@ const ContactForm = () => {
   // ✅ Validate required fields
   const validateForm = () => {
     const newErrors = {}
-    if (!formData.fullName.trim()) newErrors.fullName = "Full Name is required"
+    if (!formData.firstName.trim())
+      newErrors.firstName = "First Name is required"
     if (!formData.email.trim()) newErrors.email = "Email is required"
     if (formData.contact.trim().length !== 10)
       newErrors.contact = "Contact number must be 10 digits"
@@ -180,7 +268,7 @@ const ContactForm = () => {
     }
 
     const payload = {
-      firstName: formData.fullName,
+      firstName: formData.firstName,
       lastName: formData.lastName,
       email: formData.email,
       contact: formData.contact,
@@ -193,9 +281,12 @@ const ContactForm = () => {
 
     sendToGoogleSheets(payload)
 
+    // Send to Salesforce Web-to-Lead
+    sendToSalesforce(formData)
+
     // Fire-and-forget CF7 submission
     const form = new FormData()
-    form.append("your-full-name", formData.fullName)
+    form.append("your-first-name", formData.firstName)
     form.append("your-last-name", formData.lastName)
     form.append("your-email", formData.email)
     form.append("your-contact", formData.contact)
@@ -215,22 +306,17 @@ const ContactForm = () => {
         method: "POST",
         body: form,
       }
-    )
-      .then((response) => response.json().catch(() => null))
-      .then((result) => {
-        console.log("CF7 Response:", result)
-      })
-      .catch((err) => {
-        console.error("CF7 submission error:", err)
-      })
+    ).catch(() => {
+      // Silent error handling
+    })
 
     setStatus({
       loading: false,
       success: true,
-      message: "✅ Thank you! Your message has been sent successfully.",
+      message: "Thank you! Your message has been sent successfully.",
     })
     setFormData({
-      fullName: "",
+      firstName: "",
       lastName: "",
       email: "",
       contact: "",
@@ -240,6 +326,15 @@ const ContactForm = () => {
       message: "",
     })
     setErrors({})
+
+    // Clear success message after 5 seconds
+    setTimeout(() => {
+      setStatus({
+        loading: false,
+        success: null,
+        message: "",
+      })
+    }, 5000)
   }
 
   return (
@@ -253,21 +348,23 @@ const ContactForm = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
               <div>
                 <label className="font-semibold text-base">
-                  Full Name{" "}
+                  First Name{" "}
                   <span className="text-sm font-normal">(required)</span>
                 </label>
                 <input
                   type="text"
-                  name="fullName"
-                  placeholder="Full Name"
-                  value={formData.fullName}
+                  name="firstName"
+                  placeholder="First Name"
+                  value={formData.firstName}
                   onChange={handleChange}
                   className={`w-full mt-2 bg-[#e1f4f1] text-[#1b2950] rounded-md p-3 focus:outline-none ${
-                    errors.fullName ? "border border-red-500" : ""
+                    errors.firstName ? "border border-red-500" : ""
                   }`}
                 />
-                {errors.fullName && (
-                  <p className="text-red-300 text-sm mt-1">{errors.fullName}</p>
+                {errors.firstName && (
+                  <p className="text-red-300 text-sm mt-1">
+                    {errors.firstName}
+                  </p>
                 )}
               </div>
 

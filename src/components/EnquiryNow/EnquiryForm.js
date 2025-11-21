@@ -337,6 +337,7 @@ const ContactForm = () => {
       form.appendChild(createInput("00NF9000007KmJQ", formData.course || "")) // Course
       form.appendChild(
         createInput("00NF9000007KmGW", formData.academicYear || "")
+        
       ) // Academic Year
 
       // Debug mode - uncomment to receive error emails
