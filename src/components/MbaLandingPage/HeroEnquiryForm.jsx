@@ -5,6 +5,10 @@ import Select, { components as selectComponents } from "react-select"
 import CountryListWithDialCode from "country-list-with-dial-code-and-flag"
 import { Country, State, City } from "country-state-city"
 
+// Salesforce Configuration
+const SALESFORCE_ORG_ID = "00DF9000001Fwgc"
+const SALESFORCE_WEB_TO_LEAD_ENDPOINT = `https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=${SALESFORCE_ORG_ID}`
+
 const initialFormData = {
   name: "",
   email: "",
@@ -295,6 +299,77 @@ const HeroEnquiryForm = ({ includeId = true }) => {
     }
   }
 
+  // Send to Salesforce Web-to-Lead using hidden form
+  const sendToSalesforce = (data, phoneDisplay) => {
+    try {
+      // Create a hidden iframe for silent submission
+      let hiddenIframe = document.getElementById("salesforce-hidden-iframe")
+      if (!hiddenIframe) {
+        hiddenIframe = document.createElement("iframe")
+        hiddenIframe.id = "salesforce-hidden-iframe"
+        hiddenIframe.name = "salesforce-hidden-iframe"
+        hiddenIframe.style.display = "none"
+        hiddenIframe.style.width = "0"
+        hiddenIframe.style.height = "0"
+        hiddenIframe.style.border = "none"
+        document.body.appendChild(hiddenIframe)
+      }
+
+      // Create a hidden form element
+      const form = document.createElement("form")
+      form.method = "POST"
+      form.action = SALESFORCE_WEB_TO_LEAD_ENDPOINT
+      form.style.display = "none"
+      form.target = "salesforce-hidden-iframe"
+
+      // Helper function to create hidden input
+      const createInput = (name, value) => {
+        const input = document.createElement("input")
+        input.type = "hidden"
+        input.name = name
+        input.value = value || ""
+        return input
+      }
+
+      // Helper function to create hidden textarea (for description if needed)
+      const createTextarea = (name, value) => {
+        const textarea = document.createElement("textarea")
+        textarea.name = name
+        textarea.value = value || ""
+        textarea.style.display = "none"
+        return textarea
+      }
+
+      // Add all form fields
+      form.appendChild(createInput("oid", SALESFORCE_ORG_ID))
+      form.appendChild(createInput("retURL", window.location.origin))
+
+      // Standard Lead Fields
+      form.appendChild(createInput("first_name", data.name || ""))
+      form.appendChild(createInput("last_name", "")) // Empty since form only has single name field
+      form.appendChild(createInput("email", data.email || ""))
+      form.appendChild(createInput("phone", phoneDisplay || ""))
+
+      // Custom Fields (same as EnquiryForm)
+      form.appendChild(createInput("00NF9000007KmGY", data.country || "")) // Country
+      form.appendChild(createInput("00NF9000007KmGp", data.state || "")) // State
+      form.appendChild(createInput("00NF9000007KmGX", data.city || "")) // City
+
+      form.appendChild(createInput("lead_source", "MBA Landing Page"))
+
+      // Append form to body and submit
+      document.body.appendChild(form)
+      form.submit()
+
+      // Remove form after a short delay
+      setTimeout(() => {
+        document.body.removeChild(form)
+      }, 100)
+    } catch (error) {
+      // Silent error handling
+    }
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault()
 
@@ -322,6 +397,9 @@ const HeroEnquiryForm = ({ includeId = true }) => {
       city: formData.city,
       sheetName: "MBA Enquiries",
     }
+
+    // Send to Salesforce Web-to-Lead
+    sendToSalesforce(payload, phoneDisplay)
 
     saveToWordPress(payload)
 
