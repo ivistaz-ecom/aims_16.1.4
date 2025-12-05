@@ -69,7 +69,7 @@ const HeroBanner = ({ announcements, pageType = "admissions" }) => {
         autoPlaySpeed={10000}
         arrows={true}
         customLeftArrow={
-          <div className="z-40 absolute md:top-[45%] left-4 lg:left-10 cursor-pointer top-1/2 -translate-y-1/2 bg-white hover:bg-[#A22877] hover:text-white text-black p-3 rounded-full shadow transition-colors duration-300">
+          <div className="z-20 absolute md:top-[45%] left-4 lg:left-10 cursor-pointer top-1/2 -translate-y-1/2 bg-white hover:bg-[#A22877] hover:text-white text-black p-3 rounded-full shadow transition-colors duration-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -88,7 +88,7 @@ const HeroBanner = ({ announcements, pageType = "admissions" }) => {
           </div>
         }
         customRightArrow={
-          <div className="z-40 absolute right-4 md:top-[45%] lg:right-4 cursor-pointer top-1/2 -translate-y-1/2 bg-white hover:bg-[#A22877] hover:text-white text-black p-3 rounded-full shadow transition-colors duration-300">
+          <div className="z-20 absolute right-4 md:top-[45%] lg:right-4 cursor-pointer top-1/2 -translate-y-1/2 bg-white hover:bg-[#A22877] hover:text-white text-black p-3 rounded-full shadow transition-colors duration-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -281,7 +281,7 @@ const HeroBanner = ({ announcements, pageType = "admissions" }) => {
 
               {/* Apply Now Button - only for slide 2 (index 1) */}
               {index === 1 && (
-                <div className="absolute top-[65%] md:top-[45%] lg:top-auto lg:bottom-44 left-1/2 lg:left-44 px-4 lg:px-0 z-40 -translate-x-1/2 -translate-y-1/2 md:translate-y-0 lg:translate-x-0">
+                <div className="absolute top-[55%] md:top-[45%] lg:top-auto lg:bottom-44 left-1/2 lg:left-44 px-4 lg:px-0 z-40 -translate-x-1/2 -translate-y-1/2 md:translate-y-0 lg:translate-x-0">
                   <a
                     href="https://apply.theaims.ac.in/login"
                     target="_blank"
