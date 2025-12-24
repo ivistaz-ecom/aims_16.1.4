@@ -375,14 +375,43 @@ export const academicJobsData = [
     summary: {
       type: "box",
       content:
-        "We are seeking a qualified and dynamic Assistant Professor in Information Technology to teach courses in MCA and BCA programs. The ideal candidate should possess strong subject expertise, research orientation, and hands-on experience with Outcome-Based Education (OBE) and NAAC quality assurance processes.",
+        "AIMS Institutes, Peenya, Bengaluru, is a premier educational institution dedicated to academic excellence, research, and innovation. Our vision is to nurture professionals equipped with the technical competence, ethical foundation, and leadership skills to thrive in a dynamic digital world.",
     },
     sections: [
       {
         type: "heading",
+        title: "Position Overview:",
+        items: [
+          {
+            parts: [
+              "We are seeking a qualified and dynamic ",
+              { bold: "Assistant Professor in Information Technology" },
+              " to teach courses in ",
+              { bold: "MCA and BCA programs" },
+              ". The ideal candidate should possess strong subject expertise, research orientation, and hands-on experience with ",
+              { bold: "Outcome-Based Education (OBE)" },
+              " and ",
+              { bold: "NAAC quality assurance processes" },
+              ".",
+            ],
+          },
+        ],
+      },
+      {
+        type: "heading",
         title: "Key Responsibilities:",
         items: [
-          "Deliver engaging lectures and practical sessions in Information Technology, Computer Applications, and related subjects for MCA & BCA programs.",
+          {
+            parts: [
+              "Deliver engaging lectures and practical sessions in ",
+              { bold: "Information Technology" },
+              ", ",
+              { bold: "Computer Applications" },
+              ", and related subjects for ",
+              { bold: "MCA & BCA programs" },
+              ".",
+            ],
+          },
           {
             parts: [
               "Design and implement ",
@@ -399,7 +428,15 @@ export const academicJobsData = [
           },
           "Guide students in academic projects, internships, and research activities.",
           "Stay updated with emerging technologies, tools, and pedagogical trends.",
-          "Engage in academic research, publications, and professional development activities.",
+          {
+            parts: [
+              "Engage in ",
+              {
+                bold: "academic research, publications, and professional development",
+              },
+              " activities.",
+            ],
+          },
           "Support departmental events, seminars, and collaborative initiatives.",
         ],
       },
@@ -409,7 +446,12 @@ export const academicJobsData = [
         items: [
           {
             parts: [
-              "Mandatory: Master's Degree in Computer Applications (MCA) or Information Technology/Computer Science from a recognized university and ",
+              { bold: "Mandatory:" },
+              " Master's Degree in ",
+              { bold: "Computer Applications (MCA)" },
+              " or ",
+              { bold: "Information Technology/Computer Science" },
+              " from a recognized university and ",
               { bold: "Ph.D. (awarded or pursuing)" },
               " in a relevant discipline.",
             ],
@@ -491,40 +533,106 @@ export const academicJobsData = [
 export const nonTeachingJobsData = [
   {
     id: 1,
-    title: "Administrative Assistant",
-    slug: "administrative-assistant",
-    department: "Administration",
-    experience: "1-3 years experience",
+    title: "Placement Manager/Officer",
+    slug: "placement-manager-officer",
+    department: "Placement & Corporate Relations",
+    experience: "7-12 years experience",
     location: "Bengaluru",
     institution: "AIMS Institutes, Bengaluru",
     summary: {
       type: "box",
       content:
-        "AIMS Institutes is seeking an Administrative Assistant to support daily administrative operations, manage documentation, and assist in coordinating various institutional activities.",
+        "AIMS Institutes is seeking a highly networked and result-oriented Placement Manager to lead student placement and internship initiatives across multiple schools including Business, IT, Hotel Management (BHM), and Commerce. The ideal candidate will have strong industry connects, proven experience in driving campus recruitment, and the ability to individually contribute towards building corporate relations, securing internships, and ensuring successful student placements.",
     },
     sections: [
       {
         type: "heading",
-        title: "Key Responsibilities:",
+        title: "Placement & Internship Coordination:",
         items: [
-          "Handle administrative tasks and documentation.",
-          "Coordinate meetings and maintain schedules.",
-          "Manage correspondence and communications.",
-          "Assist in event planning and coordination.",
+          "Develop and implement effective strategies for student placements and internships across all schools.",
+          "Secure opportunities with top companies, corporates, startups, and industry leaders.",
+          "Organize campus recruitment drives, job fairs, and internship programs.",
+          "Monitor and track student placement records, offer letters, and internship completion.",
+        ],
+      },
+      {
+        type: "heading",
+        title: "Industry Networking & Corporate Relations:",
+        items: [
+          "Leverage personal and professional networks to create strong industry partnerships.",
+          "Establish and maintain long-term relationships with HR leaders, recruiters, and industry bodies.",
+          "Conduct regular corporate visits, industry meets, and networking events to enhance employer engagement.",
+        ],
+      },
+      {
+        type: "heading",
+        title: "Student Development & Training:",
+        items: [
+          "Collaborate with faculty and trainers to identify industry-specific skill requirements.",
+          "Organize workshops, mock interviews, resume-building sessions, and soft-skills training.",
+          "Guide students in career counseling, interview preparation, and industry readiness.",
+        ],
+      },
+      {
+        type: "heading",
+        title: "Institutional Branding:",
+        items: [
+          "Promote AIMS Institutes as a preferred destination for talent among corporate partners.",
+          "Ensure high visibility of the institute's programs and student competencies to recruiters.",
+          "Collaborate with marketing and academic teams for employer branding initiatives.",
+        ],
+      },
+      {
+        type: "heading",
+        title: "Reporting & Compliance:",
+        items: [
+          "Maintain placement statistics, dashboards, and reports for management review.",
+          "Ensure compliance with institutional policies and placement guidelines.",
+          "Provide insights on market trends and emerging industry needs.",
         ],
       },
       {
         type: "heading",
         title: "Qualifications & Experience:",
         items: [
+          "Master's degree in Business Administration, HR, or related field.",
           {
-            bold: "Educational Qualification:",
-            text: "Bachelor's degree in any discipline.",
+            parts: [
+              "7–12 years of experience in ",
+              { bold: "placement" },
+              ", ",
+              { bold: "corporate relations" },
+              ", or ",
+              { bold: "talent acquisition" },
+              " roles.",
+            ],
           },
+          "Proven track record of student placements and industry tie-ups in education sector.",
           {
-            bold: "Experience:",
-            text: "1-3 years of administrative experience preferred.",
+            parts: [
+              "Excellent corporate network across ",
+              { bold: "Business" },
+              ", ",
+              { bold: "IT" },
+              ", ",
+              { bold: "Hospitality" },
+              ", and ",
+              { bold: "Commerce" },
+              " sectors.",
+            ],
           },
+          "Strong negotiation, relationship-building, and presentation skills.",
+        ],
+      },
+      {
+        type: "heading",
+        title: "Key Competencies:",
+        items: [
+          "Highly proactive, target-driven, and result-oriented.",
+          "Excellent communication and networking abilities.",
+          "Strong organizational and event-management skills.",
+          "Ability to work independently as well as in collaboration with academic departments.",
+          "Passion for student success and employability.",
         ],
       },
     ],
@@ -532,40 +640,93 @@ export const nonTeachingJobsData = [
   },
   {
     id: 2,
-    title: "IT Support Specialist",
-    slug: "it-support-specialist",
-    department: "Information Technology",
-    experience: "2-4 years experience",
+    title: "Placement Executive",
+    slug: "placement-executive",
+    department: "C & PR",
+    experience: "2-5 years experience",
     location: "Bengaluru",
-    institution: "AIMS Institutes, Bengaluru",
+    institution: "AIMS Institutes, Peenya, Bengaluru",
     summary: {
       type: "box",
       content:
-        "AIMS Institutes is looking for an IT Support Specialist to provide technical support, maintain IT infrastructure, and ensure smooth operation of all technology systems.",
+        "The Placement Executive at AIMS Institutes plays a key role in building and maintaining strong industry connections to facilitate student placements, internships, and corporate engagements. The position requires an energetic and result-oriented individual with excellent communication skills, an understanding of the education sector, and a strong professional network across industries.",
     },
     sections: [
       {
         type: "heading",
         title: "Key Responsibilities:",
         items: [
-          "Provide technical support to staff and students.",
-          "Maintain and troubleshoot IT infrastructure.",
-          "Install and configure software and hardware.",
-          "Ensure network security and data backup.",
+          {
+            parts: [
+              "Develop and strengthen ",
+              { bold: "industry linkages" },
+              " and ",
+              { bold: "corporate relations" },
+              " to secure placements and internships for students.",
+            ],
+          },
+          "Coordinate and manage campus recruitment drives, interviews, and employer interactions.",
+          "Identify potential recruiters and expand the institute's placement network across diverse sectors.",
+          "Maintain regular communication with companies, HR professionals, and industry leaders for long-term engagement.",
+          {
+            parts: [
+              "Collaborate with academic departments to align ",
+              { bold: "student skills" },
+              " with ",
+              { bold: "market and industry requirements" },
+              ".",
+            ],
+          },
+          "Assist in organizing training programs, soft skills workshops, and pre-placement talks to enhance student employability.",
+          "Track and maintain placement records, offer letters, and performance analytics of students.",
+          "Support in designing and executing strategies for career guidance, internship mapping, and industry exposure programs.",
+          "Represent AIMS Institutes at external events, job fairs, and networking forums to promote the institution's brand.",
+          "Coordinate with alumni for referrals, mentorship programs, and collaborative opportunities.",
         ],
       },
       {
         type: "heading",
-        title: "Qualifications & Experience:",
+        title: "Required Qualifications:",
         items: [
+          "Bachelor's or Master's Degree in Management, HR, Marketing, or any related discipline.",
           {
-            bold: "Educational Qualification:",
-            text: "Bachelor's degree in IT, Computer Science, or related field.",
+            parts: [
+              "Minimum ",
+              { bold: "2–5 years of experience" },
+              " in placement, corporate relations, or career services (preferably in the education sector).",
+            ],
           },
           {
-            bold: "Experience:",
-            text: "2-4 years of IT support or system administration experience.",
+            parts: [
+              "Strong industry network across various domains including ",
+              { bold: "IT" },
+              ", ",
+              { bold: "BFSI" },
+              ", ",
+              { bold: "Healthcare" },
+              ", ",
+              { bold: "Hospitality" },
+              ", ",
+              { bold: "Retail" },
+              ", and ",
+              { bold: "Management" },
+              ".",
+            ],
           },
+          "Excellent communication, interpersonal, and negotiation skills.",
+          "Good understanding of academic programs, student profiles, and employer expectations.",
+          "Proficiency in MS Office tools, CRM/placement management software, and digital communication platforms.",
+          "Ability to work under deadlines and achieve institutional placement targets.",
+        ],
+      },
+      {
+        type: "heading",
+        title: "Preferred Skills:",
+        items: [
+          "Demonstrated success in corporate outreach and partnership development.",
+          "Strong presentation and public speaking abilities.",
+          "Ability to motivate and guide students throughout the placement process.",
+          "High degree of professionalism, initiative, and organizational ability.",
         ],
       },
     ],
@@ -573,40 +734,150 @@ export const nonTeachingJobsData = [
   },
   {
     id: 3,
-    title: "Library Assistant",
-    slug: "library-assistant",
-    department: "Library Services",
-    experience: "1-2 years experience",
+    title: "Accounts Executive",
+    slug: "accounts-executive",
+    department: "Accounts & Finance Department",
+    experience: "2-5 years experience",
     location: "Bengaluru",
-    institution: "AIMS Institutes, Bengaluru",
+    institution: "AIMS Institutes, Peenya, Bengaluru",
     summary: {
       type: "box",
       content:
-        "AIMS Institutes is seeking a Library Assistant to manage library resources, assist students and faculty, and maintain library operations.",
+        "AIMS Institutes, Peenya, Bengaluru, is one of the city's leading educational institutions, known for its commitment to academic excellence, research, and institutional integrity. The institute maintains strong administrative and financial systems that support transparent and efficient operations.",
     },
     sections: [
       {
         type: "heading",
-        title: "Key Responsibilities:",
+        title: "Position Overview:",
         items: [
-          "Manage library resources and cataloging.",
-          "Assist students and faculty with library services.",
-          "Maintain library database and records.",
-          "Organize and maintain library collections.",
+          {
+            parts: [
+              "We are seeking a dedicated and detail-oriented ",
+              { bold: "Accounts Executive" },
+              " to join our ",
+              { bold: "Accounts & Finance team" },
+              ". The ideal candidate will have a strong background in ",
+              { bold: "accounting" },
+              ", ",
+              { bold: "GST" },
+              ", ",
+              { bold: "TDS" },
+              ", and ",
+              { bold: "banking operations" },
+              ", along with excellent record-keeping and compliance skills.",
+            ],
+          },
         ],
       },
       {
         type: "heading",
-        title: "Qualifications & Experience:",
+        title: "Key Responsibilities:",
+        items: [
+          "Handle day-to-day accounting operations and maintain accurate financial records.",
+          "Prepare and process vouchers, invoices, journal entries, and ledgers.",
+          {
+            parts: [
+              "Manage ",
+              { bold: "GST filings" },
+              ", ",
+              { bold: "TDS returns" },
+              ", and ensure timely statutory compliance.",
+            ],
+          },
+          "Reconcile bank accounts, vendor statements, and financial ledgers on a regular basis.",
+          "Support the preparation of monthly and annual financial statements.",
+          "Coordinate with internal departments for expense tracking and fund allocation.",
+          {
+            parts: [
+              "Assist in audits, documentation, and financial reporting for ",
+              { bold: "NAAC" },
+              " and statutory purposes.",
+            ],
+          },
+          "Maintain digital and physical records in accordance with institutional policies.",
+        ],
+      },
+      {
+        type: "heading",
+        title: "Educational Qualification:",
         items: [
           {
-            bold: "Educational Qualification:",
-            text: "Bachelor's degree in Library Science or related field.",
+            parts: [
+              { bold: "Mandatory:" },
+              " Bachelor's Degree in ",
+              { bold: "Commerce / Accounting / Finance (B.Com)" },
+              " or equivalent.",
+            ],
           },
           {
-            bold: "Experience:",
-            text: "1-2 years of library experience preferred.",
+            parts: [
+              { bold: "Preferred:" },
+              " Master's Degree in ",
+              { bold: "Commerce (M.Com)" },
+              " or ",
+              { bold: "MBA in Finance" },
+              ".",
+            ],
           },
+          "Certification in Tally ERP, GST, or Accounting Software will be an added advantage.",
+        ],
+      },
+      {
+        type: "heading",
+        title: "Experience:",
+        items: [
+          {
+            parts: [
+              "2–5 years of relevant experience in accounts, preferably in an ",
+              { bold: "educational institution" },
+              " or ",
+              { bold: "corporate setup" },
+              ".",
+            ],
+          },
+          {
+            parts: [
+              "Proven experience in ",
+              { bold: "GST" },
+              ", ",
+              { bold: "TDS" },
+              ", and ",
+              { bold: "banking operations" },
+              " is mandatory.",
+            ],
+          },
+          "Exposure to audit processes and institutional record maintenance preferred.",
+        ],
+      },
+      {
+        type: "heading",
+        title: "Skills & Attributes:",
+        items: [
+          {
+            parts: [
+              "Proficiency in ",
+              { bold: "Tally ERP" },
+              " / ",
+              { bold: "Accounting Software" },
+              ", ",
+              { bold: "MS Excel" },
+              ", and financial reporting tools.",
+            ],
+          },
+          {
+            parts: [
+              "Sound knowledge of ",
+              { bold: "GST" },
+              ", ",
+              { bold: "TDS" },
+              ", and ",
+              { bold: "statutory compliance" },
+              ".",
+            ],
+          },
+          "Strong analytical, organizational, and record-keeping skills.",
+          "High level of integrity, confidentiality, and attention to detail.",
+          "Ability to manage timelines and coordinate effectively with internal teams.",
         ],
       },
     ],
