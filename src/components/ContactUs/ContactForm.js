@@ -4,7 +4,7 @@ import Select from "react-select"
 import { GoArrowDownRight, GoArrowUpRight } from "react-icons/go"
 
 const GOOGLE_SHEETS_ENDPOINT =
-  "https://script.google.com/macros/s/AKfycbxbhsBMXJPLq4plqcQPe1FKVz6i_W8dkgVBDz36aJ9o7ITSFpFmN0uoFKY7ShTKVbPj/exec"
+  "https://script.google.com/macros/s/AKfycbynlXpBVntVd6ZRFibHRAmEzUQpLetlqQDbjEukZdoCwPUCoo5Ge0zVegAKyWx3tIK2/exec"
 
 // Salesforce Configuration
 const SALESFORCE_ORG_ID = "00DF9000001Fwgc"
@@ -141,13 +141,19 @@ const ContactForm = () => {
   })
 
   const sendToGoogleSheets = (payload) => {
+    // Your Apps Script expects JSON in e.postData.contents
+    const jsonPayload = JSON.stringify(payload)
+
     fetch(GOOGLE_SHEETS_ENDPOINT, {
       method: "POST",
       mode: "no-cors",
       redirect: "follow",
-      body: JSON.stringify(payload),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: jsonPayload,
     }).catch(() => {
-      // Silent fail
+      // Silent error handling
     })
   }
 
@@ -261,9 +267,17 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
+    // Prevent double submission
+    if (status.loading) {
+      return
+    }
+
+    setStatus({ loading: true, success: null, message: "" })
+
     const validationErrors = validateForm()
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors)
+      setStatus({ loading: false, success: null, message: "" })
       return
     }
 
