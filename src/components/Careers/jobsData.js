@@ -96,7 +96,9 @@ export const academicJobsData = [
               {
                 bold: "IQAC policies, systems, and quality assurance frameworks",
               },
-              " as per NAAC guidelines.",
+              " as per ",
+              { bold: "NAAC guidelines" },
+              ".",
             ],
           },
           {
@@ -148,14 +150,10 @@ export const academicJobsData = [
         type: "heading",
         title: "Required Qualifications:",
         items: [
-          {
-            bold: "Educational Qualification:",
-            text: "Master's Degree in any discipline (preferably Management, Education, or related field).",
-          },
+          "Master's Degree in any discipline (preferably Management, Education, or related field).",
           {
             parts: [
-              { bold: "Experience:" },
-              " Minimum ",
+              "Minimum ",
               { bold: "5 years of experience" },
               " in academic administration or quality assurance within higher education.",
             ],
@@ -314,7 +312,7 @@ export const academicJobsData = [
         items: [
           {
             parts: [
-              {bold:"2–5 years"}, 
+              { bold: "2–5 years" },
               " of relevant teaching experience in ",
               { bold: "HR and Business Law" },
               " at the undergraduate or postgraduate level.",
@@ -327,7 +325,7 @@ export const academicJobsData = [
               " and ",
               { bold: "NAAC accreditation processes" },
               " is ",
-              {bold:"mandatory."},
+              { bold: "mandatory." },
             ],
           },
           "Exposure to HR or corporate legal compliance in industry will be an added advantage.",
@@ -339,8 +337,7 @@ export const academicJobsData = [
         items: [
           {
             parts: [
-              "Strong subject expertise in HR, Labour Laws, and Business Law."
-              
+              "Strong subject expertise in HR, Labour Laws, and Business Law.",
             ],
           },
           {
@@ -471,7 +468,7 @@ export const academicJobsData = [
           {
             parts: [
               "Minimum ",
-              { bold: "2–5 years "},
+              { bold: "2–5 years " },
               "of teaching experience",
               " at the undergraduate or postgraduate level.",
             ],
@@ -483,7 +480,7 @@ export const academicJobsData = [
               " and contributing to ",
               { bold: "NAAC accreditation processes" },
               " is ",
-              {bold:"mandatory."},
+              { bold: "mandatory." },
             ],
           },
           "Exposure to IT project development, software training, or industry collaboration will be preferred.",
@@ -518,6 +515,154 @@ export const academicJobsData = [
           "Excellent communication and classroom management skills.",
           "Research aptitude and publication record desirable.",
           "Commitment to teamwork, innovation, and continuous improvement.",
+        ],
+      },
+    ],
+    applicationEmail: "hr@theaims.ac.in",
+  },
+  {
+    id: 5,
+    title: "Faculty - Human Resource Management and Business Law",
+    slug: "faculty-human-resource-management-business-law",
+    department: "School of Business / Management Studies Employment",
+    experience: "2-5 years experience",
+    location: "Bengaluru",
+    institution: "AIMS Institutes, Peenya, Bengaluru",
+    summary: {
+      type: "box",
+      content:
+        "AIMS Institutes, Peenya, Bengaluru, is a premier institution dedicated to excellence in education, research, and innovation. We nurture future-ready professionals by blending academic rigor with practical exposure, driven by a commitment to quality and institutional values.",
+    },
+    sections: [
+      {
+        type: "heading",
+        title: "Position Overview:",
+        items: [
+          {
+            parts: [
+              "We are inviting applications for a ",
+              {
+                bold: "Faculty position in Human Resource Management and Business Law",
+              },
+              ". The ideal candidate will possess strong academic credentials, industry insight, and experience in implementing ",
+              { bold: "Outcome-Based Education (OBE)" },
+              " and ",
+              { bold: "NAAC quality assurance frameworks" },
+              ".",
+            ],
+          },
+        ],
+      },
+      {
+        type: "heading",
+        title: "Key Responsibilities:",
+        items: [
+          {
+            parts: [
+              "Deliver lectures and tutorials in ",
+              { bold: "Human Resource Management" },
+              " and ",
+              { bold: "Business Law" },
+              " for undergraduate and postgraduate programs.",
+            ],
+          },
+          {
+            parts: [
+              "Design, develop, and review ",
+              { bold: "Outcome-Based Education (OBE)" },
+              " aligned course content, lesson plans, and assessments.",
+            ],
+          },
+          {
+            parts: [
+              "Participate actively in ",
+              { bold: "NAAC documentation" },
+              ", quality audits, and institutional accreditation processes.",
+            ],
+          },
+          "Mentor and guide students in academics, projects, and career progression.",
+          {
+            parts: [
+              "Engage in ",
+              {
+                bold: "research, publications, and academic development",
+              },
+              " initiatives.",
+            ],
+          },
+          "Collaborate with faculty teams to enhance the quality and relevance of the curriculum.",
+          "Uphold institutional standards of discipline, integrity, and continuous improvement.",
+        ],
+      },
+      {
+        type: "heading",
+        title: "Educational Qualification:",
+        items: [
+          {
+            parts: [
+              { bold: "Mandatory:" },
+              " Master's Degree in ",
+              { bold: "Business Law (MBL) only" },
+              " from a recognized university.",
+            ],
+          },
+          {
+            parts: [
+              { bold: "Preferred:" },
+              " Additional qualification in ",
+              { bold: "Human Resource Management" },
+              " or ",
+              { bold: "Management Studies" },
+              ".",
+            ],
+          },
+          {
+            parts: [{ bold: "Desirable:" }, " Ph.D. (awarded or pursuing)."],
+          },
+        ],
+      },
+      {
+        type: "heading",
+        title: "Experience:",
+        items: [
+          {
+            parts: [
+              "2–5 years of relevant teaching experience in ",
+              { bold: "HR and Business Law" },
+              " at the undergraduate or postgraduate level.",
+            ],
+          },
+          {
+            parts: [
+              "Hands-on experience with ",
+              { bold: "Outcome-Based Education (OBE) frameworks" },
+              " and ",
+              { bold: "NAAC accreditation processes" },
+              " is ",
+              { bold: "mandatory" },
+              ".",
+            ],
+          },
+          "Exposure to HR or corporate legal compliance in industry will be an added advantage.",
+        ],
+      },
+      {
+        type: "heading",
+        title: "Skills & Attributes:",
+        items: [
+          "Strong subject expertise in HR, Labour Laws, and Business Law.",
+          {
+            parts: [
+              "Proven ability to integrate ",
+              { bold: "OBE" },
+              " and ",
+              { bold: "quality assurance standards" },
+              " in teaching.",
+            ],
+          },
+          "Excellent communication, presentation, and mentoring skills.",
+          "Research-oriented mindset with academic publications preferred.",
+          "Collaborative and committed to institutional excellence.",
         ],
       },
     ],
@@ -593,29 +738,18 @@ export const nonTeachingJobsData = [
           "Master's degree in Business Administration, HR, or related field.",
           {
             parts: [
-              "7–12 years of experience in ",
-              { bold: "placement" },
-              ", ",
-              { bold: "corporate relations" },
-              ", or ",
-              { bold: "talent acquisition" },
-              " roles.",
+              { bold: "7–12 years of experience" },
+              " in placement, corporate relations, or talent acquisition roles.",
             ],
           },
-          "Proven track record of student placements and industry tie-ups in education sector.",
           {
             parts: [
-              "Excellent corporate network across ",
-              { bold: "Business" },
-              ", ",
-              { bold: "IT" },
-              ", ",
-              { bold: "Hospitality" },
-              ", and ",
-              { bold: "Commerce" },
-              " sectors.",
+              "Proven track record of ",
+              { bold: "student placements and industry tie-ups" },
+              " in education sector.",
             ],
           },
+          "Excellent corporate network across Business, IT, Hospitality, and Commerce sectors.",
           "Strong negotiation, relationship-building, and presentation skills.",
         ],
       },
@@ -660,23 +794,46 @@ export const nonTeachingJobsData = [
               " to secure placements and internships for students.",
             ],
           },
-          "Coordinate and manage campus recruitment drives, interviews, and employer interactions.",
-          "Identify potential recruiters and expand the institute's placement network across diverse sectors.",
-          "Maintain regular communication with companies, HR professionals, and industry leaders for long-term engagement.",
           {
             parts: [
-              "Collaborate with academic departments to align ",
-              { bold: "student skills" },
-              " with ",
-              { bold: "market and industry requirements" },
+              "Coordinate and manage ",
+              {
+                bold: "campus recruitment drives, interviews, and employer interactions",
+              },
               ".",
             ],
           },
-          "Assist in organizing training programs, soft skills workshops, and pre-placement talks to enhance student employability.",
-          "Track and maintain placement records, offer letters, and performance analytics of students.",
+          {
+            parts: [
+              "Identify potential recruiters and ",
+              { bold: "expand the institute's placement network" },
+              " across diverse sectors.",
+            ],
+          },
+          "Maintain regular communication with companies, HR professionals, and industry leaders for long-term engagement.",
+          "Collaborate with academic departments to align student skills with market and industry requirements.",
+          {
+            parts: [
+              "Assist in organizing ",
+              {
+                bold: "training programs, soft skills workshops, and pre-placement talks",
+              },
+              " to enhance student employability.",
+            ],
+          },
+          {
+            parts: [
+              "Track and Maintain",
+              {
+                bold: " placement records, offer letters, and performance analytics",
+              },
+              " of students.",
+            ],
+          },
           "Support in designing and executing strategies for career guidance, internship mapping, and industry exposure programs.",
           "Represent AIMS Institutes at external events, job fairs, and networking forums to promote the institution's brand.",
           "Coordinate with alumni for referrals, mentorship programs, and collaborative opportunities.",
+          ,
         ],
       },
       {
@@ -693,32 +850,54 @@ export const nonTeachingJobsData = [
           },
           {
             parts: [
-              "Strong industry network across various domains including ",
-              { bold: "IT" },
-              ", ",
-              { bold: "BFSI" },
-              ", ",
-              { bold: "Healthcare" },
-              ", ",
-              { bold: "Hospitality" },
-              ", ",
-              { bold: "Retail" },
-              ", and ",
-              { bold: "Management" },
+              "Strong ",
+              { bold: "industry network" },
+              " across various domains including IT, BFSI, Healthcare, Hospitality, Retail, and Management. ",
+            ],
+          },
+          {
+            parts: [
+              "Excellent ",
+              { bold: "communication, interpersonal, and negotiation skills" },
               ".",
             ],
           },
-          "Excellent communication, interpersonal, and negotiation skills.",
-          "Good understanding of academic programs, student profiles, and employer expectations.",
-          "Proficiency in MS Office tools, CRM/placement management software, and digital communication platforms.",
-          "Ability to work under deadlines and achieve institutional placement targets.",
+          {
+            parts: [
+              "Good understanding of ",
+              {
+                bold: "academic programs, student profiles, and employer expectations",
+              },
+              ".",
+            ],
+          },
+          {
+            parts: [
+              "Proficiency in ",
+              {
+                bold: "MS Office tools, CRM/placement management software, and digital communication platforms",
+              },
+              ".",
+            ],
+          },
+          {
+            parts: [
+              "Ability to work under deadlines and achieve institutional placement targets.",
+            ],
+          },
         ],
       },
       {
         type: "heading",
         title: "Preferred Skills:",
         items: [
-          "Demonstrated success in corporate outreach and partnership development.",
+          {
+            parts: [
+              "Demonstrated success in ",
+              { bold: "corporate outreach and partnership development" },
+              ".",
+            ],
+          },
           "Strong presentation and public speaking abilities.",
           "Ability to motivate and guide students throughout the placement process.",
           "High degree of professionalism, initiative, and organizational ability.",
@@ -769,7 +948,13 @@ export const nonTeachingJobsData = [
         title: "Key Responsibilities:",
         items: [
           "Handle day-to-day accounting operations and maintain accurate financial records.",
-          "Prepare and process vouchers, invoices, journal entries, and ledgers.",
+          {
+            parts: [
+              "Prepare and process ",
+              { bold: "vouchers, invoices, journal entries, and ledgers" },
+              ".",
+            ],
+          },
           {
             parts: [
               "Manage ",
@@ -779,14 +964,29 @@ export const nonTeachingJobsData = [
               ", and ensure timely statutory compliance.",
             ],
           },
-          "Reconcile bank accounts, vendor statements, and financial ledgers on a regular basis.",
-          "Support the preparation of monthly and annual financial statements.",
+          {
+            parts: [
+              "Reconcile ",
+              {
+                bold: "bank accounts, vendor statements, and financial ledgers ",
+              },
+              "on a regular basis.",
+            ],
+          },
+          {
+            parts: [
+              "Support the preparation of ",
+              { bold: "monthly and annual financial statements" },
+              ".",
+            ],
+          },
+
           "Coordinate with internal departments for expense tracking and fund allocation.",
           {
             parts: [
               "Assist in audits, documentation, and financial reporting for ",
-              { bold: "NAAC" },
-              " and statutory purposes.",
+              { bold: "NAAC and statutory purposes" },
+              ".",
             ],
           },
           "Maintain digital and physical records in accordance with institutional policies.",
@@ -814,7 +1014,13 @@ export const nonTeachingJobsData = [
               ".",
             ],
           },
-          "Certification in Tally ERP, GST, or Accounting Software will be an added advantage.",
+          {
+            parts: [
+              "Certification in ",
+              { bold: "Tally ERP, GST, or Accounting Software" },
+              " will be an added advantage.",
+            ],
+          },
         ],
       },
       {
@@ -823,7 +1029,8 @@ export const nonTeachingJobsData = [
         items: [
           {
             parts: [
-              "2–5 years of relevant experience in accounts, preferably in an ",
+              { bold: "2–5 years" },
+              " of relevant experience in accounts, preferably in an ",
               { bold: "educational institution" },
               " or ",
               { bold: "corporate setup" },
