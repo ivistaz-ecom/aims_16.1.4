@@ -314,7 +314,8 @@ export const academicJobsData = [
         items: [
           {
             parts: [
-              "2–5 years of relevant teaching experience in ",
+              {bold:"2–5 years"}, 
+              " of relevant teaching experience in ",
               { bold: "HR and Business Law" },
               " at the undergraduate or postgraduate level.",
             ],
@@ -325,7 +326,8 @@ export const academicJobsData = [
               { bold: "Outcome-Based Education (OBE) frameworks" },
               " and ",
               { bold: "NAAC accreditation processes" },
-              " is mandatory.",
+              " is ",
+              {bold:"mandatory."},
             ],
           },
           "Exposure to HR or corporate legal compliance in industry will be an added advantage.",
@@ -337,13 +339,8 @@ export const academicJobsData = [
         items: [
           {
             parts: [
-              "Strong subject expertise in ",
-              { bold: "HR" },
-              ", ",
-              { bold: "Labour Laws" },
-              ", and ",
-              { bold: "Business Law" },
-              ".",
+              "Strong subject expertise in HR, Labour Laws, and Business Law."
+              
             ],
           },
           {
@@ -430,11 +427,7 @@ export const academicJobsData = [
           "Stay updated with emerging technologies, tools, and pedagogical trends.",
           {
             parts: [
-              "Engage in ",
-              {
-                bold: "academic research, publications, and professional development",
-              },
-              " activities.",
+              "Engage in academic research, publications, and professional development activities.",
             ],
           },
           "Support departmental events, seminars, and collaborative initiatives.",
@@ -478,7 +471,8 @@ export const academicJobsData = [
           {
             parts: [
               "Minimum ",
-              { bold: "2–5 years of teaching experience" },
+              { bold: "2–5 years "},
+              "of teaching experience",
               " at the undergraduate or postgraduate level.",
             ],
           },
@@ -488,7 +482,8 @@ export const academicJobsData = [
               { bold: "Outcome-Based Education (OBE)" },
               " and contributing to ",
               { bold: "NAAC accreditation processes" },
-              " is mandatory.",
+              " is ",
+              {bold:"mandatory."},
             ],
           },
           "Exposure to IT project development, software training, or industry collaboration will be preferred.",
