@@ -11,6 +11,7 @@ export default function BhmCourseAdmissionsLayout({ children }) {
       <GTMInjector />
       {/* Google Tag Manager (noscript) - Immediately after body opening tag */}
       <noscript>
+        
         <iframe
           src="https://www.googletagmanager.com/ns.html?id=GTM-TSFSMV5R"
           height="0"
