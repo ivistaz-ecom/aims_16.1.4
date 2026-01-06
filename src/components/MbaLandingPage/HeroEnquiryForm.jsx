@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useMemo, useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
 import Select, { components as selectComponents } from "react-select"
 import CountryListWithDialCode from "country-list-with-dial-code-and-flag"
 import { Country, State, City } from "country-state-city"
@@ -70,6 +71,7 @@ const customSelectStyles = {
 }
 
 const HeroEnquiryForm = ({ includeId = true }) => {
+  const router = useRouter()
   const [formData, setFormData] = useState(initialFormData)
   const [errors, setErrors] = useState({})
   const [status, setStatus] = useState({ success: false })
@@ -458,6 +460,9 @@ const HeroEnquiryForm = ({ includeId = true }) => {
     })
 
     resetForm()
+
+    // Redirect to thankyou page
+    router.push("/mba-thankyou")
   }
 
   return (
