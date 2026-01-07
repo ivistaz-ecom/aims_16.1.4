@@ -100,9 +100,9 @@ export default function AlumniCarousel() {
                         )
                       )}
                     </div>
-                    <h4 className="font-semibold text-base sm:text-lg md:text-xl lg:text-2xl mb-2">
+                    <h3 className="font-semibold text-base sm:text-lg md:text-xl lg:text-2xl mb-2">
                       {testimonials[index].name}
-                    </h4>
+                    </h3>
                     <p className="text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl line-clamp-7">
                       {testimonials[index].text}
                     </p>

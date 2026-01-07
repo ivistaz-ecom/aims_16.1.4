@@ -47,9 +47,9 @@ const HeroBanner = ({ announcements, pageType = "admissions" }) => {
     },
     {
       id: 2,
-      desktop: "/MBA/MBAPage_ADMISSSION_Banner2.webp",
-      tablet: "/MBA/MBA_banner_tab.webp",
-      mobile: "/MBA/MBA_banner_mobile.webp",
+      desktop: "/MBA/MBa_ban_2.webp",
+      tablet: "/MBA/mba_tab_ban_2.webp",
+      mobile: "/MBA/mba_ban_Mob.webp",
       iacbeMobile: "/MBA/MBA_Details.svg",
     }
   ]

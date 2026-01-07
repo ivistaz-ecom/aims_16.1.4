@@ -61,9 +61,9 @@ const HeroBannerSoH = ({ announcements, pageType = "admissions" }) => {
       mobile: "/bhm-img/chef_mobile.webp",
     },
     {
-      desktop: "/bhm-img/VETbhmpage_desktop.webp",
-      tablet: "/bhm-img/VETbhm_Tab.webp",
-      mobile: "/bhm-img/VETbhmpage_Mobile.webp",
+      desktop: "/bhm-img/VET_ban.webp",
+      tablet: "/bhm-img/VET_ban_tab.webp",
+      mobile: "/bhm-img/VET_ban_Mob.webp",
     },
   ]
 
