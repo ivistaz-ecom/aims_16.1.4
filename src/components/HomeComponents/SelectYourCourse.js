@@ -151,9 +151,9 @@ const SelectYourCourse = () => {
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                         </div>
                                         {/* School Content */}
-                                        <h5 className="text-sm md:text-base text-gray-800">
+                                        <h3 className="text-sm md:text-base text-gray-800">
                                             {school.name}
-                                        </h5>
+                                        </h3>
                                     </div>
                                 </div>
                             ))}

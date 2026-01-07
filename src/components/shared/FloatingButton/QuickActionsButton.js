@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from "react"
 import Link from "next/link"
-import { FaWhatsapp, FaPlus, FaFacebook } from "react-icons/fa"
+import { FaWhatsapp, FaPlus, FaFacebook, FaInstagram } from "react-icons/fa"
 
 const QuickActionsButton = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -146,7 +146,7 @@ const QuickActionsButton = () => {
             rel="noopener noreferrer"
             aria-label="Chat with AIMS Institutes on WhatsApp"
             title="Chat with AIMS Institutes on WhatsApp"
-            className={`absolute bg-gradient-to-br from-green-400 to-green-600 text-white w-14 h-14 rounded-full shadow-2xl hover:shadow-green-500/50 transition-all duration-1000 flex items-center justify-center 
+            className={`absolute bg-gradient-to-br from-green-400 to-green-600 text-white w-11 h-11 rounded-full shadow-2xl hover:shadow-green-500/50 transition-all duration-1000 flex items-center justify-center 
                         transform border-2 border-green-300/30 backdrop-blur-sm hover:scale-110
                         ${
                           isMobile
@@ -157,7 +157,7 @@ const QuickActionsButton = () => {
                         }`}
             style={{ transitionDelay: "0ms" }}
           >
-            <FaWhatsapp className="w-7 h-7" aria-hidden="true" />
+            <FaWhatsapp className="w-6 h-6" aria-hidden="true" />
             {/* Glow Ring */}
             <div className="absolute inset-0 rounded-full bg-green-400/30 animate-ping"></div>
           </Link>
@@ -169,7 +169,7 @@ const QuickActionsButton = () => {
             rel="noopener noreferrer"
             aria-label="AIMS Institutes on Facebook"
             title="AIMS Institutes on Facebook"
-            className={`absolute bg-gradient-to-br from-blue-500 to-blue-700 text-white w-14 h-14 rounded-full shadow-2xl hover:shadow-blue-500/50 transition-all duration-1000 flex items-center justify-center
+            className={`absolute bg-gradient-to-br from-blue-500 to-blue-700 text-white w-11 h-11 rounded-full shadow-2xl hover:shadow-blue-500/50 transition-all duration-1000 flex items-center justify-center
                         transform border-2 border-blue-300/30 backdrop-blur-sm hover:scale-110
                         ${
                           isMobile
@@ -180,11 +180,37 @@ const QuickActionsButton = () => {
                         }`}
             style={{ transitionDelay: "200ms" }}
           >
-            <FaFacebook className="w-7 h-7" aria-hidden="true" />
+            <FaFacebook className="w-6 h-6" aria-hidden="true" />
             {/* Glow Ring */}
             <div
               className="absolute inset-0 rounded-full bg-blue-400/30 animate-ping"
               style={{ animationDelay: "1s" }}
+            ></div>
+          </Link>
+
+          {/* Instagram Button - Top Left Diagonal */}
+          <Link
+            href="https://www.instagram.com/aimsinstitutes1994/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="AIMS Institutes on Instagram"
+            title="AIMS Institutes on Instagram"
+            className={`absolute bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 text-white w-11 h-11 rounded-full shadow-2xl hover:shadow-pink-500/50 transition-all duration-1000 flex items-center justify-center
+                        transform border-2 border-pink-300/30 backdrop-blur-sm hover:scale-110
+                        ${
+                          isMobile
+                            ? isExpanded
+                              ? "opacity-100 scale-100 translate-x-[-70px] translate-y-[-70px] animate-bounce"
+                              : "opacity-0 scale-0"
+                            : "opacity-0 scale-0 group-hover:scale-100 group-hover:opacity-100 group-hover:translate-x-[-70px] group-hover:translate-y-[-70px] group-hover:animate-bounce hover:opacity-100 hover:scale-100"
+                        }`}
+            style={{ transitionDelay: "400ms" }}
+          >
+            <FaInstagram className="w-6 h-6" aria-hidden="true" />
+            {/* Glow Ring */}
+            <div
+              className="absolute inset-0 rounded-full bg-pink-400/30 animate-ping"
+              style={{ animationDelay: "1.5s" }}
             ></div>
           </Link>
 
