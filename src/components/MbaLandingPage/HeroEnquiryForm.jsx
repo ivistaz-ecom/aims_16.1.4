@@ -10,6 +10,11 @@ import { Country, State, City } from "country-state-city"
 const SALESFORCE_API_ENDPOINT =
   "https://aims-api-prod.ken42.com/v1/lead/post/bulkUpload"
 
+const academicYearOptions = [
+  { value: "2025-2026", label: "2025-2026" },
+  { value: "2026-2027", label: "2026-2027" },
+]
+
 const initialFormData = {
   name: "",
   email: "",
@@ -17,6 +22,7 @@ const initialFormData = {
   country: "IN",
   state: "",
   city: "",
+  academicYear: "",
 }
 
 const customSelectStyles = {
@@ -222,6 +228,15 @@ const HeroEnquiryForm = ({ includeId = true }) => {
     if (name === "city") {
       setFormData((prev) => ({ ...prev, city: selectedOption?.value || "" }))
       setErrors((prev) => ({ ...prev, city: "" }))
+      return
+    }
+
+    if (name === "academicYear") {
+      setFormData((prev) => ({
+        ...prev,
+        academicYear: selectedOption?.value || "",
+      }))
+      setErrors((prev) => ({ ...prev, academicYear: "" }))
     }
   }
 
@@ -262,6 +277,8 @@ const HeroEnquiryForm = ({ includeId = true }) => {
     if (!formData.country) validationErrors.country = "Select a country"
     if (!formData.state) validationErrors.state = "Select a state"
     if (!formData.city) validationErrors.city = "Select a city"
+    if (!formData.academicYear)
+      validationErrors.academicYear = "Academic Year is required"
 
     return validationErrors
   }
@@ -274,33 +291,33 @@ const HeroEnquiryForm = ({ includeId = true }) => {
     setTimeout(() => setStatus({ success: false }), 8000)
   }
 
-  const saveToWordPress = async (data) => {
-    try {
-      const form = new FormData()
-      form.append("name", data.name)
-      form.append("email", data.email)
-      form.append("phone", data.phone)
-      form.append("country", data.country)
-      form.append("state", data.state)
-      form.append("city", data.city)
+  // const saveToWordPress = async (data) => {
+  //   try {
+  //     const form = new FormData()
+  //     form.append("name", data.name)
+  //     form.append("email", data.email)
+  //     form.append("phone", data.phone)
+  //     form.append("country", data.country)
+  //     form.append("state", data.state)
+  //     form.append("city", data.city)
 
-      form.append("_wpcf7", "885")
-      form.append("_wpcf7_version", "5.7.7")
-      form.append("_wpcf7_locale", "en_US")
-      form.append("_wpcf7_unit_tag", "wpcf7-f885-p" + Date.now())
-      form.append("_wpcf7_container_post", "0")
+  //     form.append("_wpcf7", "885")
+  //     form.append("_wpcf7_version", "5.7.7")
+  //     form.append("_wpcf7_locale", "en_US")
+  //     form.append("_wpcf7_unit_tag", "wpcf7-f885-p" + Date.now())
+  //     form.append("_wpcf7_container_post", "0")
 
-      await fetch(
-        "https://docs.theaims.ac.in/wp-json/contact-form-7/v1/contact-forms/885/feedback",
-        {
-          method: "POST",
-          body: form,
-        }
-      )
-    } catch (error) {
-      // Silent fail - same behaviour as existing form
-    }
-  }
+  //     await fetch(
+  //       "https://docs.theaims.ac.in/wp-json/contact-form-7/v1/contact-forms/885/feedback",
+  //       {
+  //         method: "POST",
+  //         body: form,
+  //       }
+  //     )
+  //   } catch (error) {
+  //     // Silent fail - same behaviour as existing form
+  //   }
+  // }
 
   // Send to Salesforce using API POST request
   const sendToSalesforce = (data, phoneDisplay) => {
@@ -323,15 +340,18 @@ const HeroEnquiryForm = ({ includeId = true }) => {
           LastName: lastName,
           Email: data.email || "",
           Phone: formatPhone(phoneDisplay || ""),
+          Interested_Level_of_Study__c: "PG",
           Interested_Course__c: "Master of Business Administration (MBA)",
           LeadSource: "MBA Landing Page",
           Level__c: "Primary",
           Country__c: data.country || "",
           State__c: data.state || "",
           City__c: data.city || "",
+          Academic_Year__c: data.academicYear || "",
           UTM_Touchpoint__c: "test",
           Campaign__c: "Test",
           Remarks__c: "test",
+          Month__c: "January",
         },
       ]
 
@@ -341,9 +361,18 @@ const HeroEnquiryForm = ({ includeId = true }) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(payload),
-      }).catch(() => {
-        // Silent error handling
       })
+        .then(async (response) => {
+          const responseData = await response.json().catch(() => ({}))
+          // console.log(responseData)
+          if (response.ok) {
+            return { success: true, service: "Salesforce" }
+          }
+          return { success: false, service: "Salesforce" }
+        })
+        .catch(() => {
+          return { success: false, service: "Salesforce" }
+        })
     } catch (error) {
       // Silent error handling
     }
@@ -374,6 +403,7 @@ const HeroEnquiryForm = ({ includeId = true }) => {
         states.find((state) => state.isoCode === formData.state)?.name ||
         formData.state,
       city: formData.city,
+      academicYear: formData.academicYear,
       sheetName: "MBA Enquiries",
     }
 
@@ -520,7 +550,7 @@ const HeroEnquiryForm = ({ includeId = true }) => {
           </div>
 
           {/* Country */}
-          <div className="md:col-span-2">
+          <div>
             <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-[#667085]">
               Country <span className="text-red-500">*</span>
             </label>
@@ -554,10 +584,7 @@ const HeroEnquiryForm = ({ includeId = true }) => {
               </p>
             )}
           </div>
-        </div>
 
-        {/* State */}
-        <div className="grid gap-4 md:grid-cols-2">
           <div>
             <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-[#667085]">
               State <span className="text-red-500">*</span>
@@ -597,7 +624,6 @@ const HeroEnquiryForm = ({ includeId = true }) => {
             )}
           </div>
 
-          {/* City */}
           <div>
             <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-[#667085]">
               City <span className="text-red-500">*</span>
@@ -631,6 +657,40 @@ const HeroEnquiryForm = ({ includeId = true }) => {
                 style={{ fontSize: "10px" }}
               >
                 {errors.city}
+              </p>
+            )}
+          </div>
+
+          <div>
+            <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-[#667085]">
+              Academic Year <span className="text-red-500">*</span>
+            </label>
+            <Select
+              name="academicYear"
+              value={
+                formData.academicYear
+                  ? academicYearOptions.find(
+                      (option) => option.value === formData.academicYear
+                    )
+                  : null
+              }
+              onChange={handleSelectChange}
+              options={academicYearOptions}
+              placeholder="Select Academic Year"
+              styles={customSelectStyles}
+              classNamePrefix="form-select"
+              menuPortalTarget={
+                typeof document !== "undefined" ? document.body : undefined
+              }
+              menuPosition="fixed"
+              menuPlacement="top"
+            />
+            {errors.academicYear && (
+              <p
+                className="mt-1 leading-tight text-red-500 font-medium"
+                style={{ fontSize: "10px" }}
+              >
+                {errors.academicYear}
               </p>
             )}
           </div>
