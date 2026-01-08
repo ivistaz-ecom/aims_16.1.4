@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useMemo, useState, useEffect } from "react"
+import React, { useMemo, useState } from "react"
 import { useRouter } from "next/navigation"
 import Select, { components as selectComponents } from "react-select"
 import CountryListWithDialCode from "country-list-with-dial-code-and-flag"
@@ -10,6 +10,11 @@ import { Country, State, City } from "country-state-city"
 const SALESFORCE_API_ENDPOINT =
   "https://aims-api-prod.ken42.com/v1/lead/post/bulkUpload"
 
+const academicYearOptions = [
+  { value: "2025-2026", label: "2025-2026" },
+  { value: "2026-2027", label: "2026-2027" },
+]
+
 const initialFormData = {
   name: "",
   email: "",
@@ -17,6 +22,7 @@ const initialFormData = {
   country: "IN",
   state: "",
   city: "",
+  academicYear: "",
 }
 
 const customSelectStyles = {
@@ -221,6 +227,15 @@ const HeroEnquiryForm = ({ includeId = true }) => {
     if (name === "city") {
       setFormData((prev) => ({ ...prev, city: selectedOption?.value || "" }))
       setErrors((prev) => ({ ...prev, city: "" }))
+      return
+    }
+
+    if (name === "academicYear") {
+      setFormData((prev) => ({
+        ...prev,
+        academicYear: selectedOption?.value || "",
+      }))
+      setErrors((prev) => ({ ...prev, academicYear: "" }))
     }
   }
 
@@ -261,6 +276,8 @@ const HeroEnquiryForm = ({ includeId = true }) => {
     if (!formData.country) validationErrors.country = "Select a country"
     if (!formData.state) validationErrors.state = "Select a state"
     if (!formData.city) validationErrors.city = "Select a city"
+    if (!formData.academicYear)
+      validationErrors.academicYear = "Academic Year is required"
 
     return validationErrors
   }
@@ -323,12 +340,14 @@ const HeroEnquiryForm = ({ includeId = true }) => {
           LastName: lastName,
           Email: data.email || "",
           Phone: formatPhone(phoneDisplay || ""),
+          Interested_Level_of_Study__c: "UG",
           Interested_Course__c: "Bachelor of Hotel Management (BHM)",
           LeadSource: "BHM Landing Page",
           Level__c: "Primary",
           Country__c: data.country || "",
           State__c: data.state || "",
           City__c: data.city || "",
+          Academic_Year__c: data.academicYear || "",
           Month__c: "January",
           Campaign__c: "Test",
           Remarks__c: "test",
@@ -345,6 +364,7 @@ const HeroEnquiryForm = ({ includeId = true }) => {
       })
         .then(async (response) => {
           const responseData = await response.json().catch(() => ({}))
+          // console.log(responseData)
           if (response.ok) {
             return { success: true, service: "Salesforce" }
           }
@@ -383,6 +403,7 @@ const HeroEnquiryForm = ({ includeId = true }) => {
         states.find((state) => state.isoCode === formData.state)?.name ||
         formData.state,
       city: formData.city,
+      academicYear: formData.academicYear,
       sheetName: "BHM Enquiries",
     }
 
@@ -519,7 +540,7 @@ const HeroEnquiryForm = ({ includeId = true }) => {
             )}
           </div>
 
-          <div className="md:col-span-2">
+          <div>
             <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-[#667085]">
               Country <span className="text-red-500">*</span>
             </label>
@@ -553,9 +574,7 @@ const HeroEnquiryForm = ({ includeId = true }) => {
               </p>
             )}
           </div>
-        </div>
 
-        <div className="grid gap-4 md:grid-cols-2">
           <div>
             <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-[#667085]">
               State <span className="text-red-500">*</span>
@@ -628,6 +647,40 @@ const HeroEnquiryForm = ({ includeId = true }) => {
                 style={{ fontSize: "10px" }}
               >
                 {errors.city}
+              </p>
+            )}
+          </div>
+
+          <div>
+            <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-[#667085]">
+              Academic Year <span className="text-red-500">*</span>
+            </label>
+            <Select
+              name="academicYear"
+              value={
+                formData.academicYear
+                  ? academicYearOptions.find(
+                      (option) => option.value === formData.academicYear
+                    )
+                  : null
+              }
+              onChange={handleSelectChange}
+              options={academicYearOptions}
+              placeholder="Select Academic Year"
+              styles={customSelectStyles}
+              classNamePrefix="form-select"
+              menuPortalTarget={
+                typeof document !== "undefined" ? document.body : undefined
+              }
+              menuPosition="fixed"
+              menuPlacement="top"
+            />
+            {errors.academicYear && (
+              <p
+                className="mt-1 leading-tight text-red-500 font-medium"
+                style={{ fontSize: "10px" }}
+              >
+                {errors.academicYear}
               </p>
             )}
           </div>
