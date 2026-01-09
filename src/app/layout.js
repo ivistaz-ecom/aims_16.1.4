@@ -5,6 +5,7 @@ import Header from "../components/shared/Header"
 import Footer from "../components/shared/Footer"
 import FloatingButton from "../components/shared/FloatingButton"
 import ConditionalLayout from "../components/shared/ConditionalLayout"
+import ClarityInit from "../components/shared/ClarityInit"
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -178,6 +179,7 @@ const RootLayout = ({ children }) => {
           `}
         </Script>
 
+        <ClarityInit />
         <ConditionalLayout>{children}</ConditionalLayout>
       </body>
     </html>
