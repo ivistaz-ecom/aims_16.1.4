@@ -16,7 +16,8 @@ const academicYearOptions = [
 ]
 
 const initialFormData = {
-  name: "",
+  firstName: "",
+  lastName: "",
   email: "",
   phone: "",
   country: "IN",
@@ -256,7 +257,10 @@ const HeroEnquiryForm = ({ includeId = true }) => {
   const validateForm = () => {
     const validationErrors = {}
 
-    if (!formData.name.trim()) validationErrors.name = "Name is required"
+    if (!formData.firstName.trim())
+      validationErrors.firstName = "First Name is required"
+    if (!formData.lastName.trim())
+      validationErrors.lastName = "Last Name is required"
     if (!formData.email.trim()) {
       validationErrors.email = "Email is required"
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
@@ -322,9 +326,9 @@ const HeroEnquiryForm = ({ includeId = true }) => {
   // Send to Salesforce using API POST request
   const sendToSalesforce = (data, phoneDisplay) => {
     try {
-      // Use full name as FirstName and "." as LastName
-      const firstName = (data.name || "").trim()
-      const lastName = "."
+      // Use firstName and lastName from form data
+      const firstName = (data.firstName || "").trim()
+      const lastName = (data.lastName || "").trim()
 
       // Format phone number (ensure it has the dial code format)
       const formatPhone = (phone) => {
@@ -390,10 +394,10 @@ const HeroEnquiryForm = ({ includeId = true }) => {
     const phoneDisplay = `${phoneCountry?.dialCode || ""} ${
       formData.phone
     }`.trim()
-    const sheetPhone = phoneDisplay ? `'${phoneDisplay}` : ""
 
     const payload = {
-      name: formData.name,
+      firstName: formData.firstName,
+      lastName: formData.lastName,
       email: formData.email,
       phone: phoneDisplay,
       country:
@@ -412,27 +416,64 @@ const HeroEnquiryForm = ({ includeId = true }) => {
 
     // saveToWordPress(payload)
 
-    const sheetsPayload = { ...payload, phone: sheetPhone }
+    // Prepare Google Sheets payload with new structure
+    const firstName = (formData.firstName || "").trim()
+    const lastName = (formData.lastName || "").trim()
+    const currentDate = new Date()
+    const uploadedDate = currentDate.toISOString().split("T")[0] // YYYY-MM-DD format
+    // Automatic month generation (uncomment if needed):
+    // const monthNames = [
+    //   "January",
+    //   "February",
+    //   "March",
+    //   "April",
+    //   "May",
+    //   "June",
+    //   "July",
+    //   "August",
+    //   "September",
+    //   "October",
+    //   "November",
+    //   "December",
+    // ]
+    // const currentMonth = monthNames[currentDate.getMonth()]
+
+    const sheetsPayload = {
+      FirstName: firstName,
+      LastName: lastName,
+      Email: formData.email || "",
+      Phone: phoneDisplay || "",
+      LeadSource: "MBA Landing Page",
+      Status: "",
+      OwnerId: "",
+      Interested_Level_of_Study__c: "PG",
+      Interested_Course__c: "Master of Business Administration (MBA)",
+      Academic_Year__c: formData.academicYear || "",
+      Uploaded_Date__c: uploadedDate,
+      Month__c: "January", // Automatic: Month__c: currentMonth,
+      City__c: formData.city || "",
+      State__c:
+        states.find((state) => state.isoCode === formData.state)?.name ||
+        formData.state ||
+        "",
+      Lead_Sub_Source__c: "Website Enquiry Form",
+      sheetName: "MBA & BHM",
+    }
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbxDhi4AcFcPtjdO8ss3TAI0Eda0YIPc6xBbMyIMNYGvTP0ksZrjUlcNfKygjtWchbzA/exec",
+      "https://script.google.com/macros/s/AKfycbwtcWSwo5a77xIr65SgtnQyCQfgjkS2G4PKjCNwIlXAKFEUz0oXL1tv9YUViuD_9BSm/exec",
       {
         method: "POST",
         mode: "no-cors",
         redirect: "follow",
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(sheetsPayload),
       }
-    )
-      .then(async (response) => {
-        const responseData = await response.json().catch(() => ({}))
-        if (response.ok) {
-          return { success: true, service: "Salesforce" }
-        }
-        return { success: false, service: "Salesforce" }
-      })
-      .catch(() => {
-        return { success: false, service: "Salesforce" }
-      })
+    ).catch(() => {
+      // Silent error handling
+    })
 
     resetForm()
 
@@ -451,25 +492,48 @@ const HeroEnquiryForm = ({ includeId = true }) => {
 
       <form className="space-y-5" onSubmit={handleSubmit}>
         <div className="grid gap-4 md:grid-cols-2">
-          <div className="md:col-span-2">
+          <div>
             <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-[#667085]">
-              Full Name <span className="text-red-500">*</span>
+              First Name <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
-              name="name"
-              value={formData.name}
+              name="firstName"
+              value={formData.firstName}
               onChange={handleInputChange}
               className={`mt-2 w-full border border-[#d5d8e0] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#A22977] ${
-                errors.name ? "border-red-500" : ""
+                errors.firstName ? "border-red-500" : ""
               }`}
             />
-            {errors.name && (
+            {errors.firstName && (
               <p
                 className="mt-1 leading-tight text-red-500 font-medium"
                 style={{ fontSize: "10px" }}
               >
-                {errors.name}
+                {errors.firstName}
+              </p>
+            )}
+          </div>
+
+          <div>
+            <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-[#667085]">
+              Last Name <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleInputChange}
+              className={`mt-2 w-full border border-[#d5d8e0] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#A22977] ${
+                errors.lastName ? "border-red-500" : ""
+              }`}
+            />
+            {errors.lastName && (
+              <p
+                className="mt-1 leading-tight text-red-500 font-medium"
+                style={{ fontSize: "10px" }}
+              >
+                {errors.lastName}
               </p>
             )}
           </div>
