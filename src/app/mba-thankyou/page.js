@@ -27,7 +27,7 @@ const page = () => {
             href="/"
             showReadMore={false}
           >
-            know More
+           Visit Our Website
           </Button>
         </div>
       </div>
