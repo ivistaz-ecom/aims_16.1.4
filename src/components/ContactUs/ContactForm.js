@@ -228,11 +228,15 @@ const ContactForm = () => {
     const newErrors = {}
     if (!formData.firstName.trim())
       newErrors.firstName = "First Name is required"
+    if (!formData.lastName.trim()) newErrors.lastName = "Last Name is required"
     if (!formData.email.trim()) newErrors.email = "Email is required"
     if (formData.contact.trim().length !== 10)
       newErrors.contact = "Contact number must be 10 digits"
     if (!formData.enquiry.trim())
       newErrors.enquiry = "Please select an enquiry type"
+    if (!formData.course.trim()) newErrors.course = "Please select a course"
+    if (!formData.hearAboutUs.trim())
+      newErrors.hearAboutUs = "Please select any one option"
     if (!formData.message.trim()) newErrors.message = "Message is required"
     return newErrors
   }
@@ -367,8 +371,13 @@ const ContactForm = () => {
                   placeholder="Last Name"
                   value={formData.lastName}
                   onChange={handleChange}
-                  className="w-full mt-2 bg-[#e1f4f1] text-[#1b2950] rounded-md p-3 focus:outline-none"
+                  className={`w-full mt-2 bg-[#e1f4f1] text-[#1b2950] rounded-md p-3 focus:outline-none ${
+                    errors.lastName ? "border border-red-500" : ""
+                  }`}
                 />
+                {errors.lastName && (
+                  <p className="text-red-300 text-sm mt-1">{errors.lastName}</p>
+                )}
               </div>
             </div>
 
@@ -445,7 +454,9 @@ const ContactForm = () => {
               </div>
               {/* 🎓 Course */}
               <div className="relative text-left">
-                <label className="font-semibold text-base">Course</label>
+                <label className="font-semibold text-base">
+                  Course <span className="text-sm font-normal">(required)</span>
+                </label>
                 <div className="mt-2">
                   <Select
                     inputId="contact-course"
@@ -459,18 +470,22 @@ const ContactForm = () => {
                       ) || null
                     }
                     onChange={handleSelectChange("course")}
-                    styles={getSelectStyles(false)}
+                    styles={getSelectStyles(Boolean(errors.course))}
                     classNamePrefix="contact-select"
                     isClearable
                   />
                 </div>
+                {errors.course && (
+                  <p className="text-red-300 text-sm mt-1">{errors.course}</p>
+                )}
               </div>
             </div>
 
             {/* 📢 Where did you hear about us */}
             <div className="text-left">
               <label className="font-semibold text-base mb-3 block">
-                Where did you hear about us?
+                Where did you hear about us?{" "}
+                <span className="text-sm font-normal">(required)</span>
               </label>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {[
@@ -499,6 +514,11 @@ const ContactForm = () => {
                   </label>
                 ))}
               </div>
+              {errors.hearAboutUs && (
+                <p className="text-red-300 text-sm mt-1">
+                  {errors.hearAboutUs}
+                </p>
+              )}
             </div>
 
             {/* 💬 Message */}
