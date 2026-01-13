@@ -19,12 +19,12 @@ const RcContent = () => {
         <div className="container mx-auto">
           <div className="flex flex-col gap-4">
             <h3 className="playfair-300 text-[#0C2165] leading-tight">
-              AIMS Internal Quality Assurance Cell (AIQAC){" "}
+              AIMS Internal Quality Assurance Cell (AIQAC){" "}<br/>
               <Link
                 href="/iqac-pdf/iqac-composition.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="playfair-300 text-[#0C2165] leading-tight  hover:text-[#A22877] underline "
+                className="playfair-300 text-[24px] text-[#0C2165] leading-tight  hover:text-[#A22877] underline "
               >
                 IQAC Composition
               </Link>

@@ -23,19 +23,13 @@ const SGRC = () => {
           <br />
           b. in writing or by email to the Registrar –{" "}
           <a
-            href="mailto:registrar@theaims.ac.in"
-            className="underline cursor-pointer"
-          >
-            registrar@theaims.ac.in
-          </a>
-          <br />
-          c. by email to{" "}
-          <a
             href="mailto:grievances@theaims.ac.in"
             className="underline cursor-pointer"
           >
             grievances@theaims.ac.in
           </a>
+          <br />
+          
         </p>
       )
     } else if (index === 7) {
