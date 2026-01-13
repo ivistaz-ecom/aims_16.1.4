@@ -69,6 +69,10 @@ const STATUTES_AND_POLICIES = [
     title: "E-Governance Policy",
     href: "/acts-and-statutes-moa/e-goverance-policy.pdf",
   },
+  {
+    title: "IQAC",
+    href: "/iqac-internal-quality-assurance-cell",
+  }
 ]
 
 const ActsandStatues = () => {

@@ -9,7 +9,7 @@ const GrievanceRedressal = () => {
       <HeroBanner />
       <SpeakUp />
       <SGRC />
-      <GrievanceForm />
+      {/* <GrievanceForm /> */}
     </>
   )
 }
