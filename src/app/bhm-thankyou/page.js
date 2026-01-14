@@ -1,10 +1,19 @@
 "use client"
 
-import React from "react"
+import React, { useEffect } from "react"
 import Button from "@/shared/Button"
 import SeoMetadata from "@/components/shared/Seo/SeoMetadata"
 
 const page = () => {
+  useEffect(() => {
+    // Event snippet for Submit lead form-BHM conversion page
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", "conversion", {
+        send_to: "AW-17707682486/9kIHCIDe89wbELaV1_tB",
+      })
+    }
+  }, [])
+
   return (
     <>
       <SeoMetadata
@@ -27,7 +36,7 @@ const page = () => {
             href="/"
             showReadMore={false}
           >
-           Visit Our Website
+            Visit Our Website
           </Button>
         </div>
       </div>

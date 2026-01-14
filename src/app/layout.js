@@ -143,6 +143,26 @@ const RootLayout = ({ children }) => {
         </Script>
         {/* End Google Analytics */}
 
+        {/* Google tag (gtag.js) - Google Ads - Only load on production domain */}
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+          if (window.location.hostname === 'www.theaims.ac.in') {
+            // Load Google Ads script dynamically
+            const adsScript = document.createElement('script');
+            adsScript.async = true;
+            adsScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17707682486';
+            document.head.appendChild(adsScript);
+            
+            // Initialize Google Ads (gtag already initialized by GA4)
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17707682486');
+          }
+        `}
+        </Script>
+        {/* End Google tag (gtag.js) */}
+
         {/* Defer any external CSS from staging.theaims.ac.in to avoid render-blocking */}
         <Script id="defer-external-styles" strategy="afterInteractive">
           {`
