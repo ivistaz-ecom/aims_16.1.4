@@ -11,7 +11,6 @@ const SALESFORCE_API_ENDPOINT =
   "https://aims-api-prod.ken42.com/v1/lead/post/bulkUpload"
 
 const academicYearOptions = [
-  { value: "2025-2026", label: "2025-2026" },
   { value: "2026-2027", label: "2026-2027" },
 ]
 
