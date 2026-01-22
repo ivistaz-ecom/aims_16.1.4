@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 import Image from "next/image"
 import { FiMenu, FiX } from "react-icons/fi"
 import { HoveredLink, Menu, MenuItem } from "@/components/ui/navbar-menu"
@@ -22,27 +22,38 @@ export default function Header() {
   const [isSearching, setIsSearching] = useState(false)
   const [showMobileSearch, setShowMobileSearch] = useState(false)
   const pathname = usePathname()
+  const scrollPositionRef = useRef(0)
 
   // Prevent background scroll when mobile menu is open
   useEffect(() => {
     if (mobileOpen) {
       // Save the current scroll position
-      const scrollY = window.scrollY
+      scrollPositionRef.current = window.scrollY || window.pageYOffset || document.documentElement.scrollTop
       // Apply styles to prevent scrolling
       document.body.style.position = "fixed"
-      document.body.style.top = `-${scrollY}px`
+      document.body.style.top = `-${scrollPositionRef.current}px`
       document.body.style.width = "100%"
       document.body.style.overflow = "hidden"
+      // Also prevent scrolling on html element
+      document.documentElement.style.overflow = "hidden"
+      // Ensure header stays visible
+      setIsSticky(true)
     } else {
       // Restore scroll position when menu closes
-      const scrollY = document.body.style.top
+      const savedScrollPosition = scrollPositionRef.current
+      // Remove all scroll prevention styles
       document.body.style.position = ""
       document.body.style.top = ""
       document.body.style.width = ""
       document.body.style.overflow = ""
-      if (scrollY) {
-        window.scrollTo(0, parseInt(scrollY || "0") * -1)
-      }
+      document.documentElement.style.overflow = ""
+      // Restore scroll position after styles are reset
+      requestAnimationFrame(() => {
+        window.scrollTo({
+          top: savedScrollPosition,
+          behavior: "instant"
+        })
+      })
     }
   }, [mobileOpen])
 
@@ -205,26 +216,28 @@ export default function Header() {
   }, [showMobileSearch])
 
   // Determine if header should be fixed
-  // On mobile: always fixed when search is open, otherwise based on scroll
+  // On mobile: always fixed when search is open or menu is open, otherwise based on scroll
   // On desktop/tablet: based on scroll position
-  const shouldBeFixed = showMobileSearch ? true : isSticky
+  const shouldBeFixed = showMobileSearch || mobileOpen ? true : isSticky
 
   // Removed all transforms to prevent mobile header enlarging
 
   return (
     <>
       <header
-        className={`z-50 bg-white backdrop-blur-md w-full ${
+        className={`bg-white backdrop-blur-md w-full ${
           shouldBeFixed
-            ? "fixed top-0 left-0 right-0 md:shadow-none shadow-sm"
-            : "relative"
+            ? "fixed top-0 left-0 right-0 md:shadow-none shadow-sm z-[10000]"
+            : "relative z-50"
         }`}
       >
         {/* HEADER CONTAINER */}
         <div className="h-full flex flex-col">
           {/* TOP BAR */}
           <div className="px-4 lg:px-8">
-            <div className="container mx-auto flex items-center justify-between py-3 w-full z-50 bg-white h-[12vh] md:h-[10vh]">
+            <div className={`container mx-auto flex items-center justify-between py-3 w-full bg-white h-[12vh] md:h-[10vh] ${
+              shouldBeFixed ? "z-[10001]" : "z-50"
+            }`}>
               {/* Desktop Logo */}
               <div className="hidden lg:flex items-center">
                 <Link href="/" scroll={false} onClick={handleLogoClick}>
@@ -658,7 +671,7 @@ export default function Header() {
             <>
               {/* Full-screen overlay */}
               <motion.div
-                className="fixed inset-0 bg-black/75 backdrop-blur-sm z-40"
+                className="fixed inset-0 bg-black/75 backdrop-blur-sm z-[9998]"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
