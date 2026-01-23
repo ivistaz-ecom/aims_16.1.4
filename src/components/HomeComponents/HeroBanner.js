@@ -116,6 +116,50 @@ const HeroBannerSoB = ({ announcements, pageType = "admissions" }) => {
     mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
   }
 
+  // Preload critical images (first banner and logo)
+  useEffect(() => {
+    const preloadLinks = []
+    const firstBanner = banners[0]
+
+    // Function to create and add preload link
+    const addPreloadLink = (href, as = "image", type = "image/webp") => {
+      // Check if link already exists
+      const existingLink = document.querySelector(`link[rel="preload"][href="${href}"]`)
+      if (existingLink) return null
+
+      const link = document.createElement("link")
+      link.rel = "preload"
+      link.href = href
+      link.as = as
+      link.type = type
+      link.fetchPriority = "high"
+      document.head.appendChild(link)
+      return link
+    }
+
+    // Preload first banner images based on viewport
+    // We'll preload all three and let CSS handle which one displays
+    const desktopLink = addPreloadLink(firstBanner.desktop)
+    const tabletLink = addPreloadLink(firstBanner.tablet)
+    const mobileLink = addPreloadLink(firstBanner.mobile)
+    const logoLink = addPreloadLink(firstBanner.logo)
+
+    // Store links for cleanup
+    if (desktopLink) preloadLinks.push(desktopLink)
+    if (tabletLink) preloadLinks.push(tabletLink)
+    if (mobileLink) preloadLinks.push(mobileLink)
+    if (logoLink) preloadLinks.push(logoLink)
+
+    // Cleanup function
+    return () => {
+      preloadLinks.forEach((link) => {
+        if (link && link.parentNode) {
+          link.parentNode.removeChild(link)
+        }
+      })
+    }
+  }, []) // Empty dependency array - only run once on mount
+
   return (
     <>
       <Carousel

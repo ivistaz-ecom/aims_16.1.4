@@ -1,8 +1,49 @@
-import React from "react"
+"use client"
+import React, { useEffect } from "react"
 import Image from "next/image"
 import ApplicationMarquee from "../../shared/ApplicationMarquee"
 
 const HeroBannerSoH = ({ announcements, pageType = "admissions" }) => {
+  // Preload critical banner images
+  useEffect(() => {
+    const preloadLinks = []
+
+    // Function to create and add preload link
+    const addPreloadLink = (href, as = "image", type = "image/webp") => {
+      // Check if link already exists
+      const existingLink = document.querySelector(`link[rel="preload"][href="${href}"]`)
+      if (existingLink) return null
+
+      const link = document.createElement("link")
+      link.rel = "preload"
+      link.href = href
+      link.as = as
+      link.type = type
+      link.fetchPriority = "high"
+      document.head.appendChild(link)
+      return link
+    }
+
+    // Preload banner images
+    const desktopLink = addPreloadLink("/about-aims/About-banner.webp")
+    const mobileLink = addPreloadLink("/about-aims/About-aims-mobile-banner.webp")
+    const logoLink = addPreloadLink("/white-empower.svg")
+
+    // Store links for cleanup
+    if (desktopLink) preloadLinks.push(desktopLink)
+    if (mobileLink) preloadLinks.push(mobileLink)
+    if (logoLink) preloadLinks.push(logoLink)
+
+    // Cleanup function
+    return () => {
+      preloadLinks.forEach((link) => {
+        if (link && link.parentNode) {
+          link.parentNode.removeChild(link)
+        }
+      })
+    }
+  }, []) // Empty dependency array - only run once on mount
+
   return (
     <>
       <div className="relative w-full h-[83vh] md:h-[76vh] overflow-hidden">
