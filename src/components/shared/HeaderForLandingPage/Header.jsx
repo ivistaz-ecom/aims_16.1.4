@@ -29,7 +29,7 @@ export default function Header() {
             <Button
               showReadMore={false}
               variant="placement"
-              href="https://staging.theaims.ac.in/contact-us"
+              href="/contact-us"
             >
               Contact Us
             </Button>
