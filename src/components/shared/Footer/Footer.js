@@ -44,15 +44,15 @@ export default function Footer() {
     try {
       // Contact Form 7 integration with proper headers
       const formData = new FormData()
-      formData.append("subscriber-email", email) // Must match CF7 field name
-      formData.append("_wpcf7", "853") // Contact Form 7 ID
+      formData.append("email", email) // Must match CF7 field name
+      formData.append("_wpcf7", "833") // Contact Form 7 ID
       formData.append("_wpcf7_version", "5.7.7") // CF7 version
       formData.append("_wpcf7_locale", "en_US") // Locale
-      formData.append("_wpcf7_unit_tag", "wpcf7-f853-p" + Date.now()) // Unique tag
+      formData.append("_wpcf7_unit_tag", "wpcf7-f833-p" + Date.now()) // Unique tag
       formData.append("_wpcf7_container_post", "0") // Container post ID
 
       const response = await fetch(
-        "https://docs.theaims.ac.in/wp-json/contact-form-7/v1/contact-forms/853/feedback",
+        "https://docs.theaims.ac.in/wp-json/contact-form-7/v1/contact-forms/833/feedback",
         {
           method: "POST",
           body: formData,
@@ -69,7 +69,7 @@ export default function Footer() {
         console.error("Non-JSON response:", text)
 
         // Fallback success
-        setMessage("Thank you! You have been successfully subscribed.")
+        setMessage("Thank you for signing up. We will keep you updated via email.")
         setIsSuccess(true)
         setEmail("")
         setIsLoading(false)
@@ -79,7 +79,7 @@ export default function Footer() {
       // Handle different CF7 response statuses
       if (data.status === "mail_sent") {
         // Success - email was sent
-        setMessage("Thank you! You have been successfully subscribed.")
+        setMessage("Thank you for signing up. We will keep you updated via email.")
         setIsSuccess(true)
         setEmail("")
 
@@ -131,13 +131,13 @@ export default function Footer() {
           )
 
           setMessage(
-            "Thank you! Your subscription has been received. We'll contact you soon."
+            "Thank you for signing up. We will keep you updated via email."
           )
           setIsSuccess(true)
           setEmail("")
         } catch (localError) {
           setMessage(
-            "Subscription received, but please contact us if you don't receive a confirmation."
+            "Thank you for signing up. We will keep you updated via email."
           )
           setIsSuccess(true)
           setEmail("")
@@ -175,7 +175,7 @@ export default function Footer() {
         )
 
         setMessage(
-          "Your subscription has been saved. We'll process it when the connection is restored."
+          "Thank you for signing up. We will keep you updated via email."
         )
         setIsSuccess(true)
         setEmail("")

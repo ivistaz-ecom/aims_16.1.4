@@ -30,15 +30,15 @@ const Subscribe = () => {
     try {
       
       const formData = new FormData();
-      formData.append("subscriber-email", email); // Must match CF7 field name
-      formData.append("_wpcf7", "373"); // Contact Form 7 ID
+      formData.append("email", email); // Must match CF7 field name
+      formData.append("_wpcf7", "833"); // Contact Form 7 ID
       formData.append("_wpcf7_version", "5.7.7"); // CF7 version
       formData.append("_wpcf7_locale", "en_US"); // Locale
       formData.append("_wpcf7_unit_tag", "wpcf7-f373-p" + Date.now()); // Unique tag
       formData.append("_wpcf7_container_post", "0"); // Container post ID
 
       const response = await fetch(
-        "https://docs-aims.ivista.biz/wp-json/contact-form-7/v1/contact-forms/373/feedback",
+        "https://docs.theaims.ac.in/wp-json/contact-form-7/v1/contact-forms/833/feedback",
         {
           method: "POST",
           body: formData,
@@ -56,7 +56,7 @@ const Subscribe = () => {
         
         // If CF7 REST API fails, try alternative approach
         const alternativeResponse = await fetch(
-          "https://docs-aims.ivista.biz/wp-admin/admin-ajax.php",
+          "https://docs.theaims.ac.in/wp-admin/admin-ajax.php",
           {
             method: "POST",
             headers: {
@@ -64,8 +64,8 @@ const Subscribe = () => {
             },
             body: new URLSearchParams({
               action: "wpcf7_submit",
-              _wpcf7: "373",
-              "subscriber-email": email,
+              _wpcf7: "833",
+              "email": email,
               _wpcf7_version: "5.7.7",
               _wpcf7_locale: "en_US",
               _wpcf7_unit_tag: "wpcf7-f373-p" + Date.now(),
@@ -78,14 +78,14 @@ const Subscribe = () => {
         console.log("Alternative response:", alternativeText);
         
         // If both fail, assume success for now
-        setMessage("Thank you! You have been successfully subscribed.");
+        setMessage("Thank you for signing up. We will keep you updated via email.");
         setIsSuccess(true);
         setEmail("");
         return;
       }
       
       if (response.ok && data.status === "mail_sent") {
-        setMessage("Thank you! You have been successfully subscribed.");
+        setMessage("Thank you for signing up. We will keep you updated via email.");
         setIsSuccess(true);
         setEmail("");
       } else if (data.status === "validation_failed") {
@@ -101,16 +101,9 @@ const Subscribe = () => {
         // If the email was actually sent but CF7 returned an error, treat as success
         if (data.status === "mail_failed" || data.status === "spam") {
           console.log("CF7 returned error but email might have been sent:", data);
-          // Check if we can detect if the email was actually processed
-          if (data.message && data.message.includes("sent")) {
-            setMessage("Thank you! You have been successfully subscribed.");
-            setIsSuccess(true);
-            setEmail("");
-          } else {
-            setMessage("Thank you! You have been successfully subscribed.");
-            setIsSuccess(true);
-            setEmail("");
-          }
+          setMessage("Thank you for signing up. We will keep you updated via email.");
+          setIsSuccess(true);
+          setEmail("");
         } else {
           setMessage(data.message || "Something went wrong. Please try again.");
           setIsSuccess(false);
@@ -131,7 +124,7 @@ const Subscribe = () => {
         subscriptions.push(newSubscription);
         localStorage.setItem('subscriptions', JSON.stringify(subscriptions));
 
-        setMessage("Thank you! You have been successfully subscribed.");
+        setMessage("Thank you for signing up. We will keep you updated via email.");
         setIsSuccess(true);
         setEmail("");
       } catch (localError) {

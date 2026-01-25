@@ -38,7 +38,7 @@ const Subscribe = () => {
       formData.append("_wpcf7_container_post", "0"); // Container post ID
 
       const response = await fetch(
-        "https://docs-aims.ivista.biz/wp-json/contact-form-7/v1/contact-forms/373/feedback",
+        "https://docs.theaims.ac.in/wp-json/contact-form-7/v1/contact-forms/373/feedback",
         {
           method: "POST",
           body: formData,
@@ -56,7 +56,7 @@ const Subscribe = () => {
         
         // If CF7 REST API fails, try alternative approach
         const alternativeResponse = await fetch(
-          "https://docs-aims.ivista.biz/wp-admin/admin-ajax.php",
+          "https://docs.theaims.ac.in/wp-admin/admin-ajax.php",
           {
             method: "POST",
             headers: {
