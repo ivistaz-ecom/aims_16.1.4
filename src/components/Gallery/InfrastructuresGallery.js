@@ -60,7 +60,7 @@ const GalleryCarousel = ({ title, description, category }) => {
         const fetchGallery = async () => {
             try {
                 const res = await fetch(
-                    "https://docs-aims.ivista.biz/wp-json/wp/v2/gallery?per_page=100"
+                    "https://docs.theaims.ac.in/wp-json/wp/v2/gallery?per_page=100"
                 );
                 const data = await res.json();
 
