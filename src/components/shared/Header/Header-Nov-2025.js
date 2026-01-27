@@ -247,6 +247,7 @@ export default function Header() {
                     width={480}
                     height={120}
                     priority
+                    fetchPriority="high"
                     quality={100}
                     className="h-10 w-auto lg:h-12 xl:h-14 2xl:h-16"
                   />
@@ -262,6 +263,7 @@ export default function Header() {
                     width={400}
                     height={100}
                     priority
+                    fetchPriority="high"
                     quality={100}
                     className="h-12 w-auto"
                     style={{
@@ -283,6 +285,7 @@ export default function Header() {
                     width={280}
                     height={94}
                     priority
+                    fetchPriority="high"
                     quality={100}
                     className="h-6 w-auto sm:h-7"
                     style={{
@@ -702,6 +705,7 @@ export default function Header() {
                       width={280}
                       height={94}
                       priority
+                      fetchPriority="high"
                       quality={100}
                       className="h-6 w-auto sm:h-7"
                       style={{

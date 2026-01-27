@@ -11,12 +11,16 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
   weight: ["300", "400", "600", "700"],
+  display: "swap",
+  preload: true,
 })
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
   weight: ["400", "600", "700"],
+  display: "swap",
+  preload: true,
 })
 
 export const metadata = {
@@ -80,6 +84,12 @@ const RootLayout = ({ children }) => {
     <html lang="en" className="">
       <head>
         <meta name="msvalidate.01" content="A827D56A91561DA21E2E94273F4D52D5" />
+        <link
+          rel="preload"
+          href="/AIMS-logo.svg"
+          as="image"
+          fetchPriority="high"
+        />
       </head>
       <body
         className={`${montserrat.variable} ${playfairDisplay.variable} font-montserrat antialiased`}

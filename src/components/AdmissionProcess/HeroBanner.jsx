@@ -1,16 +1,72 @@
-import React from "react"
+"use client"
+import React, { useEffect } from "react"
 import Image from "next/image"
 import ApplicationMarquee from "@/shared/ApplicationMarquee"
 
 const HeroBanner = ({ announcements, pageType = "admissions" }) => {
+  // Preload critical banner images for LCP optimization
+  useEffect(() => {
+    const preloadLinks = []
+
+    // Function to create and add preload link
+    const addPreloadLink = (href, as = "image", type = "image/webp") => {
+      // Check if link already exists
+      const existingLink = document.querySelector(`link[rel="preload"][href="${href}"]`)
+      if (existingLink) return null
+
+      const link = document.createElement("link")
+      link.rel = "preload"
+      link.href = href
+      link.as = as
+      link.type = type
+      link.fetchPriority = "high"
+      document.head.appendChild(link)
+      return link
+    }
+
+    // Preload banner images - preload both and let CSS/Image component handle which one displays
+    const desktopLink = addPreloadLink("/admission-process/hero-banner.webp")
+    const mobileLink = addPreloadLink("/admission-process/mobile-banner-new1.webp")
+
+    // Store links for cleanup
+    if (desktopLink) preloadLinks.push(desktopLink)
+    if (mobileLink) preloadLinks.push(mobileLink)
+
+    // Cleanup function
+    return () => {
+      preloadLinks.forEach((link) => {
+        if (link && link.parentNode) {
+          link.parentNode.removeChild(link)
+        }
+      })
+    }
+  }, []) // Empty dependency array - only run once on mount
   return (
     <>
       <div className="relative w-full h-[83vh] md:h-[76vh] overflow-hidden">
         {/* Background Image - Desktop */}
-        <div className="hidden md:block w-full h-full bg-cover bg-top bg-no-repeat bg-[url('/admission-process/hero-banner.webp')]" />
+        <Image
+          src="/admission-process/hero-banner.webp"
+          alt="Admission Process Hero Banner"
+          fill
+          priority
+          fetchPriority="high"
+          quality={90}
+          className="hidden md:block object-cover object-top"
+          sizes="100vw"
+        />
 
         {/* Background Image - Mobile */}
-        <div className="md:hidden w-full h-full bg-cover bg-top bg-no-repeat bg-[url('/admission-process/mobile-banner-new1.webp')]" />
+        <Image
+          src="/admission-process/mobile-banner-new1.webp"
+          alt="Admission Process Hero Banner"
+          fill
+          priority
+          fetchPriority="high"
+          quality={90}
+          className="md:hidden object-cover object-top"
+          sizes="100vw"
+        />
 
         {/* Gradient Overlay - Figma Design */}
         <div

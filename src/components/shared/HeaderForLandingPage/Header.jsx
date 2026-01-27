@@ -18,6 +18,7 @@ export default function Header() {
                 width={400}
                 height={120}
                 priority
+                fetchPriority="high"
                 quality={100}
                 className="h-12 w-auto lg:h-18 xl:h-16"
               />
