@@ -11,35 +11,35 @@ const AicteAccreditations = () => {
       years: [
         {
           year: "2021-2022",
-          link: "/aicte/extension-of-approvals/MBA/AICTE-MBA-EoA-2021-22.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/MBA/AICTE-MBA-EoA-2021-22.pdf",
         },
         {
           year: "2020-2021",
-          link: "/aicte/extension-of-approvals/MBA/AICTE-MBA-EOA-2020-21.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/MBA/AICTE-MBA-EOA-2020-21.pdf",
         },
         {
           year: "2019-2020",
-          link: "/aicte/extension-of-approvals/MBA/AICTE-MBA-EOA-2019-20.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/MBA/AICTE-MBA-EOA-2019-20.pdf",
         },
         {
           year: "2018-2019",
-          link: "/aicte/extension-of-approvals/MBA/AICTE-MBA-EOA-2018-19.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/MBA/AICTE-MBA-EOA-2018-19.pdf",
         },
         {
           year: "2017-2018",
-          link: "/aicte/extension-of-approvals/MBA/AICTE-MBA-EOA-2017-18.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/MBA/AICTE-MBA-EOA-2017-18.pdf",
         },
         {
           year: "2016-2017",
-          link: "/aicte/extension-of-approvals/MBA/AICTE-MBA-EOA-2016-17.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/MBA/AICTE-MBA-EOA-2016-17.pdf",
         },
         {
           year: "2015-2016",
-          link: "/aicte/extension-of-approvals/MBA/AICTE-MBA-2015-16.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/MBA/AICTE-MBA-2015-16.pdf",
         },
         {
           year: "2014-2015",
-          link: "/aicte/extension-of-approvals/MBA/AICTE-MBA-2014-15.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/MBA/AICTE-MBA-2014-15.pdf",
         },
       ],
     },
@@ -48,35 +48,35 @@ const AicteAccreditations = () => {
       years: [
         {
           year: "2021-2022",
-          link: "/aicte/extension-of-approvals/MCA/AICTE-MCA-EoA-2021-22.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/MCA/AICTE-MCA-EoA-2021-22.pdf",
         },
         {
           year: "2020-2021",
-          link: "/aicte/extension-of-approvals/MCA/AICTE-MCA-EOA-2020-21.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/MCA/AICTE-MCA-EOA-2020-21.pdf",
         },
         {
           year: "2019-2020",
-          link: "/aicte/extension-of-approvals/MCA/AICTE-MCA-EOA-2019-20.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/MCA/AICTE-MCA-EOA-2019-20.pdf",
         },
         {
           year: "2018-2019",
-          link: "/aicte/extension-of-approvals/MCA/AICTE-MCA-2018-19.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/MCA/AICTE-MCA-2018-19.pdf",
         },
         {
           year: "2017-2018",
-          link: "/aicte/extension-of-approvals/MCA/AICTE-MCA-2017-18.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/MCA/AICTE-MCA-2017-18.pdf",
         },
         {
           year: "2016-2017",
-          link: "/aicte/extension-of-approvals/MCA/AICTE-MCA-2016-17.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/MCA/AICTE-MCA-2016-17.pdf",
         },
         {
           year: "2015-2016",
-          link: "/aicte/extension-of-approvals/MCA/AICTE-MCA-2015-16.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/MCA/AICTE-MCA-2015-16.pdf",
         },
         {
           year: "2014-2015",
-          link: "/aicte/extension-of-approvals/MCA/AICTE-MCA-2014-15.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/MCA/AICTE-MCA-2014-15.pdf",
         },
       ],
     },
@@ -85,35 +85,35 @@ const AicteAccreditations = () => {
       years: [
         {
           year: "2021-2022",
-          link: "/aicte/extension-of-approvals/BHM/AICTE-BHM-EoA-2021-22.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/BHM/AICTE-BHM-EoA-2021-22.pdf",
         },
         {
           year: "2020-2021",
-          link: "/aicte/extension-of-approvals/BHM/AICTE-BHM-EOA-2020-21.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/BHM/AICTE-BHM-EOA-2020-21.pdf",
         },
         {
           year: "2019-2020",
-          link: "/aicte/extension-of-approvals/BHM/AICTE-BHM-EOA-2019-20.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/BHM/AICTE-BHM-EOA-2019-20.pdf",
         },
         {
           year: "2018-2019",
-          link: "/aicte/extension-of-approvals/BHM/AICTE-BHM-EOA-2018-19.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/BHM/AICTE-BHM-EOA-2018-19.pdf",
         },
         {
           year: "2017-2018",
-          link: "/aicte/extension-of-approvals/BHM/AICTE-BHM-EOA-2017-18.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/BHM/AICTE-BHM-EOA-2018-19.pdf",
         },
         {
           year: "2016-2017",
-          link: "/aicte/extension-of-approvals/BHM/AICTE-BHM-EOA-2016-17.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/BHM/AICTE-BHM-EOA-2016-17.pdf",
         },
         {
           year: "2015-2016",
-          link: "/aicte/extension-of-approvals/BHM/AICTE-BHM-2015-16.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/BHM/AICTE-BHM-2015-16.pdf",
         },
         {
           year: "2014-2015",
-          link: "/aicte/extension-of-approvals/BHM/AICTE-BHM-2014-15.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/extension-of-approvals/BHM/AICTE-BHM-2014-15.pdf",
         },
       ],
     },

@@ -21,7 +21,7 @@ const RcContent = () => {
             <h3 className="playfair-300 text-[#0C2165] leading-tight">
               AIMS Internal Quality Assurance Cell (AIQAC){" "}<br/>
               <Link
-                href="/iqac-pdf/iqac-composition.pdf"
+                href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac-pdf/iqac-composition.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="playfair-300 text-[24px] text-[#0C2165] leading-tight  hover:text-[#A22877] underline "

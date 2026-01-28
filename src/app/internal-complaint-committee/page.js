@@ -15,7 +15,7 @@ const page = () => {
         heading="Internal Complaint Committee"
         paragraph="The Internal Complaint Committee at AIMS Institutes ensures a safe, respectful, and inclusive environment for all members of the campus. The ICC addresses complaints related to sexual harassment in accordance with the POSH Act, ensuring confidentiality, fairness, and timely redressal."
         buttonName="View ICC members and report"
-        pdfLink="/pdf/icc/ICC-website.pdf"
+        pdfLink="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/icc/ICC-website.pdf"
       />
     </>
   )

@@ -160,7 +160,7 @@ const EsprStudentEngagementEvents = () => {
                 variant="secondary"
                 onClick={() =>
                   window.open(
-                    "/environment-sustainability-policy-report/AIMS+Environment+&+Sustainability+Audit+Report.pdf",
+                    "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/environment-sustainability-policy-report/AIMS+Sustainability+report+-Final+Dec2022.pdf",
                     "_blank"
                   )
                 }
@@ -208,7 +208,7 @@ const EsprStudentEngagementEvents = () => {
               <p>
                 You can download and view our submitted information using this{" "}
                 <a
-                  href="/environment-sustainability-policy-report/AIMS+Environment+&+Sustainability+Audit+Report.pdf"
+                  href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/environment-sustainability-policy-report/AIMS+Environment+&+Sustainability+Audit+Report.pdf"
                   target="_blank"
                   className="text-[#A22877] hover:underline"
                 >

@@ -15,7 +15,7 @@ const page = () => {
         heading="UGC 2 (f) & 12B"
         paragraph="AIMS Institutes is recognised under Section 2(f) and 12B of the University Grants Commission (UGC) Act, enabling the institution to receive central assistance for academic and developmental initiatives. This recognition affirms AIMS' commitment to maintaining quality standards in teaching, research, and institutional governance."
         buttonName="UGC 2(f) & 12B"
-        pdfLink="https://www.theaims.ac.in/ugc/2f_and_12b_certificate.pdf"
+        pdfLink="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/ugc/2f_and_12b_certificate.pdf"
       />
     </>
   )

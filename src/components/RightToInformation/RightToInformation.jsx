@@ -56,7 +56,7 @@ const RightToInformation = () => {
         <Button
           variant="placement"
           className="w-fit cursor-pointer"
-          href="/pdf/RTI/RTI-appln-form.pdf"
+          href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/RTI/RTI-appln-form.pdf"
           target="_blank"
         >
           Download RTI Application form here:

@@ -1545,12 +1545,12 @@ const PatentsTimeline = () => {
               <div className="pl-4">
                 <ul className="list-disc pl-5 space-y-1">
                   <li>
-                    <Link href="/accreditations/NAAC.pdf" target='_blank' className="underline underline-offset-2 text-[#A22877]" noopener noreferrer>
+                    <Link href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/accreditations/NAAC.pdf" target='_blank' className="underline underline-offset-2 text-[#A22877]" noopener noreferrer>
                       Cycle 2
                     </Link>
                   </li>
                   <li>
-                    <Link href="/accreditations/NAAC (1).pdf" target='_blank' className="underline underline-offset-2 text-[#A22877]" noopener noreferrer>
+                    <Link href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/accreditations/NAAC%20(1).pdf" target='_blank' className="underline underline-offset-2 text-[#A22877]" noopener noreferrer>
                       Cycle 1
                     </Link>
                   </li>
@@ -1564,22 +1564,22 @@ const PatentsTimeline = () => {
               <div className="pl-4">
                 <ul className="list-disc pl-5 space-y-1">
                   <li>
-                    <Link href="/accreditations/NIRF_AIMS_2024.pdf" target='_blank' className="underline underline-offset-2 text-[#A22877]" noopener noreferrer>
+                    <Link href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/accreditations/NIRF_AIMS_2024.pdf" target='_blank' className="underline underline-offset-2 text-[#A22877]" noopener noreferrer>
                       NIRF 2024
                     </Link>
                   </li>
                   <li>
-                    <Link href="/accreditations/NIRF_AIMS_2023.pdf" target='_blank' className="underline underline-offset-2 text-[#A22877]" noopener noreferrer>
+                    <Link href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/accreditations/NIRF_AIMS_2023.pdf" target='_blank' className="underline underline-offset-2 text-[#A22877]" noopener noreferrer>
                       NIRF 2023
                     </Link>
                   </li>
                   <li>
-                    <Link href="/accreditations/NIRF_AIMS_2022.pdf" target='_blank' className="underline underline-offset-2 text-[#A22877]" noopener noreferrer>
+                    <Link href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/accreditations/NIRF_AIMS_2022.pdf" target='_blank' className="underline underline-offset-2 text-[#A22877]" noopener noreferrer>
                       NIRF 2022
                     </Link>
                   </li>
                   <li>
-                    <Link href="/accreditations/NIRF-2021.pdf" target='_blank' className="underline underline-offset-2 text-[#A22877]" noopener noreferrer>
+                    <Link href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/accreditations/NIRF-2021.pdf" target='_blank' className="underline underline-offset-2 text-[#A22877]" noopener noreferrer>
                       NIRF 2021
                     </Link>
                   </li>
@@ -1594,12 +1594,12 @@ const PatentsTimeline = () => {
               <div className="pl-4">
                 <ul className="list-disc pl-5 space-y-1">
                   <li>
-                    <Link href="/accreditations/IACBE Accreditation Certificate 2020 AIMS School of Business.pdf" target='_blank' className="underline underline-offset-2 text-[#A22877]" noopener noreferrer>
+                    <Link href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/accreditations/IACBE%20Accreditation%20Certificate%202020%20AIMS%20School%20of%20Business.pdf" target='_blank' className="underline underline-offset-2 text-[#A22877]" noopener noreferrer>
                       Certificate
                     </Link>
                   </li>
                   <li>
-                    <Link href="/accreditations/5 IACBE Acreditation (international) Certificate.pdf" target='_blank' className="underline underline-offset-2 text-[#A22877]" noopener noreferrer>
+                    <Link href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/accreditations/5%20IACBE%20Acreditation%20(international)%20Certificate.pdf" target='_blank' className="underline underline-offset-2 text-[#A22877]" noopener noreferrer>
                       AIMS School of Business - IACBE Accreditation
                     </Link>
                   </li>

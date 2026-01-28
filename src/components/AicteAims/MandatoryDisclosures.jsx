@@ -11,7 +11,7 @@ const MandatoryDisclosures = () => {
       description: [
         {
           text: "MBA Mandatory Disclosures 2022",
-          download: "/aicte/mandatory-disclosures/2022/MBA/MBA-2022.pdf",
+          download: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/mandatory-disclosures/2022/MBA/MBA-2022.pdf",
           hasView: true,
         },
       ],
@@ -22,7 +22,7 @@ const MandatoryDisclosures = () => {
       description: [
         {
           text: "MCA Mandatory Disclosures 2022",
-          download: "/aicte/mandatory-disclosures/2022/MCA/MCA-2022.pdf",
+          download: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/mandatory-disclosures/2022/MCA/MCA-2022.pdf",
           hasView: true,
         },
       ],
@@ -32,7 +32,7 @@ const MandatoryDisclosures = () => {
       description: [
         {
           text: "BHM Mandatory Disclosures 2022",
-          download: "/aicte/mandatory-disclosures/2022/BHM/BHM-2022.pdf",
+          download: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aicte/mandatory-disclosures/2022/BHM/BHM-2022.pdf",
           hasView: true,
         },
       ],

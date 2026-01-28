@@ -15,7 +15,7 @@ const page = () => {
         heading="Facilities for Differently Abled"
         paragraph="AIMS Institutes provides barrier-free access and support facilities for differently-abled students, in line with accessibility and inclusivity norms. Ramps, accessible restrooms, assistive features, and supportive services ensure that every student can navigate and benefit from the campus without obstacles."
         buttonName="Download accessibility facilities list"
-        pdfLink="/pdf/fda/Barrier-Free-Environment.pdf"
+        pdfLink="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/fda/Barrier-Free-Environment.pdf"
       />
     </>
   )

@@ -4,15 +4,15 @@ import React from "react"
 const GOVERNING_COUNCIL_MEMBERS = [
   {
     year: "2024-25",
-    href: "/pdf/governing-council/2024-25.pdf",
+    href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/governing-council/2024-25.pdf",
   },
   {
     year: "2023-24",
-    href: "/pdf/governing-council/2023-24.pdf",
+    href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/governing-council/2023-24.pdf",
   },
   {
     year: "2022-23",
-    href: "/pdf/governing-council/2022-23.pdf",
+    href: "/",
   },
 ]
 

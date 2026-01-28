@@ -78,7 +78,7 @@ const HowToApply = () => {
                     See{" "}
                     <span className="monser-600">
                       <a
-                        href="/Admission Policies and Procedures.pdf"
+                        href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/Admission%20Policies%20and%20Procedures.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-[#A22877] underline monser-600 hover:text-[#8b1f5f]"

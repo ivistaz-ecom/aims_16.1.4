@@ -10,15 +10,15 @@ const AQARComponent = () => {
       content: {
         heading: "AQAR",
         documents: [
-          { year: "2023-24", link: "/iqac/aqar/AQAR+2023-24.pdf" },
-          { year: "2022-23", link: "/iqac/aqar/AQAR+2022-23.pdf" },
-          { year: "2021-22", link: "/iqac/aqar/AQAR+-2021-2022.pdf" },
-          { year: "2020-21", link: "/iqac/aqar/AQAR+2020-2021.pdf" },
-          { year: "2019-20", link: "/iqac/aqar/AQAR+2019-20.pdf" },
-          { year: "2018-19", link: "/iqac/aqar/AQAR+2018-19.pdf" },
-          { year: "2017-18", link: "/iqac/aqar/AQAR+2017-18.pdf" },
-          { year: "2016-17", link: "/iqac/aqar/AQAR+2016-17.pdf" },
-          { year: "2015-16", link: "/iqac/aqar/AQAR+2015-16.pdf" },
+          { year: "2023-24", link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/aqar/AQAR+2023-24.pdf" },
+          { year: "2022-23", link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/aqar/AQAR+2022-23.pdf" },
+          { year: "2021-22", link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/aqar/AQAR+-2021-2022.pdf" },
+          { year: "2020-21", link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/aqar/AQAR+2020-2021.pdf" },
+          { year: "2019-20", link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/aqar/AQAR+2019-20.pdf" },
+          { year: "2018-19", link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/aqar/AQAR+2018-19.pdf" },
+          { year: "2017-18", link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/aqar/AQAR+2017-18.pdf" },
+          { year: "2016-17", link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/aqar/AQAR+2016-17.pdf" },
+          { year: "2015-16", link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/aqar/AQAR+2015-16.pdf" },
         ],
       },
     },
@@ -29,29 +29,29 @@ const AQARComponent = () => {
         documents: [
           {
             year: "2024-25",
-            link: "/iqac/minutes-of-meeting/IQAC+Minutes+2024-2025.pdf",
+            link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/minutes-of-meeting/IQAC+Minutes+2024-2025.pdf",
           },
           {
             year: "2023-24",
-            link: "/iqac/minutes-of-meeting/IQAC+Minutes+2023-2024.pdf",
+            link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/minutes-of-meeting/IQAC+Minutes+2023-2024.pdf",
           },
           {
             year: "2022-23",
-            link: "/iqac/minutes-of-meeting/IQAC+Minutes+2022-2023.pdf",
+            link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/minutes-of-meeting/IQAC+Minutes+2022-2023.pdf",
           },
           {
             year: "2021-22",
-            link: "/iqac/minutes-of-meeting/IQAC+Minutes+2021-2022.pdf",
+            link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/minutes-of-meeting/IQAC+Minutes+2021-2022.pdf",
           },
           {
             year: "2020-21",
-            link: "/iqac/minutes-of-meeting/IQAC+Minutes+2020-2021.pdf",
+            link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/minutes-of-meeting/IQAC+Minutes+2020-2021.pdf",
           },
-          { year: "2019-20", link: "/iqac/minutes-of-meeting/MOM_2019-20.pdf" },
-          { year: "2018-19", link: "/iqac/minutes-of-meeting/MOM_2018-19.pdf" },
-          { year: "2017-18", link: "/iqac/minutes-of-meeting/MOM_2017-18.pdf" },
-          { year: "2016-17", link: "/iqac/minutes-of-meeting/MOM_2016-17.pdf" },
-          { year: "2015-16", link: "/iqac/minutes-of-meeting/MOM_2015-16.pdf" },
+          { year: "2019-20", link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/minutes-of-meeting/MOM_2019-20.pdf" },
+          { year: "2018-19", link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/minutes-of-meeting/MOM_2018-19.pdf" },
+          { year: "2017-18", link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/minutes-of-meeting/MOM_2017-18.pdf" },
+          { year: "2016-17", link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/minutes-of-meeting/MOM_2016-17.pdf" },
+          { year: "2015-16", link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/minutes-of-meeting/MOM_2015-16.pdf" },
         ],
       },
     },
@@ -62,35 +62,35 @@ const AQARComponent = () => {
         documents: [
           {
             title: "Student Statisfaction Survey 2023-24",
-            link: "/iqac/feedback/Student+Satisfaction+Survey+2023-2024.pdf",
+            link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/feedback/Student+Satisfaction+Survey+2023-2024.pdf",
           },
           {
             title: "Feedback on Virtual Classes 2019-20",
-            link: "/iqac/feedback/Feedback+on+Virtual+Classes+2019-20.pdf",
+            link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/feedback/Feedback+on+Virtual+Classes+2019-20.pdf",
           },
           {
             title: "Student Satisfaction Survey",
-            link: "/iqac/feedback/Student+Satisfaction+Survey.pdf",
+            link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/feedback/Student+Satisfaction+Survey.pdf",
           },
           {
             title: "Industry Feedback on Curriculum",
-            link: "/iqac/feedback/Industry_Feedback.pdf",
+            link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/feedback/Industry_Feedback.pdf",
           },
           {
             title: "Alumni Feedback on Curriculum",
-            link: "/iqac/feedback/Alumni_Feedback.pdf",
+            link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/feedback/Alumni_Feedback.pdf",
           },
           {
             title: "Parents Feedback on Curriculum",
-            link: "/iqac/feedback/Parents+Feedback.pdf",
+            link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/feedback/Parents+Feedback.pdf",
           },
           {
             title: "Students Feedback on Curriculum",
-            link: "/iqac/feedback/Students+Feedback.pdf",
+            link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/feedback/Students+Feedback.pdf",
           },
           {
             title: "Teacher Feedback on Curriculum",
-            link: "/iqac/feedback/Teacher+Feedback.pdf",
+            link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/feedback/Teacher+Feedback.pdf",
           },
         ],
       },
@@ -115,7 +115,7 @@ const AQARComponent = () => {
         documents: [
           {
             title: "Best Practices",
-            link: "/iqac/best-practices/Best_practices.pdf",
+            link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/best-practices/Best_practices.pdf",
           },
         ],
       },
@@ -127,7 +127,7 @@ const AQARComponent = () => {
         documents: [
           {
             title: "Institutional Distinctiveness",
-            link: "/iqac/institutional-distinctiveness/Institutional_Distinctiveness.pdf",
+            link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/institutional-distinctiveness/Institutional_Distinctiveness.pdf",
           },
         ],
       },
@@ -139,11 +139,11 @@ const AQARComponent = () => {
         documents: [
           {
             title: "NAAC Compliance",
-            link: "/iqac/declaration/NAAC+Compliance.pdf",
+            link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/declaration/NAAC+Compliance.pdf",
           },
           {
             title: "Declaration under RTI",
-            link: "/iqac/declaration/rti_declaration.pdf",
+            link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/declaration/rti_declaration.pdf",
           },
         ],
       },
