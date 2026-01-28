@@ -11,7 +11,7 @@ const NirfRankings = () => {
       description: [
         {
           text: "You can download and view our submitted information using this link",
-          download: "/nirf/NIRF_AIMS_2024.pdf",
+          download: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/nirf/NIRF_AIMS_2024.pdf",
         },
       ],
     },
@@ -20,7 +20,7 @@ const NirfRankings = () => {
       description: [
         {
           text: "You can download and view our submitted information using this link",
-          download: "/nirf/NIRF_AIMS_2023.pdf",
+          download: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/nirf/NIRF_AIMS_2023.pdf",
         },
       ],
     },
@@ -29,7 +29,7 @@ const NirfRankings = () => {
       description: [
         {
           text: "You can download and view our submitted information using this link",
-          download: "/nirf/NIRF_AIMS_2022.pdf",
+          download: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/nirf/NIRF_AIMS_2022.pdf",
         },
       ],
     },
@@ -38,7 +38,7 @@ const NirfRankings = () => {
       description: [
         {
           text: "You can download and view our submitted information using this link",
-          download: "/nirf/NIRF_AIMS_2021.pdf",
+          download: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/nirf/NIRF_AIMS_2021.pdf",
         },
       ],
     },
@@ -47,7 +47,7 @@ const NirfRankings = () => {
       description: [
         {
           text: "You can download and view our submitted information using this link",
-          download: "/nirf/NIRF_AIMS_2020.pdf",
+          download: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/nirf/NIRF_AIMS_2020.pdf",
         },
       ],
     },

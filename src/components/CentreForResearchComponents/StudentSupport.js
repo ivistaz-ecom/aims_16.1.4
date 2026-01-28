@@ -51,7 +51,7 @@ const StudentSupport = () => {
           </Button>
           <Button
             variant="placement"
-            href="/ACR - Policy (1).pdf"
+            href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/ACR%20-%20Policy%20(1).pdf"
             showReadMore={false}
             target="_blank"
           >

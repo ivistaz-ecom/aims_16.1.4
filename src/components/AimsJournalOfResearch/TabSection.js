@@ -69,7 +69,7 @@ const AdmissionTabsSection = () => {
       points: [
         <>
           <a
-            href="/pdf/aims-journal-of-research/archives/AIMS+Journal+Vol-19_Iss-2_September-2024.pdf"
+            href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aims-journal-of-research/archives/AIMS+Journal+Vol-19_Iss-2_September-2024.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -78,7 +78,7 @@ const AdmissionTabsSection = () => {
         </>,
         <>
           <a
-            href="/pdf/aims-journal-of-research/archives/AIMS+Journal+Volume+18+-+Issue+2.pdf"
+            href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aims-journal-of-research/archives/AIMS+Journal+Volume+18+-+Issue+2.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -87,7 +87,7 @@ const AdmissionTabsSection = () => {
         </>,
         <>
           <a
-            href="/pdf/aims-journal-of-research/archives/AIMS+Journal+Volume+18+-+Issue+1.pdf"
+            href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aims-journal-of-research/archives/AIMS+Journal+Volume+18+-+Issue+1.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -96,7 +96,7 @@ const AdmissionTabsSection = () => {
         </>,
         <>
           <a
-            href="/pdf/aims-journal-of-research/archives/AIMS+Journal+Volume+17+-+Issue+2.pdf"
+            href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aims-journal-of-research/archives/AIMS+Journal+Volume+17+-+Issue+2.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -105,7 +105,7 @@ const AdmissionTabsSection = () => {
         </>,
         <>
           <a
-            href="/pdf/aims-journal-of-research/archives/AIMS+Journal+Volume+17+-+Issue+1.pdf"
+            href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aims-journal-of-research/archives/AIMS+Journal+Volume+17+-+Issue+1.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -114,7 +114,7 @@ const AdmissionTabsSection = () => {
         </>,
         <>
           <a
-            href="/pdf/aims-journal-of-research/archives/AIMS+Journal+Volume+16+-+Issue+2.pdf"
+            href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aims-journal-of-research/archives/AIMS+Journal+Volume+16+-+Issue+2.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -123,7 +123,7 @@ const AdmissionTabsSection = () => {
         </>,
         <>
           <a
-            href="/pdf/aims-journal-of-research/archives/AIMS+Journal+Volume+16+-+Issue+1.pdf"
+            href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aims-journal-of-research/archives/AIMS+Journal+Volume+16+-+Issue+1.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -132,7 +132,7 @@ const AdmissionTabsSection = () => {
         </>,
         <>
           <a
-            href="/pdf/aims-journal-of-research/archives/AIMS+Journal+Volume+15+-+Issue+2+.pdf"
+            href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aims-journal-of-research/archives/AIMS+Journal+Volume+15+-+Issue+2+.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -141,7 +141,7 @@ const AdmissionTabsSection = () => {
         </>,
         <>
           <a
-            href="/pdf/aims-journal-of-research/archives/AIMS+Journal+Volume+15+-+Issue+1.pdf"
+            href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aims-journal-of-research/archives/AIMS+Journal+Volume+15+-+Issue+1.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -150,7 +150,7 @@ const AdmissionTabsSection = () => {
         </>,
         <>
           <a
-            href="/pdf/aims-journal-of-research/archives/AIMS+Journal+Volume+14+-+Issue+2.pdf"
+            href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aims-journal-of-research/archives/AIMS+Journal+Volume+14+-+Issue+2.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -159,7 +159,7 @@ const AdmissionTabsSection = () => {
         </>,
         <>
           <a
-            href="/pdf/aims-journal-of-research/archives/AIMS+Journal+Volume+14+-+Issue+1.pdf"
+            href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aims-journal-of-research/archives/AIMS+Journal+Volume+14+-+Issue+1.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -169,7 +169,7 @@ const AdmissionTabsSection = () => {
 
         <>
           <a
-            href="/pdf/aims-journal-of-research/archives/AIMS+Journal+Volume+13+-+Issue+2.pdf"
+            href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aims-journal-of-research/archives/AIMS+Journal+Volume+13+-+Issue+2.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -178,7 +178,7 @@ const AdmissionTabsSection = () => {
         </>,
         <>
           <a
-            href="/pdf/aims-journal-of-research/archives/AIMS+Journal+Volume+13+-+Issue+1.pdf"
+            href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aims-journal-of-research/archives/AIMS+Journal+Volume+13+-+Issue+1.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >

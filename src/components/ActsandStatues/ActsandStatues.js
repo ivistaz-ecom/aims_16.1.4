@@ -4,70 +4,70 @@ import React from "react"
 const STATUTES_AND_POLICIES = [
   {
     title: "Infrastructure and Maintenance Policy",
-    href: "/acts-and-statutes-moa/Infrastructure policy.pdf",
+    href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/acts-and-statutes-moa/Infrastructure%20policy.pdf",
   },
   {
     title: "Anti-Ragging Policy",
-    href: "/acts-and-statutes-moa/Antiragging policy.pdf",
+    href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/acts-and-statutes-moa/Antiragging%20policy.pdf",
   },
   {
     title: "Policy for Prevention of Sexual Harassment",
-    href: "/acts-and-statutes-moa/Sexual harrassment.pdf",
+    href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/acts-and-statutes-moa/Sexual%20harrassment.pdf",
   },
   {
     title: "Code of Conduct – Faculty and Staff",
-    href: "/acts-and-statutes-moa/Code of Conduct faculty and staff.pdf",
+    href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/acts-and-statutes-moa/Code%20of%20Conduct%20faculty%20and%20staff.pdf",
   },
   {
     title: "Policy for Sponsorship of Faculty for Development Activities",
-    href: "/acts-and-statutes-moa/Faculty development activities.pdf",
+    href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/acts-and-statutes-moa/Faculty%20development%20activities.pdf",
   },
   {
     title: "Students Grievance Redressal Policy",
-    href: "/acts-and-statutes-moa/Student grievances and redressal.pdf",
+    href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/acts-and-statutes-moa/Student%20grievances%20and%20redressal.pdf",
   },
   {
     title: "Policy for Promotion of Equity",
-    href: "/acts-and-statutes-moa/Policy of Promotion equity.pdf",
+    href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/acts-and-statutes-moa/Policy%20of%20Promotion%20equity.pdf",
   },
   {
     title: "Code of Conduct – Students",
-    href: "/acts-and-statutes-moa/Code of Conduct-Students.pdf",
+    href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/acts-and-statutes-moa/Code%20of%20Conduct-Students.pdf",
   },
   {
     title: "Code of Ethics",
-    href: "/acts-and-statutes-moa/Code of Ethics.pdf",
+    href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/acts-and-statutes-moa/Code%20of%20Ethics.pdf",
   },
   {
     title: "Environment & Sustainability Policy",
-    href: "/acts-and-statutes-moa/Environment-and-Sustainability-Policy.pdf",
+    href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/acts-and-statutes-moa/Environment-and-Sustainability-Policy.pdf",
   },
-  { title: "IT Policy", href: "/acts-and-statutes-moa/IT Policy.pdf" },
-  { title: "HR Policy", href: "/acts-and-statutes-moa/HR Policy_merged.pdf" },
+  { title: "IT Policy", href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/acts-and-statutes-moa/IT%20Policy.pdf" },
+  { title: "HR Policy", href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/acts-and-statutes-moa/HR%20Policy_merged.pdf" },
   // { title: "ER Policy", href: null },
   {
     title: "Admission Policy",
-    href: "/acts-and-statutes-moa/Admission policy.pdf",
+    href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/acts-and-statutes-moa/Admission%20policy.pdf",
   },
   {
     title: "Research Policy",
-    href: "/acts-and-statutes-moa/Research-Policy.pdf",
+    href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/acts-and-statutes-moa/Research-Policy.pdf",
   },
   {
     title: "Library Policies and Procedures",
-    href: "/acts-and-statutes-moa/Library Policy and Procedures.pdf",
+    href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/acts-and-statutes-moa/Library%20Policy%20and%20Procedures.pdf",
   },
   {
     title: "Student Exit Policy",
-    href: "/acts-and-statutes-moa/Student-Exit-Policy.pdf",
+    href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/acts-and-statutes-moa/Student-Exit-Policy.pdf",
   },
   {
     title: "Placement Policy",
-    href: "/acts-and-statutes-moa/placement-policy.pdf",
+    href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/acts-and-statutes-moa/placement-policy.pdf",
   },
   {
     title: "E-Governance Policy",
-    href: "/acts-and-statutes-moa/e-goverance-policy.pdf",
+    href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/acts-and-statutes-moa/e-goverance-policy.pdf",
   },
   {
     title: "IQAC",

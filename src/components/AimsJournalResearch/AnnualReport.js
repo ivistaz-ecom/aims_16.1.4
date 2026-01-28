@@ -12,10 +12,10 @@ const AnnualReport = () => {
                         <div className='lg:pl-5'>
                             <ul className='list-disc list-inside'>
                                 <li>
-                                    Annual Report 2023-24 - <a href='/iqac/annual+report+2023.pdf' target='_blank' className='text-black underline'>Download</a>
+                                    Annual Report 2023-24 - <a href='https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/annual+report+2023.pdf' target='_blank' className='text-black underline'>Download</a>
                                 </li>
                                 <li>
-                                    Annual Report 2020-21 - <a href='/iqac/Annual+Report+2020-21.pdf' target='_blank' className='text-black underline'>Download</a>
+                                    Annual Report 2020-21 - <a href='https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iqac/Annual+Report+2020-21.pdf' target='_blank' className='text-black underline'>Download</a>
                                 </li>
                             </ul>
                         </div>

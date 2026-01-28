@@ -15,7 +15,7 @@ const page = () => {
         heading="NCC & NSS"
         paragraph="The NSS unit at AIMS Institutes promotes student participation in community engagement, social responsibility, and nation-building activities. Through camps, awareness programs, and service initiatives, students learn leadership, teamwork, and civic responsibility while contributing meaningfully to society."
         buttonName="About NSS"
-        pdfLink="/pdf/nss/About-NSS.pdf"
+        pdfLink="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/nss/About-NSS.pdf"
       />
     </>
   )

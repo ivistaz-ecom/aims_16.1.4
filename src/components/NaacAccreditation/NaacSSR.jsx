@@ -12,7 +12,7 @@ const NaacSSR = () => {
       links: [
         {
           text: "NAAC SSR - View",
-          link: "/naac/Self-Study-Report/naac-ssr.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/naac/Self-Study-Report/naac-ssr.pdf",
         },
         {
           text: "IIQA - View",
@@ -26,11 +26,11 @@ const NaacSSR = () => {
       links: [
         {
           text: "2.2 Seats earmarked for reserved category as per GOI/State Govt rule year-wise during the last five years - View",
-          link: "/naac/Extended-Profile/NAAC-2.2-Reserved-Category-Seats-SC_ST_OBC-Supporting-Document.pdf",
+          link: "",
         },
         {
           text: "3.2 Number of sanctioned posts year-wise during last five years - View",
-          link: "/naac/Extended-Profile/NAAC-3.2-Sanctioned-Posts.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/naac/Extended-Profile/NAAC-3.2-Sanctioned-Posts.pdf",
         },
       ],
     },
@@ -40,23 +40,23 @@ const NaacSSR = () => {
       links: [
         {
           text: "1.1.1- The Institution ensures effective curriculum delivery through a well planned and documented process. - View",
-          link: "/naac/Criteria-1-Curricular-Aspects/NAAC-1.1.1.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/naac/Criteria-1-Curricular-Aspects/NAAC-1.1.1.pdf",
         },
         {
           text: "1.1.2- The institution adheres to the academic calendar, including for the conduct of CIE. - View",
-          link: "/naac/Criteria-1-Curricular-Aspects/NAAC-1.1.2.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/naac/Criteria-1-Curricular-Aspects/NAAC-1.1.2.pdf",
         },
         {
           text: "1.1.3 -Teachers participation in curriculum development, assessment and academic bodies of the affiliating University during the last five years. - View",
-          link: "/naac/Criteria-1-Curricular-Aspects/NAAC-1.1.3.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/naac/Criteria-1-Curricular-Aspects/NAAC-1.1.3.pdf",
         },
         {
           text: "1.2.1 - Programs with CBCS/elective course system (Additional document). - View",
-          link: "/naac/Criteria-1-Curricular-Aspects/NAAC-1.2.1-Additional-Document.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/naac/Criteria-1-Curricular-Aspects/NAAC-1.2.1-Additional-Document.pdf",
         },
         {
           text: "1.2.1 - Programs with CBCS/elective course system (Syllabus). - View",
-          link: "/naac/Criteria-1-Curricular-Aspects/NAAC-1.2.1-Syllabus.pdf",
+          link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/naac/Criteria-1-Curricular-Aspects/NAAC-1.2.1-Syllabus.pdf",
         },
         {
           text: "1.2.2 - Add-on / Certificate Programs offered during the last 5 years. - View",

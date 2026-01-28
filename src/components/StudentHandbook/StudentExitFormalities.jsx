@@ -38,13 +38,13 @@ const StudentExitFormalities = () => {
               <div className="flex md:flex-row flex-col gap-4 py-6 items-center">
                 <Button
                   variant="placement"
-                  href="/student-handbook/Student-Handbook/Student Exit Formalities Process.pdf"
+                  href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/Student-Handbook/Student%20Exit%20Formalities%20Process.pdf"
                 >
                   Student Exit Formalities Process
                 </Button>
                 <Button
                   variant="placement"
-                  href="/student-handbook/Student-Handbook/Student Exit Formalities Form.pdf"
+                  href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/Student-Handbook/Student%20Exit%20Formalities%20Form.pdf"
                 >
                   Student Exit Formalities Form
                 </Button>

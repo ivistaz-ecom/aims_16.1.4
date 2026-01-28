@@ -202,7 +202,7 @@ export default function Footer() {
         { href: "/student-information-zone", text: "Examinations" },
         { href: "/aims-academic-calendar", text: "Academic Calendar" },
         {
-          href: "/pdf/footer-pdf/Program_and_Course_Outcomes.pdf",
+          href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/footer-pdf/Program_and_Course_Outcomes.pdf",
           target: "_blank",
           text: "Program and Course Outcome",
         },
@@ -232,17 +232,17 @@ export default function Footer() {
         { href: "/aicte-aims", text: "AICTE" },
         { href: "/nirf-ranking", text: "NIRF" },
         {
-          href: "/pdf/footer-pdf/AIMS-UGC2(f)+&+12B+.pdf",
+          href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/footer-pdf/AIMS-UGC2(f)+&+12B+.pdf",
           target: "_blank",
           text: "UGC 2(f) & 12B",
         },
         {
-          href: "/pdf/footer-pdf/IDP-final+copy.pdf",
+          href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/footer-pdf/IDP-final+copy.pdf",
           target: "_blank",
           text: "Institutional Development Plan",
         },
         {
-          href: "/pdf/footer-pdf/Annual+Accounts.pdf",
+          href: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/footer-pdf/Annual+Accounts.pdf",
           target: "_blank",
           text: "Annual Accounts",
         },

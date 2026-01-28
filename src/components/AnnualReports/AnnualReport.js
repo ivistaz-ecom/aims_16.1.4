@@ -32,12 +32,12 @@ const AnnualReport = () => {
                         </h4>
                         <ul className='list-disc list-inside space-y-2'>
                             <li className='text-[18px] text-[#A22877]'>
-                                <Link href="/annual-reports/annual+report+2023.pdf" target='_blank' noopener noreferrer>
+                                <Link href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/annual-reports/annual+report+2023.pdf" target='_blank' noopener noreferrer>
                                     Annual Report 2023-24 - <span className='text-bold underline'>Download</span>
                                 </Link>
                             </li>
                             <li className='text-[18px] text-[#A22877]'>
-                                <Link href="/annual-reports/Annual+Report+2020-21.pdf" target='_blank' noopener noreferrer>
+                                <Link href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/annual-reports/Annual+Report+2020-21.pdf" target='_blank' noopener noreferrer>
                                     Annual Report 2020-21 - <span className='text-bold underline'>Download</span>
                                 </Link>
                             </li>

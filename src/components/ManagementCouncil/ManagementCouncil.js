@@ -30,7 +30,7 @@ const ManagementCouncil = () => {
             <ul className="list-disc list-outside space-y-2 pl-6">
               <li className="text-[18px] text-[#A22877]">
                 <Link
-                  href="/pdf/management-council/Management-Council-Members.pdf"
+                  href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/management-council/Management-Council-Members.pdf"
                   target="_blank"
                   noopener
                   noreferrer

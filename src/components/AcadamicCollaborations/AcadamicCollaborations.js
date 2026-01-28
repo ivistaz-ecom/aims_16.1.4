@@ -25,7 +25,7 @@ const AcadamicCalender = () => {
             <ul className="list-disc list-outside space-y-2 pl-6">
               <li className="text-[18px] text-[#A22877]">
                 <Link
-                  href="/academic-collaborations/itc-academy/itc-academy.pdf"
+                  href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/academic-collaborations/itc-academy/itc-academy.pdf"
                   target="_blank"
                   noopener
                   noreferrer
@@ -36,7 +36,7 @@ const AcadamicCalender = () => {
               </li>
               <li className="text-[18px] text-[#A22877]">
                 <Link
-                  href="/academic-collaborations/computer-society-of-india /csi-institution-memer-certificate.pdf"
+                  href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/academic-collaborations/computer-society-of-india%20/csi-institution-memer-certificate.pdf"
                   target="_blank"
                   noopener
                   noreferrer
@@ -71,7 +71,7 @@ const AcadamicCalender = () => {
               </li>
               <li className="text-[18px] text-[#A22877]">
                 <Link
-                  href="/academic-collaborations/mou-ehl/mou-ehl.pdf"
+                  href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/academic-collaborations/mou-ehl/mou-ehl.pdf"
                   target="_blank"
                   noopener
                   noreferrer
@@ -86,7 +86,7 @@ const AcadamicCalender = () => {
               </li>
               <li className="text-[18px] text-[#A22877]">
                 <Link
-                  href="/academic-collaborations/iiac/iica.pdf"
+                  href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/academic-collaborations/iiac/iica.pdf"
                   target="_blank"
                   noopener
                   noreferrer
@@ -111,7 +111,7 @@ const AcadamicCalender = () => {
               </li>
               <li className="text-[18px] text-[#A22877]">
                 <Link
-                  href="/academic-collaborations/mou-hosco/mou-hosco.pdf"
+                  href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/academic-collaborations/mou-hosco/mou-hosco.pdf"
                   target="_blank"
                   noopener
                   noreferrer
@@ -121,7 +121,7 @@ const AcadamicCalender = () => {
               </li>
               <li className="text-[18px] text-[#A22877]">
                 <Link
-                  href="/academic-collaborations/chai-point/chai-pointpdf.pdf"
+                  href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/academic-collaborations/chai-point/chai-pointpdf.pdf"
                   target="_blank"
                   noopener
                   noreferrer

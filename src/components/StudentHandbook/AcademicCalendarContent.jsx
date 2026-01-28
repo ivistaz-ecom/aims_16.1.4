@@ -8,19 +8,19 @@ const AcademicCalendarContent = () => {
   const academicYears = [
     {
       year: "2023-24",
-      link: "/academic-calender/2023-2024/Academic Calender-(2023-2024).pdf",
+      link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/academic-calender/2023-2024/Academic%20Calender-(2023-2024).pdf",
     },
     {
       year: "2022-23",
-      link: "/academic-calender/2022-2023/Academic Calender-(2022-2023).pdf",
+      link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/academic-calender/2022-2023/Academic%20Calender-(2022-2023).pdf",
     },
     {
       year: "2021-22",
-      link: "/academic-calender/2021-2022/Academic Calender-(2021-2022).pdf",
+      link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/academic-calender/2021-2022/Academic%20Calender-(2021-2022).pdf",
     },
     {
       year: "2020-21",
-      link: "/academic-calender/2020-2021/Academic Calendar-(2020-2021).pdf",
+      link: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/academic-calender/2020-2021/Academic%20Calendar-(2020-2021).pdf",
     },
   ]
 

@@ -24,22 +24,22 @@ const AcadamicCalender = () => {
                         </h4>
                         <ul className='list-disc list-inside space-y-2'>
                             <li className='text-[18px] text-[#A22877]'>
-                                <Link href="/academic-calender/2023-2024/Academic Calender-(2023-2024).pdf" target='_blank' noopener noreferrer>
+                                <Link href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/academic-calender/2023-2024/Academic%20Calender-(2023-2024).pdf" target='_blank' noopener noreferrer>
                                     Academic Year 2023-24 - <span className='text-bold underline'>View</span>
                                 </Link>
                             </li>
                             <li className='text-[18px] text-[#A22877]'>
-                                <Link href="/academic-calender/2022-2023/Academic Calender-(2022-2023).pdf" target='_blank' noopener noreferrer>
+                                <Link href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/academic-calender/2022-2023/Academic%20Calender-(2022-2023).pdf" target='_blank' noopener noreferrer>
                                     Academic Year 2022-23 - <span className='text-bold underline'>View</span>
                                 </Link>
                             </li>
                             <li className='text-[18px] text-[#A22877]'>
-                                <Link href="/academic-calender/2021-2022/Academic Calender-(2021-2022).pdf" target='_blank' noopener noreferrer>
+                                <Link href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/academic-calender/2021-2022/Academic%20Calender-(2021-2022).pdf" target='_blank' noopener noreferrer>
                                     Academic Year 2021-22 - <span className='text-bold underline'>View</span>
                                 </Link>
                             </li>
                             <li className='text-[18px] text-[#A22877]'>
-                                <Link href="/academic-calender/2020-2021/Academic Calendar-(2020-2021).pdf" target='_blank' noopener noreferrer>
+                                <Link href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/academic-calender/2020-2021/Academic%20Calendar-(2020-2021).pdf" target='_blank' noopener noreferrer>
                                     Academic Year 2020-21 - <span className='text-bold underline'>View</span>
                                 </Link>
                             </li>

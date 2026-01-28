@@ -71,7 +71,7 @@ const JournalTabs = ({ tabsData }) => {
             </div>
             {tabsData[activeTab].showButtons && (
               <div className="flex flex-col lg:flex-row md:flex-row xl:flex-row gap-4 py-5">
-                <Link href="/pdf/aims-journal-of-research/Submission+Guidelines.pdf" target="_blank">
+                <Link href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/aims-journal-of-research/Submission+Guidelines.pdf" target="_blank">
                 <Button variant="placement">
                   Download Submission Guidelines
                 </Button>

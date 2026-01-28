@@ -21,17 +21,17 @@ const AccualAccounts = () => {
                     <div>
                         <ul className='list-disc list-inside space-y-2'>
                             <li className='text-[18px] text-[#A22877] underline underline-offset-2'>
-                                <Link href="/annual-accounts/Annual Audit 2024-25.pdf" target='_blank' noopener noreferrer>
+                                <Link href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/annual-accounts/Annual%20Audit%202024-25.pdf" target='_blank' noopener noreferrer>
                                     Annual Audit 2024-2025
                                 </Link>
                             </li>
                             <li className='text-[18px] text-[#A22877] underline underline-offset-2'>
-                                <Link href="/annual-accounts/Annual Audit 2023-2024.pdf" target='_blank' noopener noreferrer>
+                                <Link href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/annual-accounts/Annual%20Audit%202023-2024.pdf" target='_blank' noopener noreferrer>
                                     Annual Audit 2023-2024
                                 </Link>
                             </li>
                             <li className='text-[18px] text-[#A22877]   underline underline-offset-2'>
-                                <Link href="/annual-accounts/Annual Audit 2022-2023.pdf" target='_blank' noopener noreferrer>
+                                <Link href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/annual-accounts/Annual%20Audit%202022-2023.pdf" target='_blank' noopener noreferrer>
                                     Annual Audit 2022-2023
                                 </Link>
                             </li>

@@ -17,7 +17,7 @@ const PublicDisclosure = () => {
                 (2022-24); PhD (2020-24) -{" "}
                 <a
                   target="_blank"
-                  href="/iacbe/Public-Disclosure-of-Student-Achievement-+2024.pdf"
+                  href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iacbe/Public-Disclosure-of-Student-Achievement-+2024.pdf"
                   className="text-[#002561] underline"
                 >
                   View
@@ -28,7 +28,7 @@ const PublicDisclosure = () => {
                 (2021-23); PhD (2019-23) -{" "}
                 <a
                   target="_blank"
-                  href="/iacbe/Public-Disclosure-of-Student-Achievement+2022-23.pdf"
+                  href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iacbe/Public-Disclosure-of-Student-Achievement+2022-23.pdf"
                   className="text-[#002561] underline"
                 >
                   View
@@ -54,7 +54,7 @@ const PublicDisclosure = () => {
                   For a listing of accredited programs,{" "}
                   <a
                     target="_blank"
-                    href="/iacbe/IACBE+Member+Status+Information+-+AIMSInstitute.pdf"
+                    href="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/iacbe/IACBE+Member+Status+Information+-+AIMSInstitute.pdf"
                     className="text-[#002561] underline"
                   >
                     Click Here.
