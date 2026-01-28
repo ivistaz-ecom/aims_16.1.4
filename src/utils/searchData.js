@@ -435,7 +435,7 @@ export const searchResults = [
   {
     id: 23,
     title: "Institutional Development Plan (IDP)",
-    url: "/institutional-development-plan/IDP.pdf",
+    url: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/institutional-development-plan/IDP.pdf",
     type: "PDF",
     keywords: [
       "institutional development plan",
@@ -460,7 +460,7 @@ export const searchResults = [
   {
     id: 24,
     title: "UGC 2(f) & 12B",
-    url: "/ugc/2f_and_12b_certificate.pdf",
+    url: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/ugc/2f_and_12b_certificate.pdf",
     type: "PDF",
     keywords: [
       "ugc 2f and 12b",
@@ -867,7 +867,7 @@ export const searchResults = [
   {
     id: 41,
     title: "Fee Refund Policy",
-    url: "/fee-refund-policy/fee-payment-terms-and-conditions.pdf",
+    url: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/fee-refund-policy/fee-payment-terms-and-conditions.pdf",
     type: "PDF",
     keywords: [
       "fee refund policy",
@@ -1223,7 +1223,7 @@ export const searchResults = [
   {
     id: 57,
     title: "NCC / NSS",
-    url: "/pdf/nss/About-NSS.pdf",
+    url: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/nss/About-NSS.pdf",
     type: "PDF",
     keywords: [
       "nss",
@@ -1306,7 +1306,7 @@ export const searchResults = [
   {
     id: 61,
     title: "Internal Complaint Committee (ICC)",
-    url: "/pdf/icc/ICC-website.pdf",
+    url: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/icc/ICC-website.pdf",
     type: "PDF",
     keywords: [
       "internal complaint committee",
@@ -1411,7 +1411,7 @@ export const searchResults = [
   {
     id: 66,
     title: "Facilities for Differently-Abled",
-    url: "/pdf/fda/Barrier-Free-Environment.pdf",
+    url: "https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/aims-pdfs/fda/Barrier-Free-Environment.pdf",
     type: "PDF",
     keywords: [
       "facilities for differently abled",
