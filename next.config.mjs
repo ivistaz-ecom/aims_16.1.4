@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
+        // In some networks (IPv6/NAT64), public domains can resolve to addresses
+        // that Next.js treats as "private". Disabling optimization avoids the
+        // proxy fetch (and SSRF protection) while still rendering the images.
+        unoptimized: true,
+        // Allow the qualities used across the site (prevents runtime warnings).
+        qualities: [75, 90, 100],
         remotePatterns: [
             {
                 protocol: 'https',
@@ -18,10 +24,6 @@ const nextConfig = {
                 pathname: '/wp-content/uploads/**',
             },
         ],
-    },
-    
-    eslint: {
-        ignoreDuringBuilds: true, // ✅ Skip ESLint (no TypeScript needed)
     },
     async headers() {
         return [
