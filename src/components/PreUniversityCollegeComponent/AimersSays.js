@@ -117,12 +117,16 @@ export default function AimersSays() {
             {/* Arrow controls */}
             <div className="absolute bottom-[20px] right-[20px] flex gap-[10px] max-sm:bottom-auto max-sm:top-[80px]">
               <button
+                type="button"
+                aria-label="Previous testimonial"
                 className="w-10 h-10 text-xl flex items-center justify-center border border-[#a22978] rounded-full bg-white shadow hover:bg-[#a22978] hover:text-white text-black"
                 onClick={() => sliderRef.slickPrev()}
               >
                 <HiArrowSmallLeft />
               </button>
               <button
+                type="button"
+                aria-label="Next testimonial"
                 className="w-10 h-10 text-xl flex items-center justify-center border border-[#a22978] rounded-full bg-white shadow hover:bg-[#a22978] hover:text-white text-black"
                 onClick={() => sliderRef.slickNext()}
               >

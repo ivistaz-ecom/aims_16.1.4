@@ -238,6 +238,8 @@ const SchoolOfHospitalityTourismFaculty = () => {
                                         fill
                                         className="object-cover rounded-t-3xl"
                                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                                        priority={index === 0}
+                                        fetchPriority={index === 0 ? "high" : "auto"}
                                     />
                                 ) : (
                                     <div className="w-full h-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">

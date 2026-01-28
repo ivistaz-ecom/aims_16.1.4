@@ -53,10 +53,11 @@ const BbaValueAddedPrograms = () => {
             <Image
               src="/bhm-img/BHM-new-Mobile-image.webp"
               alt="AIMS Students"
-              width={2400}
+              width={1400}
               height={300}
               className="w-full h-full object-cover"
               priority
+              
             />
           </div>
 

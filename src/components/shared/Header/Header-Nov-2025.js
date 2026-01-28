@@ -338,8 +338,10 @@ export default function Header() {
                   </div>
                 </div>
                 <button
+                  type="button"
                   onClick={() => setShowMobileSearch(false)}
                   className="ml-3 p-2 hover:bg-gray-100 rounded-lg transition-all duration-200"
+                  aria-label="Close search"
                 >
                   <svg
                     className="w-5 h-5 text-gray-600"
@@ -589,8 +591,10 @@ export default function Header() {
 
               {/* Mobile Search Icon */}
               <button
+                type="button"
                 onClick={() => setShowMobileSearch(!showMobileSearch)}
                 className="md:hidden text-2xl z-50 bg-white rounded-lg p-3 hover:bg-gray-50 transition-all duration-200 ease-out"
+                aria-label={showMobileSearch ? "Close search" : "Open search"}
               >
                 <svg
                   className="w-6 h-6 text-gray-600"
@@ -609,10 +613,12 @@ export default function Header() {
 
               {/* Tablet Hamburger */}
               <button
+                type="button"
                 onClick={() =>
                   mobileOpen ? closeMobileMenu() : openMobileMenu()
                 }
                 className="hidden md:flex lg:hidden text-3xl z-50 bg-white rounded-lg p-4 hover:bg-gray-50 transition-all duration-200 ease-out"
+                aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
               >
                 {mobileOpen ? (
                   <FiX className="w-10 h-10" />
@@ -623,10 +629,12 @@ export default function Header() {
 
               {/* Mobile Hamburger */}
               <button
+                type="button"
                 onClick={() =>
                   mobileOpen ? closeMobileMenu() : openMobileMenu()
                 }
                 className="md:hidden text-3xl z-50 bg-white rounded-lg p-3 hover:bg-gray-50 transition-all duration-200 ease-out"
+                aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
               >
                 {mobileOpen ? <FiX /> : <FiMenu />}
               </button>

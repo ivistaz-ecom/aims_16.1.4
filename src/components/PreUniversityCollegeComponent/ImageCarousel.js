@@ -97,12 +97,16 @@ const ImageCarousel = () => {
           <div className="flex gap-4">
             <button
               onClick={() => emblaApi && emblaApi.scrollPrev()}
+              type="button"
+              aria-label="Previous slide"
               className="w-10 h-10 flex items-center justify-center border-2 border-[#a22978] rounded-full bg-white shadow-md hover:bg-[#a22978] hover:text-white transition-all duration-300"
             >
               <HiArrowSmallLeft size={20} />
             </button>
             <button
               onClick={() => emblaApi && emblaApi.scrollNext()}
+              type="button"
+              aria-label="Next slide"
               className="w-10 h-10 flex items-center justify-center border-2 border-[#a22978] rounded-full bg-white shadow-md hover:bg-[#a22978] hover:text-white transition-all duration-300"
             >
               <HiArrowSmallRight size={20} />

@@ -30,7 +30,8 @@ const PreUniversityTab = ({ tabsData }) => {
                       ? "/admission-process/up-arrow.svg"
                       : "/admission-process/down-arrow.svg"
                   }
-                  alt={tab.title}
+                  alt=""
+                  aria-hidden="true"
                   width={24}
                   height={24}
                   className="w-6 h-6"

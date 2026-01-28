@@ -16,7 +16,7 @@ const BannerFallback = () => {
         fill
         priority
         fetchPriority="high"
-        quality={90}
+        quality={70}
         className="hidden lg:block object-cover object-center"
         sizes="100vw"
       />
@@ -27,7 +27,7 @@ const BannerFallback = () => {
         fill
         priority
         fetchPriority="high"
-        quality={90}
+        quality={70}
         className="hidden md:block lg:hidden object-cover object-center"
         sizes="100vw"
       />
@@ -38,7 +38,7 @@ const BannerFallback = () => {
         fill
         priority
         fetchPriority="high"
-        quality={90}
+        quality={70}
         className="md:hidden object-cover object-center"
         sizes="100vw"
       />
@@ -140,7 +140,7 @@ const HeroBannerSoH = ({ announcements, pageType = "admissions" }) => {
                     fill
                     priority
                     fetchPriority="high"
-                    quality={90}
+                    quality={70}
                     className="hidden lg:block object-cover object-top"
                     sizes="100vw"
                   />
@@ -151,7 +151,7 @@ const HeroBannerSoH = ({ announcements, pageType = "admissions" }) => {
                     fill
                     priority
                     fetchPriority="high"
-                    quality={90}
+                    quality={70}
                     className="hidden md:block lg:hidden object-cover object-center"
                     sizes="100vw"
                   />
@@ -162,7 +162,7 @@ const HeroBannerSoH = ({ announcements, pageType = "admissions" }) => {
                     fill
                     priority
                     fetchPriority="high"
-                    quality={90}
+                    quality={70}
                     className="md:hidden object-cover object-center"
                     sizes="100vw"
                   />
