@@ -1,10 +1,9 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
-import Button from "@/shared/Button";
-import Link from "next/link";
+import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import Image from "next/image"
+import Button from "@/shared/Button"
 
 const testimonials = [
   {
@@ -35,15 +34,14 @@ const testimonials = [
     image: "/home/slide02.webp",
     stars: 5,
   },
-
-];
+]
 
 export default function AlumniCarousel() {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0)
 
-  const next = () => setIndex((i) => (i + 1) % testimonials.length);
+  const next = () => setIndex((i) => (i + 1) % testimonials.length)
   const prev = () =>
-    setIndex((i) => (i - 1 + testimonials.length) % testimonials.length);
+    setIndex((i) => (i - 1 + testimonials.length) % testimonials.length)
 
   return (
     <>
@@ -56,7 +54,11 @@ export default function AlumniCarousel() {
               <span className="italic text-[#A22877] playfair-400">Action</span>
             </h2>
             <div className="flex justify-left pt-5">
-              <Button variant="placement" href="/aims-alumni-association" className="cursor-pointer">
+              <Button
+                variant="placement"
+                href="/aims-alumni-association"
+                className="cursor-pointer"
+              >
                 <span className="text-xl">Read Their Journeys</span>
               </Button>
             </div>
@@ -97,7 +99,7 @@ export default function AlumniCarousel() {
                             height={20}
                             className="sm:w-5 sm:h-5 md:w-6 md:h-6"
                           />
-                        )
+                        ),
                       )}
                     </div>
                     <h3 className="font-semibold text-base sm:text-lg md:text-xl lg:text-2xl mb-2">
@@ -114,8 +116,8 @@ export default function AlumniCarousel() {
             {/* ✅ Desktop and Tablet Landscape: keep 2 testimonials */}
             <div className="hidden xl:flex items-center gap-6 lg:gap-10 h-[700px] w-[600px]">
               {[0, 1].map((offset) => {
-                const t = testimonials[(index + offset) % testimonials.length];
-                const isFirstCard = offset === 0;
+                const t = testimonials[(index + offset) % testimonials.length]
+                const isFirstCard = offset === 0
 
                 return (
                   <div
@@ -198,7 +200,7 @@ export default function AlumniCarousel() {
                       </AnimatePresence>
                     )}
                   </div>
-                );
+                )
               })}
             </div>
 
@@ -261,5 +263,5 @@ export default function AlumniCarousel() {
         </section>
       </div>
     </>
-  );
+  )
 }

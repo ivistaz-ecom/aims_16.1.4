@@ -1,9 +1,9 @@
-"use client";
-import React, { useRef, useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import Button from "@/shared/Button";
-import Link from "next/link";
-import Image from "next/image";
+"use client"
+import React, { useRef, useEffect, useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import Button from "@/shared/Button"
+import Link from "next/link"
+import Image from "next/image"
 
 const courses = [
   {
@@ -29,8 +29,8 @@ const courses = [
       },*/
     ],
     leftImage: "/home/course/school-of-buisnesss-left.webp",
-    rightImage: "/home/course/slides/school-of-buisnesss.webp",
-    mobileImage: "/home/course/slides/business.webp",
+    rightImage: "/home/course/school-of-buisnesss.webp",
+    mobileImage: "/home/course/business.webp",
     browseAllLink: "/business-school",
     buttonText: "Browse Business Programs",
   },
@@ -47,14 +47,14 @@ const courses = [
         name: "Bachelor of Commerce B.COM",
         link: "/finance-commerce-school/bachelor-of-commerce",
       },
-     /* {
+      /* {
         name: "B.COM+ CA/ACCA",
         link: "/finance-commerce-school/bachelor-of-commerce",
       },*/
     ],
     leftImage: "/home/course/school-of-finance-left.webp",
-    rightImage: "/home/course/slides/school-of-finance.webp",
-    mobileImage: "/home/course/school.png",
+    rightImage: "/home/course/school-of-finance.webp",
+    mobileImage: "/home/course/school.webp",
     browseAllLink: "/finance-commerce-school",
     buttonText: "Browse Finance Programs",
   },
@@ -87,8 +87,8 @@ const courses = [
       },
     ],
     leftImage: "/home/course/school-of-hospitality-left.webp",
-    rightImage: "/home/course/slides/school-of-hospitality.webp",
-    mobileImage: "/home/course/slides/hospitality.webp",
+    rightImage: "/home/course/school-of-hospitality.webp",
+    mobileImage: "/home/course/hospitality.webp",
     browseAllLink: "/hospitality-tourism-school",
     buttonText: "Browse Hospitality Programs",
   },
@@ -104,14 +104,14 @@ const courses = [
         name: "Bachelor of Computer Application BCA",
         link: "/information-technology-school/bachelor-computer-applications",
       },
-     /* {
+      /* {
         name: "BCA+ AI/ML | Data Science | Full-stack Development",
         link: "/information-technology-school/bachelor-computer-applications",
       }*/
     ],
     leftImage: "/home/course/school-of-information-left.webp",
-    rightImage: "/home/course/slides/school-of-information.webp",
-    mobileImage: "/home/course/slides/information.webp",
+    rightImage: "/home/course/school-of-information.webp",
+    mobileImage: "/home/course/information.webp",
     browseAllLink: "/information-technology-school",
     buttonText: "Browse IT Programs",
   },
@@ -134,43 +134,43 @@ const courses = [
       },
     ],
     leftImage: "/home/course/puc-left.webp",
-    rightImage: "/home/course/slides/puc.webp",
-    mobileImage: "/home/course/slides/puc02.webp",
+    rightImage: "/home/course/puc.webp",
+    mobileImage: "/home/course/puc02.webp",
     browseAllLink: "/pre-university-college",
     buttonText: "Browse PUC Programs",
   },
-];
+]
 
 export default function ExactSwapCarousel() {
-  const [current, setCurrent] = useState(0);
-  const thumbsRef = useRef([]);
-  const thumbsContainerRef = useRef(null);
+  const [current, setCurrent] = useState(0)
+  const thumbsRef = useRef([])
+  const thumbsContainerRef = useRef(null)
 
   useEffect(() => {
-    thumbsRef.current = thumbsRef.current.slice(0, courses.length);
-  }, []);
+    thumbsRef.current = thumbsRef.current.slice(0, courses.length)
+  }, [])
 
   useEffect(() => {
-    const el = thumbsRef.current[current];
-    const container = thumbsContainerRef.current;
+    const el = thumbsRef.current[current]
+    const container = thumbsContainerRef.current
     if (el && container) {
-      const containerRect = container.getBoundingClientRect();
-      const elementRect = el.getBoundingClientRect();
+      const containerRect = container.getBoundingClientRect()
+      const elementRect = el.getBoundingClientRect()
 
       // Only scroll horizontally within the container
       const scrollLeft =
-        el.offsetLeft - container.offsetWidth / 2 + el.offsetWidth / 2;
+        el.offsetLeft - container.offsetWidth / 2 + el.offsetWidth / 2
       container.scrollTo({
         left: scrollLeft,
         behavior: "smooth",
-      });
+      })
     }
-  }, [current]);
+  }, [current])
 
   const prev = () =>
-    setCurrent((p) => (p - 1 + courses.length) % courses.length);
-  const next = () => setCurrent((p) => (p + 1) % courses.length);
-  const goTo = (i) => setCurrent(i);
+    setCurrent((p) => (p - 1 + courses.length) % courses.length)
+  const next = () => setCurrent((p) => (p + 1) % courses.length)
+  const goTo = (i) => setCurrent(i)
 
   return (
     <div className="bg-[url('/home/bg-circle.svg')] bg-cover bg-center bg-no-repeat text-white p-6 md:p-12 relative overflow-hidden">
@@ -402,7 +402,8 @@ export default function ExactSwapCarousel() {
                         </ul>
                       )}
                     <Link href={courses[current].browseAllLink}>
-                      <Button variant="placement"
+                      <Button
+                        variant="placement"
                         showReadMore={false}
                         className="hover:text-white hover:border-white text-xl cursor-pointer"
                       >
@@ -412,8 +413,6 @@ export default function ExactSwapCarousel() {
                   </motion.div>
                 </AnimatePresence>
               </div>
-
-              
 
               {/* Thumbnails (desktop and tablet landscape only) */}
               <div className="hidden xl:block relative">
@@ -425,7 +424,7 @@ export default function ExactSwapCarousel() {
                   transition={{ duration: 0.3 }}
                 >
                   {courses.map((c, idx) => {
-                    const isActive = idx === current;
+                    const isActive = idx === current
                     return (
                       <motion.button
                         key={c.id}
@@ -460,7 +459,7 @@ export default function ExactSwapCarousel() {
                           {c.title}
                         </div>
                       </motion.button>
-                    );
+                    )
                   })}
                 </motion.div>
               </div>
@@ -469,5 +468,5 @@ export default function ExactSwapCarousel() {
         </div>
       </div>
     </div>
-  );
+  )
 }

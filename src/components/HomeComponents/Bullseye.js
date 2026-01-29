@@ -1,9 +1,8 @@
-import React from "react";
-import Image from "next/image";
-import Button from "@/shared/Button";
-import Link from "next/link";
-import Companies from "../shared/Companies";
-
+import React from "react"
+import Image from "next/image"
+import Button from "@/shared/Button"
+import Link from "next/link"
+import Companies from "../shared/Companies"
 
 const Bullseye = () => {
   return (
@@ -19,28 +18,30 @@ const Bullseye = () => {
           intent.
         </p>
       </div>
-     <div className="px-4 lg:px-8">
-     <div className="container mx-auto hidden lg:block">
-        <Image
-          src="/home/bullseye/Bulls_img2.svg"
-          alt="bullseye"
-          width={1000}
-          height={1000}
-          className="w-full"
-        />
+      <div className="px-4 lg:px-8">
+        <div className="container mx-auto hidden lg:block">
+          <Image
+            src="/home/bullseye/Bulls_img.webp"
+            alt="bullseye"
+            width={1000}
+            height={1000}
+            className="w-full"
+          />
+        </div>
       </div>
-     </div>
 
       <div className="lg:hidden">
         <Companies />
       </div>
       <div className="flex justify-center w-full">
         <Link href="/placement" className="lg:-mt-20 text-xl">
-          <Button variant="placement" className="cursor-pointer">Explore Placements</Button>
+          <Button variant="placement" className="cursor-pointer">
+            Explore Placements
+          </Button>
         </Link>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Bullseye;
+export default Bullseye
