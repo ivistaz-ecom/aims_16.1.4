@@ -41,7 +41,6 @@ export default function AimsCarousel() {
         if (!response.ok)
           throw new Error(`HTTP error! status: ${response.status}`)
         const data = await response.json()
-      
 
         if (Array.isArray(data) && data.length > 0) {
           const formattedSlides = data.map((event, index) => ({
@@ -49,7 +48,7 @@ export default function AimsCarousel() {
             src:
               event.acf?.thumbnail_image ||
               event.acf?.banner_image ||
-              "/home/campus/embla-001-updated.webp",
+              "/home/embla-001-updated.webp",
             description: stripHtml(event.title?.rendered || "Event"),
             date: formatDate(event.date || new Date()),
             alt: event.title?.rendered || `Event ${index + 1}`,
@@ -96,7 +95,7 @@ export default function AimsCarousel() {
 
   const windowIdxs = Array.from(
     { length: visible },
-    (_, k) => (start + k) % slides.length
+    (_, k) => (start + k) % slides.length,
   )
 
   // Auto-slide effect

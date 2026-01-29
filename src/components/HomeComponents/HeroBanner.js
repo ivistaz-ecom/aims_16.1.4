@@ -79,33 +79,33 @@ const HeroBannerSoB = ({ announcements, pageType = "admissions" }) => {
   // You can add as many banner slides as you want here
   const banners = [
     {
-      desktop: "/home/home_banner_Desktop.webp",
-      tablet: "/home/Home_banner_tab.webp",
-      mobile: "/home/Home_Banner_mobile_new.webp",
+      desktop: "/home/banner-1-Desktop.webp",
+      tablet: "/home/banner-1-tab.webp",
+      mobile: "/home/banner-1-mobile.webp",
       logo: "/white-empower.svg",
     },
     {
-      desktop: "/home/MBA_desk_ban.webp",
-      tablet: "/home/mba_tab_ban.webp",
-      mobile: "/home/mba_mob_ban.webp",
+      desktop: "/home/banner-2-Desktop.webp",
+      tablet: "/home/banner-2-tab.webp",
+      mobile: "/home/banner-2-mobile.webp",
       logo: "/white-empower.svg",
     },
     {
-      desktop: "/home/VET_desk_ban.webp",
-      tablet: "/home/VET_tab_ban.webp",
-      mobile: "/home/VET_Mob_ban.webp",
+      desktop: "/home/banner-3-Desktop.webp",
+      tablet: "/home/banner-3-tab.webp",
+      mobile: "/home/banner-3-mobile.webp",
       logo: "/white-empower.svg",
     },
     {
-      desktop: "/home/slide-03-final.webp",
-      tablet: "/home/tab-home-banner-slider03.webp",
-      mobile: "/home/mobile-home-banner-slider003.webp",
+      desktop: "/home/banner-4-Desktop.webp",
+      tablet: "/home/banner-4-tab.webp",
+      mobile: "/home/banner-4-mobile.webp",
       logo: "/white-empower.svg",
     },
     {
-      desktop: "/home/desktop-banner-final-4th.webp",
-      tablet: "/home/tab-home-banner-slider4th.webp",
-      mobile: "/home/mobile-home-banner-slider4th.webp",
+      desktop: "/home/banner-5-Desktop.webp",
+      tablet: "/home/banner-5-tab.webp",
+      mobile: "/home/banner-5-mobile.webp",
       logo: "/white-empower.svg",
     },
   ]
@@ -124,7 +124,9 @@ const HeroBannerSoB = ({ announcements, pageType = "admissions" }) => {
     // Function to create and add preload link
     const addPreloadLink = (href, as = "image", type = "image/webp") => {
       // Check if link already exists
-      const existingLink = document.querySelector(`link[rel="preload"][href="${href}"]`)
+      const existingLink = document.querySelector(
+        `link[rel="preload"][href="${href}"]`,
+      )
       if (existingLink) return null
 
       const link = document.createElement("link")

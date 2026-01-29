@@ -3,9 +3,6 @@ import HeroBanner from "./HeroBanner"
 
 import Since from "./Since"
 
-// import AimersInAction from './AimersInAction'
-
-import Slide from "./Slide"
 import SlideTwo from "./SlideTwo"
 import CampusUpdates from "./CampusUpdates/CampusUpdates"
 import Bullseye from "./Bullseye"
@@ -19,7 +16,6 @@ const HomeComponents = () => {
     <>
       <HeroBanner />
       <Since />
-      {/* <Slide /> */}
       <SlideTwo />
       <Bullseye />
       <YourPractice />
