@@ -51,6 +51,10 @@ export const metadata = {
   //   linkedinbot: "noindex, nofollow, noarchive, nosnippet",
   //   whatsapp: "noindex, nofollow, noarchive, nosnippet",
   // },
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: [
       {

@@ -26,6 +26,15 @@ const SeoMetadata = ({
     }
     metaDescription.setAttribute("content", description || "")
 
+    // Robots (index, follow)
+    let metaRobots = document.querySelector('meta[name="robots"]')
+    if (!metaRobots) {
+      metaRobots = document.createElement("meta")
+      metaRobots.setAttribute("name", "robots")
+      document.head.appendChild(metaRobots)
+    }
+    metaRobots.setAttribute("content", "index, follow")
+
     // Canonical link
     let link = document.querySelector('link[rel="canonical"]')
     if (!link) {
