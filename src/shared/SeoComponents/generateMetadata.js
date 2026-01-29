@@ -30,6 +30,10 @@ export async function generateMetadataFromProps({
     return {
         title,
         description,
+        robots: {
+            index: true,
+            follow: true,
+        },
         alternates: {
             canonical: canonicalUrl,
         },
