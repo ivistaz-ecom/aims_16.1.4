@@ -103,9 +103,9 @@ const HeroBannerSoB = ({ announcements, pageType = "admissions" }) => {
       logo: "/white-empower.svg",
     },
     {
-      desktop: "/home/banner-5-Desktop-01.webp",
+      desktop: "/home/fdp-desktop2.webp",
       tablet: "/home/banner-5-tab-01.webp",
-      mobile: "/home/banner-5-mobile-01.webp",
+      mobile: "/home/fdp-mob.webp",
       logo: "/white-empower.svg",
     },
   ]
@@ -168,7 +168,7 @@ const HeroBannerSoB = ({ announcements, pageType = "admissions" }) => {
         responsive={responsive}
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={4000}
+        autoPlaySpeed={400000}
         arrows={true}
         customLeftArrow={
           <div className="z-auto absolute left-10 cursor-pointer top-1/2 -translate-y-1/2 bg-white hover:bg-[#A22877] hover:text-white text-black p-3 rounded-full shadow">
