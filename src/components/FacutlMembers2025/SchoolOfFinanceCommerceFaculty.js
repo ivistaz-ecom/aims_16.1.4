@@ -1,6 +1,5 @@
-
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { API_CONFIG } from '@/config/config'
@@ -8,7 +7,8 @@ import { API_CONFIG } from '@/config/config'
 const SchoolOfFinanceCommerceFaculty = () => {
     const [facultyData, setFacultyData] = useState([])
     const [loading, setLoading] = useState(true)
-    const [imagesLoaded, setImagesLoaded] = useState(false)
+    const [isVisible, setIsVisible] = useState(false)
+    const sectionRef = useRef(null)
 
     // Animation variants
     const containerVariants = {
@@ -111,30 +111,39 @@ const SchoolOfFinanceCommerceFaculty = () => {
         }
     }
 
+    // Intersection Observer for lazy loading
     useEffect(() => {
-        fetchFacultyData()
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true)
+                    observer.disconnect()
+                }
+            },
+            {
+                rootMargin: '100px', // Start loading 100px before section comes into view
+                threshold: 0.1
+            }
+        )
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current)
+        }
+
+        return () => observer.disconnect()
     }, [])
 
-    // Function to preload images
-    const preloadImages = (imageUrls) => {
-        const promises = imageUrls.map((url) => {
-            if (!url) return Promise.resolve()
-            return new Promise((resolve, reject) => {
-                const img = new window.Image()
-                img.onload = resolve
-                img.onerror = resolve // Continue even if image fails
-                img.src = url
-            })
-        })
-        return Promise.all(promises)
-    }
+    useEffect(() => {
+        if (isVisible) {
+            fetchFacultyData()
+        }
+    }, [isVisible])
 
     const fetchFacultyData = async () => {
         try {
             setLoading(true)
-            setImagesLoaded(false)
 
-            // Fetch faculty members with category 18 (School of Business)
+            // Fetch faculty members with category 19 (School of Finance & Commerce)
             const response = await fetch(
                 `${API_CONFIG.SERVER_URL}faculty-member?categories=19&per_page=100&_embed&acf&production=${API_CONFIG.PRODUCTION_SERVER_ID}`
             )
@@ -149,9 +158,6 @@ const SchoolOfFinanceCommerceFaculty = () => {
                 // Map faculty data and use profile_image from ACF
                 const facultyWithImages = data.map((faculty) => {
                     let imageUrl = null
-
-                    console.log('Faculty ACF data:', faculty.acf)
-                    console.log('Profile image:', faculty.acf?.profile_image)
 
                     // Check for ACF profile_image first
                     if (faculty.acf?.profile_image?.url) {
@@ -172,11 +178,6 @@ const SchoolOfFinanceCommerceFaculty = () => {
                 })
 
                 setFacultyData(facultyWithImages)
-
-                // Preload all images
-                const imageUrls = facultyWithImages.map(m => m.imageUrl).filter(Boolean)
-                await preloadImages(imageUrls)
-                setImagesLoaded(true)
             }
         } catch (error) {
             console.error('Error fetching faculty data:', error)
@@ -185,10 +186,37 @@ const SchoolOfFinanceCommerceFaculty = () => {
         }
     }
 
-    if (loading || !imagesLoaded) {
+    // Placeholder while waiting for intersection
+    if (!isVisible) {
         return (
-            <div className="container mx-auto px-4 py-10">
+            <div 
+                ref={sectionRef} 
+                className="py-10 px-4 lg:px-8"
+                style={{ backgroundColor: '#B3DBD3', minHeight: '400px' }}
+            >
+                <div className="text-center container mx-auto">
+                    <h2 className="text-2xl md:text-4xl font-bold text-[#0C2165] mb-4 monser-600">
+                        School of Finance & Commerce
+                    </h2>
+                    <p className="text-lg md:text-xl text-[#0C2165] mb-4 monser-400">
+                        Academic Year: 2024 - 2025
+                    </p>
+                </div>
+            </div>
+        )
+    }
+
+    if (loading) {
+        return (
+            <div 
+                ref={sectionRef}
+                className="container mx-auto px-4 py-10"
+                style={{ backgroundColor: '#B3DBD3' }}
+            >
                 <div className="text-center">
+                    <h2 className="text-2xl md:text-4xl font-bold text-[#0C2165] mb-4 monser-600">
+                        School of Finance & Commerce
+                    </h2>
                     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#0C2165] mx-auto"></div>
                     <p className="mt-4 text-gray-600">Loading faculty...</p>
                 </div>
@@ -202,6 +230,7 @@ const SchoolOfFinanceCommerceFaculty = () => {
 
     return (
         <motion.section
+            ref={sectionRef}
             className="py-10 px-4 lg:px-8"
             style={{ backgroundColor: '#B3DBD3' }}
             initial="hidden"
@@ -250,18 +279,18 @@ const SchoolOfFinanceCommerceFaculty = () => {
                         >
                             {/* Image */}
                             <motion.div
-                                className="w-full aspect-square relative overflow-hidden"
+                                className="w-full aspect-square overflow-hidden"
                                 variants={imageVariants}
                             >
                                 {member.imageUrl ? (
                                     <Image
                                         src={member.imageUrl}
                                         alt={member.title.rendered}
-                                        fill
-                                        className="object-cover rounded-t-3xl"
+                                        width={300}
+                                        height={300}
+                                        className="object-cover rounded-t-3xl w-full h-full"
                                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                        priority={index === 0}
-                                        fetchPriority={index === 0 ? "high" : "auto"}
+                                        loading="lazy"
                                     />
                                 ) : (
                                     <div className="w-full h-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
@@ -275,22 +304,22 @@ const SchoolOfFinanceCommerceFaculty = () => {
                             {/* Content */}
                             <div className="p-6">
                                 {/* Name */}
-                                <h5 className="monser-600 text-[18px] md:text-[20px] text-[#0C2165] text-center mb-2">
+                                <h3 className="monser-600 !text-[18px] md:!text-[20px] text-[#0C2165] text-center mb-2">
                                     {member.title.rendered}
-                                </h5>
+                                </h3>
 
                                 {/* Academic Degrees */}
                                 {member.acf?.academic_degrees && (
-                                    <h6 className="monser-400 text-[14px] text-[#6E3299] text-center mb-2">
+                                    <p className="monser-400 !text-[14px] text-[#6E3299] text-center mb-2">
                                         {member.acf.academic_degrees}
-                                    </h6>
+                                    </p>
                                 )}
 
                                 {/* Designation */}
                                 {member.acf?.designation && (
-                                    <h6 className="monser-400 text-[16px] text-gray-600 text-center mt-2">
+                                    <p className="monser-400 !text-[16px] text-gray-600 text-center mt-2">
                                         {member.acf.designation}
-                                    </h6>
+                                    </p>
                                 )}
                             </div>
                         </motion.div>
