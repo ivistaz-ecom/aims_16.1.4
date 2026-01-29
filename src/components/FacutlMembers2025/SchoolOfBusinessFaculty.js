@@ -7,7 +7,6 @@ import { API_CONFIG } from '@/config/config'
 const SchoolOfBusinessFaculty = () => {
     const [facultyData, setFacultyData] = useState([])
     const [loading, setLoading] = useState(true)
-    const [imagesLoaded, setImagesLoaded] = useState(false)
 
     // Animation variants
     const containerVariants = {
@@ -114,24 +113,9 @@ const SchoolOfBusinessFaculty = () => {
         fetchFacultyData()
     }, [])
 
-    // Function to preload images
-    const preloadImages = (imageUrls) => {
-        const promises = imageUrls.map((url) => {
-            if (!url) return Promise.resolve()
-            return new Promise((resolve, reject) => {
-                const img = new window.Image()
-                img.onload = resolve
-                img.onerror = resolve // Continue even if image fails
-                img.src = url
-            })
-        })
-        return Promise.all(promises)
-    }
-
     const fetchFacultyData = async () => {
         try {
             setLoading(true)
-            setImagesLoaded(false)
 
             // Fetch faculty members with category 18 (School of Business)
             const response = await fetch(
@@ -148,9 +132,6 @@ const SchoolOfBusinessFaculty = () => {
                 // Map faculty data and use profile_image from ACF
                 const facultyWithImages = data.map((faculty) => {
                     let imageUrl = null
-
-                    console.log('Faculty ACF data:', faculty.acf)
-                    console.log('Profile image:', faculty.acf?.profile_image)
 
                     // Check for ACF profile_image first
                     if (faculty.acf?.profile_image?.url) {
@@ -171,11 +152,6 @@ const SchoolOfBusinessFaculty = () => {
                 })
 
                 setFacultyData(facultyWithImages)
-
-                // Preload all images
-                const imageUrls = facultyWithImages.map(m => m.imageUrl).filter(Boolean)
-                await preloadImages(imageUrls)
-                setImagesLoaded(true)
             }
         } catch (error) {
             console.error('Error fetching faculty data:', error)
@@ -184,7 +160,7 @@ const SchoolOfBusinessFaculty = () => {
         }
     }
 
-    if (loading || !imagesLoaded) {
+    if (loading) {
         return (
             <div
                 className="flex items-center justify-center"
@@ -277,18 +253,20 @@ const SchoolOfBusinessFaculty = () => {
                         >
                             {/* Image */}
                             <motion.div
-                                className="w-full aspect-square relative overflow-hidden"
+                                className="w-full aspect-square overflow-hidden"
                                 variants={imageVariants}
                             >
                                 {member.imageUrl ? (
                                     <Image
                                         src={member.imageUrl}
                                         alt={member.title.rendered}
-                                        fill
-                                        className="object-cover rounded-t-3xl"
+                                        width={300}
+                                        height={300}
+                                        className="object-cover rounded-t-3xl w-full h-full"
                                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                        priority={index === 0}
-                                        fetchPriority={index === 0 ? "high" : "auto"}
+                                        // Only prioritize first 4 images (first row) for LCP
+                                        priority={index < 4}
+                                        loading={index < 4 ? "eager" : "lazy"}
                                     />
                                 ) : (
                                     <div className="w-full h-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
@@ -302,22 +280,22 @@ const SchoolOfBusinessFaculty = () => {
                             {/* Content */}
                             <div className="py-6 px-2">
                                 {/* Name */}
-                                <h5 className="monser-600 text-[18px] md:text-[20px] text-[#0C2165] text-center mb-2">
+                                <h3 className="monser-600 !text-[18px] md:!text-[20px] text-[#0C2165] text-center mb-2">
                                     {member.title.rendered}
-                                </h5>
+                                </h3>
 
                                 {/* Academic Degrees */}
                                 {member.acf?.academic_degrees && (
-                                    <h6 className="monser-400 text-[14px] text-[#6E3299] text-center mb-2">
+                                    <p className="monser-400 !text-[14px] text-[#6E3299] text-center mb-2">
                                         {member.acf.academic_degrees}
-                                    </h6>
+                                    </p>
                                 )}
 
                                 {/* Designation */}
                                 {member.acf?.designation && (
-                                    <h6 className="monser-400 text-[16px] text-gray-600 text-center mt-2">
+                                    <p className="monser-400 !text-[16px] text-gray-600 text-center mt-2">
                                         {member.acf.designation}
-                                    </h6>
+                                    </p>
                                 )}
                             </div>
                         </motion.div>
