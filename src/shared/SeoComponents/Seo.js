@@ -21,6 +21,7 @@ function NextSeo({ title, description, path, metaImage }) {
       <meta property="og:image" content={metaImage} />
       <meta name="twitter:card" content="summary_large_image" />
 
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
