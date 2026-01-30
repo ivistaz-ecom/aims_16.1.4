@@ -29,6 +29,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     } else {
       head.appendChild(script)
     }
+
+    // Load gtag.js for Google Ads conversion tracking
+    const loadGtag = () => {
+      // Check if gtag is already loaded (might be from root layout)
+      if (window.gtag && typeof window.gtag === "function") {
+        // gtag is already available, fire conversion event
+        window.gtag("event", "conversion", {
+          send_to: "AW-17707682486/7XwlCP7o2esbELaV1_tB",
+        })
+        return
+      }
+
+      // Check if gtag script is already being loaded
+      if (document.getElementById("gtag-script-mba")) return
+
+      // Load gtag.js
+      const gtagScript = document.createElement("script")
+      gtagScript.id = "gtag-script-mba"
+      gtagScript.async = true
+      gtagScript.src =
+        "https://www.googletagmanager.com/gtag/js?id=AW-17707682486"
+
+      gtagScript.onload = () => {
+        // Initialize dataLayer and gtag function
+        window.dataLayer = window.dataLayer || []
+        function gtag() {
+          window.dataLayer.push(arguments)
+        }
+        window.gtag = gtag
+        gtag("js", new Date())
+        gtag("config", "AW-17707682486")
+
+        // Fire conversion event
+        gtag("event", "conversion", {
+          send_to: "AW-17707682486/7XwlCP7o2esbELaV1_tB",
+        })
+      }
+
+      // Insert gtag script into head
+      head.appendChild(gtagScript)
+    }
+
+    // Wait a bit for any existing gtag to load, then load our gtag
+    setTimeout(loadGtag, 100)
   }, [])
 
   return null // This component doesn't render anything
