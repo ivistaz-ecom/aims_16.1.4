@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect } from "react"
 import Image from "next/image"
+import Button from "@/shared/Button"
 
 // Generic Carousel Component
 const PlacementGalleryCarousel = ({ title, description }) => {
@@ -17,6 +18,16 @@ const PlacementGalleryCarousel = ({ title, description }) => {
                   .map((paragraph, idx) => <p key={idx}>{paragraph.trim()}</p>)
               : description}
           </div>
+
+          <div className="lg:mt-4 mt-4 w-fit">
+            <Button
+              variant="placement"
+              href="/placement/placement-report.pdf"
+              target="_blank"
+            >
+              Download Placement Report 2024-25
+            </Button>
+          </div>
           <div className="text-gray-600 lg:mt-4 mt-3">
             <p>
               Contact us:{" "}
@@ -28,6 +39,7 @@ const PlacementGalleryCarousel = ({ title, description }) => {
               </a>
             </p>
           </div>
+        
         </div>
       </div>
     </div>
