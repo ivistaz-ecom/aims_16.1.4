@@ -126,7 +126,7 @@ const ExclusiveAccess = () => {
                     high-growth roles in modern café and restaurant chains
                   </p>
                   <Image
-                    src="/bhm-landing/Chai_Point.webp"
+                    src="/bhm-landing/Chai_point.webp"
                     alt="Chai Point"
                     width={100}
                     height={100}

@@ -48,7 +48,7 @@ const DualSpecialisationTracks = () => {
       id: 4,
       title: "Business Analytics",
       description: "Python, R, forecasting, data mining & advanced analytics with strong data visualisation.",
-      image: "/mba-landing/business_analytics.webp",
+      image: "/mba-landing/Business_Analytics.webp",
     },
     {
       id: 5,
