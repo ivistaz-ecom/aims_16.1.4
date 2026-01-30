@@ -6,8 +6,8 @@ const PlacementHighlights = () => {
     {
       id: 1,
       icon: "/mba-landing/runner.svg", // Runner icon
-      text: "Consistent 85%+ placement record across MBA streams",
-      highlightWords: ["85%+", "placement record"],
+      text: "84% of MBA students secured placements",
+      highlightWords: ["84%"],
     },
     {
       id: 2,
@@ -24,8 +24,8 @@ const PlacementHighlights = () => {
     {
       id: 4,
       icon: "/mba-landing/percent.svg", // Percentage icon
-      text: "Dedicated career mentorship and live corporate projects",
-      highlightWords: ["career mentorship"],
+      text: "Hiring network of <br/>300+ recruiters across sectors",
+      highlightWords: ["300+ recruiters"],
     },
   ]
 

@@ -31,12 +31,11 @@ const QualityPolicy = () => {
               </h5>
               <p className="text-sm md:text-base font-medium monser-400 max-w-md text-[#ffffff]">
                 <strong className="monser-600">
-                  Guaranteed paid internship with the Taj Group of Hotels,
+                Guaranteed paid internship in reputed five-star hotels,{" "} 
                 </strong>
-                offering hands-on experience in five-star operations and guest
-                service excellence.
+                 providing hands-on experience in luxury operations and guest service standards.
               </p>
-              <div className="rounded-md p-3 mt-4 flex justify-center lg:justify-start">
+              {/* <div className="rounded-md p-3 mt-4 flex justify-center lg:justify-start">
                 <Image
                   src="/bhm-landing/Taj-01.svg"
                   alt="Taj Logo"
@@ -44,7 +43,7 @@ const QualityPolicy = () => {
                   height={150}
                   className="object-contain lg:w-32"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

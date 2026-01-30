@@ -3,7 +3,10 @@ import HeroBanner from "./HeroBanner"
 import HeroEnquiryForm from "./HeroEnquiryForm"
 import AccreditationSection from "./AccreditationSection"
 import ProgramOverview from "./ProgramOverview"
+import LearningApproach from "./LearningApproach"
+import DualSpecialisationTracks from "./DualSpecialisationTracks"
 import PlacementHighlights from "./PlacementHighlights"
+import StudentTestimonial from "./StudentTestimonial"
 import ValueAddedPrograms from "./ValueAddedPrograms"
 import EligibilityAndDates from "./EligibilityAndDates"
 import FastTrackCareer from "./FastTrackCareer"
@@ -19,10 +22,14 @@ const index = () => {
         <HeroEnquiryForm includeId={false} />
       </section>
       <AccreditationSection />
-      <ProgramOverview />
+      <ProgramOverview /> 
+      <LearningApproach />
+      <DualSpecialisationTracks />
       <PlacementHighlights />
+      
       <ValueAddedPrograms />
       <EligibilityAndDates />
+      <StudentTestimonial />
       <FastTrackCareer />
     </div>
   )

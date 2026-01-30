@@ -9,8 +9,8 @@ const Overview = () => {
       heading:
         "The applicant must satisfy one of the following eligibility criteria for admissions into the MBA program:",
       items: [
-        "A graduate degree under 10+2+3 or 10+2+4 pattern under any discipline, securing at least 60% marks in aggregate, from a recognised university",
-        "An honors degree under 10+2+4 pattern from a recognised university under UGC Act with at least 60% marks in aggregate including languages",
+        "A graduate degree under 10+2+3 or 10+2+4 pattern under any discipline, securing at least 50% marks in aggregate, from a recognised university",
+        "An honors degree under 10+2+4 pattern from a recognised university under UGC Act with at least 50% marks in aggregate including languages",
         "Candidates who have passed Bachelor/Master degree through correspondence/Open University System from this university or from any other university recognised by law, are exempted from 10+2 pattern. The duration of the degree program must be 3 + 2 years",
       ],
     },
@@ -114,7 +114,7 @@ const Overview = () => {
                   SWOC & Personal Interviews:
                 </span>{" "}
                 <span className="monser-600 text-[18px] ">
-                  February 21, 2026
+                  February 28, 2026
                 </span>
               </p>
             </div>

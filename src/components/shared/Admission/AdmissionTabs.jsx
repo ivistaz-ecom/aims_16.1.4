@@ -12,9 +12,9 @@ const AdmissionTabs = ({ tabsData }) => {
     if (typeof text !== "string") return text
 
     // Make specific portions bold using monser-600 class
-    if (text.includes("bachelor's degree with a minimum of 60%")) {
+    if (text.includes("bachelor's degree with a minimum of 50%")) {
       const parts = text.split(
-        /(A recognised )(bachelor's degree with a minimum of 60%)(.*)/
+        /(A recognised )(bachelor's degree with a minimum of 50%)(.*)/
       )
       return (
         <>

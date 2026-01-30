@@ -3,13 +3,13 @@ import React from "react"
 const EligibilityAndDates = () => {
   const eligibilityData = [
     "Completed Pre-University Course (PUC) or equivalent; applicants with international qualifications like GCE/JGCSE/GCSE recognised",
-    "A pass certificate or diploma from a Secondary Stage Level Examination (12 Years) in any discipline, recognized by a national-level board or council of any country",
+    "A pass certificate or diploma from a Secondary Stage Level Examination (12 Years) in any discipline, recognised by a national-level board or council of any country",
   ]
 
   const datesData = [
     "Application Deadline: February 2, 2026",
     "Personal Interview by February 9, 2026",
-    "Final Selection: February 21, 2026",
+    "Final Selection: February 28, 2026",
   ]
 
   const Card = ({ title, gradient, iconColor, data }) => (
