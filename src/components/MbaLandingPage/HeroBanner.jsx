@@ -86,10 +86,10 @@ const HeroBanner = () => {
           <div className="relative flex h-full w-full flex-col justify-end gap-10 pb-0 pt-16 lg:flex-row lg:items-end lg:justify-between lg:gap-12 lg:pb-12 lg:pt-20">
             {/* Hero Copy */}
             <div className="order-1 max-w-[650px] text-center text-white lg:order-none lg:text-left">
-              <h5 className="text-3xl md:text-5xl lg:text-6xl playfair-500 mb-5 tracking-wide pt-10">
+              <h5 className="text-3xl md:text-5xl lg:text-6xl playfair-500 mb-2 tracking-wide pt-10">
               Industry-Aligned MBA Program
               </h5>
-              <p className="text-lg md:text-xl lg:text-2xl monser-400 mb-6 lg:mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl lg:text-2xl monser-400 mb-1 lg:mb-8 leading-relaxed">
                 Among the top MBA Colleges in India, AIMS Institutes offers{" "}
                 <span className="monser-700">
                   dual specialisations, global accreditations
@@ -98,7 +98,7 @@ const HeroBanner = () => {
                 <br />
                 
               </p>
-              <p className="!text-sm md:!text-sm lg:!text-sm monser-400 mb-6 lg:mb-8 leading-relaxed">Faculty members with 260 years of combined teaching experience and 208 years of combined industry experience</p>
+              <p className="!text-sm md:!text-sm lg:!text-sm monser-400 mb-1 lg:mb-8 leading-relaxed">Faculty members with 260 years of combined teaching experience and 208 years of combined industry experience</p>
             </div>
 
             {/* Desktop Form */}
