@@ -380,3 +380,32 @@ h5 .wp-h5 {
 .wb-marker-light-pink-secondary::marker {
   color: #F5BBBC !important;
 }
+
+/* Application Marquee Styles */
+.marquee .track-2 {
+  animation: marquee-left 100s linear infinite;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.marquee .track-2.paused {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-left {
+  to {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(-50%);
+  }
+}

@@ -11,7 +11,7 @@ const LogoSection = () => {
                 Highest Package
               </h2>
               <Image
-                src="/placement/highest-package.svg"
+                src="/placement/highest-packages.svg"
                 alt="Highest Package"
                 width={300}
                 height={300}
