@@ -2,15 +2,15 @@ import React from "react"
 
 const EligibilityAndDates = () => {
   const eligibilityData = [
-    "Graduate degree (10+2+3 or 10+2+4 pattern) with minimum 60% aggregate marks",
-    "Valid scores in PGCET, CAT, MAT, XAT, ATMA, or other recognised admission tests",
+    "Graduate degree (10+2+3 or 10+2+4 pattern) with minimum 50% aggregate marks",
+    "Valid scores in CAT, MAT, XAT or other recognised national-level entrance examinations",
     "Selection includes a detailed online application, AI-based behavioral interview, SWOC presentation, and final panel interview",
   ]
 
   const datesData = [
     "Application Deadline: February 2, 2026",
     "Online Interview by February 9, 2026",
-    "SWOC & Personal Interviews: February 21, 2026",
+    <>SWOC & Personal Interviews: <span style={{ fontWeight: 700 }}>February 28, 2026</span></>,
   ]
 
   const Card = ({ title, gradient, iconColor, data }) => (

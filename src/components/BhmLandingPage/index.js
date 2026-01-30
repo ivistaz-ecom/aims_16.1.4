@@ -8,6 +8,7 @@ import ValueAddedPrograms from "./ValueAddedPrograms"
 import ExclusiveAccess from "./ExclusiveAccess"
 import EligibilityAndDates from "./EligibilityAndDates"
 import FastTrackCareer from "./FastTrackCareer"
+import StudentTestimonial from "./StudentTestimonial"
 
 const index = () => {
   return (
@@ -19,12 +20,13 @@ const index = () => {
       >
         <HeroEnquiryForm includeId={false} />
       </section>
-      <AccreditationSection />
+      {/* <AccreditationSection /> */}
       <ProgramOverview />
       <ExclusiveAccess />
       <PlacementHighlights />
       <ValueAddedPrograms />
       <EligibilityAndDates />
+      <StudentTestimonial />
       <FastTrackCareer />
     </div>
   )

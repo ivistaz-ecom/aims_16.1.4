@@ -125,6 +125,15 @@ const HeroBanner = () => {
           </div>
         </div>
       </div>
+      <div className="w-full flex items-center justify-center py-10">
+      <Image
+        src="/bhm-landing/Vet_by_EHL.webp"
+        alt="Bhm Banner"
+        width={768}
+        height={1024}
+        className="w-[20%] object-cover"
+      />
+      </div>
     </>
   )
 }

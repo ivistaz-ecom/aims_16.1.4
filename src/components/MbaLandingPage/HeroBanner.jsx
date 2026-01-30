@@ -68,10 +68,10 @@ const HeroBanner = () => {
         className="relative w-full h-[88vh] lg:h-[88vh] overflow-hidden"
       >
         {/* Background Image - Desktop */}
-        <div className="hidden md:block w-full h-full bg-cover bg-top bg-no-repeat bg-[url('/mba-landing/MBA_Banner_Desktop.webp')]" />
+        <div className="hidden md:block w-full h-full bg-cover bg-top bg-no-repeat bg-[url('/mba-landing/MBA_land_banner.webp')]" />
 
         {/* Background Image - Mobile */}
-        <div className="md:hidden w-full h-full bg-cover bg-top bg-no-repeat bg-[url('/mba-landing/MBA_Banner_Mobile.webp')]" />
+        <div className="md:hidden w-full h-full bg-cover bg-top bg-no-repeat bg-[url('/mba-landing/MBA_land_banner_Mobile.webp')]" />
 
         {/* Gradient Overlay */}
         {/* <div
@@ -86,16 +86,19 @@ const HeroBanner = () => {
           <div className="relative flex h-full w-full flex-col justify-end gap-10 pb-0 pt-16 lg:flex-row lg:items-end lg:justify-between lg:gap-12 lg:pb-12 lg:pt-20">
             {/* Hero Copy */}
             <div className="order-1 max-w-[650px] text-center text-white lg:order-none lg:text-left">
-              <h5 className="text-3xl md:text-5xl lg:text-6xl playfair-500 mb-5 tracking-wide">
-                An MBA That Helps You Get Hired
+              <h5 className="text-3xl md:text-5xl lg:text-6xl playfair-500 mb-5 tracking-wide pt-10">
+              Industry-Aligned MBA Program
               </h5>
               <p className="text-lg md:text-xl lg:text-2xl monser-400 mb-6 lg:mb-8 leading-relaxed">
                 Among the top MBA Colleges in India, AIMS Institutes offers{" "}
                 <span className="monser-700">
                   dual specialisations, global accreditations
                 </span>
-                , and 85%+ placements, to launch your career with confidence.
+                , and 84% placement outcomes, to launch your career with confidence.
+                <br />
+                
               </p>
+              <p className="!text-sm md:!text-sm lg:!text-sm monser-400 mb-6 lg:mb-8 leading-relaxed">Faculty members with 260 years of combined teaching experience and 208 years of combined industry experience</p>
             </div>
 
             {/* Desktop Form */}
@@ -106,7 +109,7 @@ const HeroBanner = () => {
         </div>
 
         {/* Empower Image - Top Left */}
-        <div className="absolute top-5 left-0 lg:mx-10 mx-2">
+        {/* <div className="absolute top-5 left-0 lg:mx-10 mx-2">
           <div className="container mx-auto md:py-4 py-0">
             <div className="flex items-end justify-end pb-10 md:pb-0 lg:pb-0">
               <Image
@@ -125,7 +128,7 @@ const HeroBanner = () => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   )

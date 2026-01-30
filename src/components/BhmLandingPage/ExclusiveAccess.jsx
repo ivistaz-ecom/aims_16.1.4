@@ -1,5 +1,6 @@
 import React from "react"
 import Button from "@/shared/Button"
+import Image from "next/image"
 
 const ExclusiveAccess = () => {
   const swissDiplomas = [
@@ -105,7 +106,7 @@ const ExclusiveAccess = () => {
                 Vocational Certificate in QSR (Quick Service Restaurant)
               </div>
               <div className="text-base text-black monser-400 text-[18px]">
-                <span className=" monser-600">Duration:</span> 3 months on
+                <span className=" monser-600">Duration:</span> 1 month on
                 campus hands-on
               </div>
             </div>
@@ -124,6 +125,13 @@ const ExclusiveAccess = () => {
                     Developed with Chai Point, preparing students for
                     high-growth roles in modern café and restaurant chains
                   </p>
+                  <Image
+                    src="/bhm-landing/Chai_Point.webp"
+                    alt="Chai Point"
+                    width={100}
+                    height={100}
+                    className="w-[20%] pt-5 h-full object-cover"
+                  />
                 </li>
               </ul>
             </div>
@@ -140,12 +148,11 @@ const ExclusiveAccess = () => {
             premium hospitality brands worldwide.
           </div>
           <p className="text-black monser-400" style={{ fontSize: "18px" }}>
-            Every student's learning journey culminates in a guaranteed{" "}
+          Every student’s learning journey culminates in a  {" "}
             <span className="monser-600 text-[18px]">
-              paid internship with the Taj Group of Hotels
+            guaranteed paid internship with leading five-star hotels,{" "}
             </span>
-            , providing hands-on exposure to five-star hospitality standards and
-            operational excellence.
+            offering hands-on exposure to luxury hospitality standards and real-world operations.
           </p>
         </div>
 

@@ -12,7 +12,7 @@ const AdmissionTabsSection = () => {
         title: "Eligibility Criteria",
         subtitle: "To apply, you must have:",
         requirements: [
-          "A recognised bachelor's degree with a minimum of 60% (or 45% for SC/ST/CAT-1)",
+          "A recognised bachelor's degree with a minimum of 50% (or 45% for SC/ST/CAT-1)",
           {
             main: "A valid test score:",
             sub: [

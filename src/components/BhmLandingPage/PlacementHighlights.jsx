@@ -57,7 +57,7 @@ const PlacementHighlights = () => {
             you graduate placement-ready from day one.
           </p>
 
-          <h5 className="text-3xl md:text-4xl lg:text-[40px] playfair-500 text-[#ffffff]  ">
+          <h5 className="text-3xl md:text-4xl lg:text-[40px] playfair-500 text-[#ffffff] mt-5 ">
             Key Highlights
           </h5>
         </div>
