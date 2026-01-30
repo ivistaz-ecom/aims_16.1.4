@@ -15,7 +15,7 @@ const BannerFallback = () => {
   }
 
   return (
-    <div className="relative w-full h-[83vh] md:h-[100vh] overflow-hidden">
+    <div className="relative w-full h-[100vh] md:h-[100vh]  overflow-hidden">
       {/* Desktop Image */}
       {/* banner.desktop is the desktop image */}
       <Image
@@ -79,8 +79,8 @@ const HeroBannerSoB = ({ announcements, pageType = "admissions" }) => {
   // You can add as many banner slides as you want here
   const banners = [
     {
-      desktop: "/home/banner-1-Desktop.webp",
-      tablet: "/home/banner-1-tab.webp",
+      desktop: "/home/banner-01-Desktop.webp",
+      tablet: "/home/banner-01-tab.webp",
       mobile: "/home/banner-1-mobile.webp",
       logo: "/white-empower.svg",
     },
@@ -97,14 +97,14 @@ const HeroBannerSoB = ({ announcements, pageType = "admissions" }) => {
       logo: "/white-empower.svg",
     },
     {
-      desktop: "/home/banner-4-Desktop.webp",
+      desktop: "/home/banner-04-Desktop.webp",
       tablet: "/home/banner-4-tab.webp",
       mobile: "/home/banner-4-mobile.webp",
       logo: "/white-empower.svg",
     },
     {
       desktop: "/home/fdp-desktop2.webp",
-      tablet: "/home/banner-5-tab-01.webp",
+      tablet: "home/banner-5-tab-001.webp",
       mobile: "/home/fdp-mob.webp",
       logo: "/white-empower.svg",
     },
@@ -216,7 +216,7 @@ const HeroBannerSoB = ({ announcements, pageType = "admissions" }) => {
         {banners.map((banner, index) => (
           <div
             key={index}
-            className="relative w-full h-[83vh] md:h-[100vh] overflow-hidden"
+            className="relative w-full h-[83vh] md:h-[85vh] lg:h-[100vh] overflow-hidden"
           >
             {/* First slide uses Next.js Image with priority for LCP optimization */}
             {index === 0 ? (
@@ -300,7 +300,7 @@ const HeroBannerSoB = ({ announcements, pageType = "admissions" }) => {
             </div>
 
             {/* Bottom Content */}
-            <div className="absolute top-[47%] lg:top-auto md:top-auto lg:bottom-44  bottom-0 md:bottom-24 left-1/2 lg:left-44 px-4 lg:px-0 z-10 -translate-x-1/2 lg:translate-x-0">
+            <div className="absolute top-[47%] lg:top-auto md:top-auto lg:bottom-44  bottom-0 md:bottom-20 left-1/2 lg:left-44 px-4 lg:px-0 z-10 -translate-x-1/2 lg:translate-x-0">
               <div className="container mx-auto">
                 <div className="flex lg:flex-row flex-col items-center justify-center lg:justify-between text-center lg:text-left md:gap-4 gap-4">
                   {index === 1 ? (
