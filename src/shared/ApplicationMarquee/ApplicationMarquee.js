@@ -159,37 +159,36 @@ const ApplicationMarquee = ({ announcements, pageType = "admissions" }) => {
 
   return (
     <div
-      className="h-[7vh] overflow-hidden shadow-lg flex items-center px-4 lg:px-8"
+      className="h-[7vh] overflow-hidden shadow-lg flex items-center w-full"
       style={{ backgroundColor: "#A22877" }}
     >
-      <div className="container mx-auto flex justify-center items-center">
-        <marquee
-          behavior="scroll"
-          direction="left"
-          scrollamount="6"
-          id="applicationMarquee"
-        >
-          {displayAnnouncements.map((announcement, index) => (
-            <span key={index} className="mx-8">
-              <a
-                href={announcement.link}
-                className="text-white font-semibold text-[16px] tracking-wide hover:text-yellow-300 transition-colors duration-200 cursor-pointer"
-                style={{ textDecoration: "none" }}
-                onMouseEnter={() => {
-                  const marquee = document.getElementById("applicationMarquee")
-                  if (marquee) marquee.stop()
-                }}
-                onMouseLeave={() => {
-                  const marquee = document.getElementById("applicationMarquee")
-                  if (marquee) marquee.start()
-                }}
-              >
-                {announcement.text}
-              </a>
-            </span>
-          ))}
-        </marquee>
-      </div>
+      <marquee
+        behavior="scroll"
+        direction="left"
+        scrollamount="6"
+        id="applicationMarquee"
+        className="w-full"
+      >
+        {displayAnnouncements.map((announcement, index) => (
+          <span key={index} className="mx-8">
+            <a
+              href={announcement.link}
+              className="text-white font-semibold text-[16px] tracking-wide hover:text-yellow-300 transition-colors duration-200 cursor-pointer"
+              style={{ textDecoration: "none" }}
+              onMouseEnter={() => {
+                const marquee = document.getElementById("applicationMarquee")
+                if (marquee) marquee.stop()
+              }}
+              onMouseLeave={() => {
+                const marquee = document.getElementById("applicationMarquee")
+                if (marquee) marquee.start()
+              }}
+            >
+              {announcement.text}
+            </a>
+          </span>
+        ))}
+      </marquee>
     </div>
   )
 }
