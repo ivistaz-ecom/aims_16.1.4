@@ -15,23 +15,23 @@ const StudentTestimonial = () => {
   }
 
   return (
-    <section className="py-12 mb-10 px-4" style={{ backgroundColor: "#531675" }}>
+    <section className="py-8 md:py-12 mb-6 md:mb-10 px-4" style={{ backgroundColor: "#531675" }}>
       <div className="container mx-auto max-w-6xl">
         {/* Section Title */}
-        <h2 className="text-white text-3xl md:text-4xl lg:text-5xl playfair-600 mb-5">
+        <h2 className="text-white text-3xl md:text-4xl lg:text-5xl playfair-600 mb-4 md:mb-5">
           Student Testimonial
         </h2>
 
         {/* Testimonial Content */}
-        <div className="flex flex-col lg:flex-row gap-8 items-start">
+        <div className="flex flex-col lg:flex-row gap-4 md:gap-8 items-start">
           {/* Left Side - Student Image and Info */}
           <div className="flex flex-col items-center lg:items-start">
             {/* Image Container with dashed border */}
-            <div className=" rounded-lg p-4 mb-4">
+            <div className="rounded-lg p-2 md:p-4 mb-1 md:mb-2">
               {/* Circular Image with purple background */}
-              <div className="relative w-[200px] h-[280px] md:w-[240px] md:h-[320px] flex items-center justify-center pb-10">
+              <div className="relative w-[180px] h-[220px] md:w-[240px] md:h-[300px] flex items-center justify-center pb-2 md:pb-4">
                
-                <div className="relative z-10 w-full h-full">
+                <div className="relative z-10 w-full h-full ">
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
@@ -55,7 +55,7 @@ const StudentTestimonial = () => {
           </div>
 
           {/* Right Side - Testimonial Text */}
-          <div className="flex-1  rounded-lg p-6 md:p-8">
+          <div className="flex-1 rounded-lg p-2 md:p-8">
             <div className="space-y-4">
               {testimonial.quotes.map((quote, index) => (
                 <p 
