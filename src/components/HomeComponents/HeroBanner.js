@@ -85,15 +85,15 @@ const HeroBannerSoB = ({ announcements, pageType = "admissions" }) => {
       logo: "/white-empower.svg",
     },
     {
-      desktop: "/home/banner-2-Desktop.webp",
-      tablet: "/home/banner-2-tab.webp",
-      mobile: "/home/banner-2-mobile.webp",
+      desktop: "/home/banner-02-Desktop.webp  ",
+      tablet: "/home/banner-002-tab.webp",
+      mobile: "/home/banner-002-mobile.webp",
       logo: "/white-empower.svg",
     },
     {
-      desktop: "/home/banner-3-Desktop.webp",
-      tablet: "/home/banner-3-tab.webp",
-      mobile: "/home/banner-3-mobile.webp",
+      desktop: "/home/banner-03-Desktop.webp",
+      tablet: "/home/banner-03-tab.webp",
+      mobile: "/home/banner-03-mobile.webp",
       logo: "/white-empower.svg",
     },
     {
@@ -102,12 +102,12 @@ const HeroBannerSoB = ({ announcements, pageType = "admissions" }) => {
       mobile: "/home/banner-4-mobile.webp",
       logo: "/white-empower.svg",
     },
-    {
-      desktop: "/home/fdp-desktop2.webp",
-      tablet: "home/banner-5-tab-001.webp",
-      mobile: "/home/fdp-mob.webp",
-      logo: "/white-empower.svg",
-    },
+    // {
+    //   desktop: "/home/fdp-desktop2.webp",
+    //   tablet: "home/banner-5-tab-001.webp",
+    //   mobile: "/home/fdp-mob.webp",
+    //   logo: "/white-empower.svg",
+    // },
   ]
 
   const responsive = {
