@@ -15,17 +15,17 @@ const StudentTestimonial = () => {
   }
 
   return (
-    <section className="py-8 md:py-12 mb-6 md:mb-10 px-4" style={{ backgroundColor: "#531675" }}>
+    <section className="py-8 md:py-12 mb-6 md:mb-10 px-4 relative md:static overflow-hidden md:overflow-visible" style={{ backgroundColor: "#531675" }}>
       <div className="container mx-auto max-w-6xl">
         {/* Section Title */}
-        <h2 className="text-white text-3xl md:text-4xl lg:text-5xl playfair-600 mb-4 md:mb-5">
+        <h2 className="text-white text-3xl md:text-4xl lg:text-5xl playfair-600 mb-4 md:mb-5 text-center md:text-left">
           Student Testimonial
         </h2>
 
         {/* Testimonial Content */}
-        <div className="flex flex-col lg:flex-row gap-4 md:gap-8 items-start">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center md:items-start">
           {/* Left Side - Student Image and Info */}
-          <div className="flex flex-col items-center lg:items-start">
+          <div className="flex flex-col items-center w-full md:w-auto">
             {/* Image Container with dashed border */}
             <div className="rounded-lg p-2 md:p-4 mb-1 md:mb-2">
               {/* Circular Image with purple background */}
@@ -44,7 +44,7 @@ const StudentTestimonial = () => {
             </div>
 
             {/* Student Name and Batch */}
-            <div className="text-center lg:text-center w-full">
+            <div className="text-center w-full">
               <h3 className="text-white monser-700 text-xl md:text-2xl mb-1 !text-[24px]">
                 {testimonial.name}
               </h3>
@@ -55,12 +55,12 @@ const StudentTestimonial = () => {
           </div>
 
           {/* Right Side - Testimonial Text */}
-          <div className="flex-1 rounded-lg p-2 md:p-8">
+          <div className="flex-1 rounded-lg p-2 md:p-8 w-full">
             <div className="space-y-4">
               {testimonial.quotes.map((quote, index) => (
                 <p 
                   key={index} 
-                  className={`text-white monser-400 text-sm md:text-base leading-relaxed ${
+                  className={`text-white monser-400 text-sm md:text-base leading-relaxed text-center md:text-left ${
                     index === 0 ? 'text-lg md:text-xl monser-500' : ''
                   }`}
                 >
